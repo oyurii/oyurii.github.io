@@ -1,0 +1,80 @@
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-size: 45px;
+    letter-spacing: 2px;
+    /*font-weight: bold;*/
+    /*text-transform: uppercase;*/
+}
+p {
+    text-align: justify;
+}
+/*.abstract {*/
+    /*background-color: #272727;*/
+    /*opacity: 0.62;*/
+    /*border-radius: 5px;*/
+    /*padding: 7px;*/
+
+/*}*/
+/*.jumbotron {*/
+    /*margin-top: -30px;*/
+    /*[>padding-top: 100px!important;<]*/
+    /*padding-bottom: 30px;*/
+    /*background: url(../images/bgr.jpg);*/
+    /*background-position: 0px 0px;*/
+    /*color: #ffff99;*/
+/*}*/
+.navbar-inverse {
+    background-color: #151515;
+    /*border-color: #292929; */
+    /*background-color: transparent;*/
+    border-color: transparent;
+    /*border-color: goldenrod; */
+}
+/*ul.main_menu {*/
+    /*margin-top: 7px;*/
+/*}*/
+ul.main_menu li a {
+    color: #fff;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+ul.main_menu li a:hover {
+    color: darkgreen;
+    background: #ffff99;
+}
+ul.main_menu {
+    padding-bottom: 7px;
+    /*border-bottom: 1px solid #fff;*/
+}
+.thumbnail {
+    text-align: center;
+    -o-transition: transform 0.3s linear;
+    -ms-transition: transform 0.3s linear;
+    -moz-transition: transform 0.3s linear;
+    -webkit-transition: transform 0.3s linear;
+    transition: transform 0.3s linear;
+}
+.thumbnail:hover {
+    /*-moz-transform: rotate(5deg); [> Для Firefox <]*/
+    /*-ms-transform: rotate(5deg); [> Для IE <]*/
+    /*-webkit-transform: rotate(5deg); [> Для Safari, Chrome, iOS <]*/
+    /*-o-transform: rotate(5deg); [> Для Opera <]*/
+    /*transform: rotate(5deg);*/
+
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+/*hr {*/
+     /*margin-top: 0px; */
+     /*margin-bottom: 20px; */
+    /*border: 0;*/
+    /*border-top: 1px solid #eee;*/
+/*}*/
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}

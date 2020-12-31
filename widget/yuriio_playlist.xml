@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<items>
+  <channel>
+    <title>Выжить любой ценой</title>
+    <playlist_url><![CDATA[http://192.168.1.111/Выжить_любой_ценой.xml]]></playlist_url>          
+    <logo_30x30></logo_30x30>
+    <category_id>1</category_id>
+  </channel>
+  <channel>
+    <title>Приказ вернутьтся живым</title>
+    <playlist_url><![CDATA[http://192.168.1.111/Приказ_вернутьтся_живым.xml]]></playlist_url>          
+    <logo_30x30></logo_30x30>
+    <category_id>1</category_id>
+  </channel>
+  <channel>
+    <title>Крутой</title>
+    <playlist_url><![CDATA[http://192.168.1.111/Крутой.xml]]></playlist_url>          
+    <logo_30x30></logo_30x30>
+    <category_id>1</category_id>
+  </channel>
+  <channel>
+    <title>Путь домой</title>
+    <playlist_url><![CDATA[http://192.168.1.111/Путь_домой.xml]]></playlist_url>          
+    <logo_30x30></logo_30x30>
+    <category_id>1</category_id>
+  </channel>
+  <channel>
+    <title></title>
+    <playlist_url><![CDATA[http://192.168.1.111/.xml]]></playlist_url>          
+    <logo_30x30></logo_30x30>
+    <category_id>1</category_id>
+  </channel>
+  <channel>
+    <title></title>
+    <playlist_url><![CDATA[http://192.168.1.111/.xml]]></playlist_url>          
+    <logo_30x30></logo_30x30>
+    <category_id>1</category_id>
+  </channel>
+  <channel>
+    <title></title>
+    <playlist_url><![CDATA[http://192.168.1.111/.xml]]></playlist_url>          
+    <logo_30x30></logo_30x30>
+    <category_id>1</category_id>
+  </channel>
+</items>
