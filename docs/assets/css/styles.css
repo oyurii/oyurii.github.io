@@ -1,0 +1,22 @@
+main {
+  text-align: justify;
+}
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+.nav-link:hover {
+    color: #00bc8c;
+}
+.nav-link.active {
+    color: yellow!important;
+}
+img.about-image {
+  object-fit: cover;
+  object-position: center 15%;
+  transform: scale(1.00);
+}
+.access-info {
+    color: red;
+}
+

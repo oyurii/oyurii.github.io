@@ -1,0 +1,520 @@
+[
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Personal Blog\nBelow are one-off posts about various topics, which span from generic advice to random musings.\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nShort Description\n\n\n\nTags\n\n\n\n\n\n\n\n\nJan 25, 2026\n\n\nMD simulation\n\n\nJustification of the choice of parameters of the Nose-Hoover thermostat for LAMMPS scenarios\n\n\nPhysics, MD, Ab initio\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yurii M. Ovcharenko",
+    "section": "",
+    "text": "Hello! My name is Yurii Ovcharenko, I am a teacher of physics and researcher in the field of computer modeling of physical processes in metal alloys used in nuclear reactors.\nCurrently, I work as a senior researcher at the Institute of Applied Physics of the National Academy of Sciences of Ukraine, which is a leading scientific center for applied and fundamental problems of the application of nuclear technologies in the study of the structure and composition of matter. I am a teacher of the discipline Molecular Dynamics and Ab Initio Modeling in Materials Science for graduate students of the institute.\nPreviously, I was an associate professor at the Department of General and Theoretical Physics of Sumy State University, where I taught the following disciplines to students:\n\nQuantum Mechanics,\nStatistical Physics,\nSolid State Physics.\n\nI received a PhD in Physics and Mathematics with a major in Solid State Physics and an academic title of Associate Professor at the Department of Theoretical Physics at Sumy State University, where I was engaged in experimental work investigating the electrophysical properties of thin multilayer metal and semiconductor films.\nYou can find more information about my work, what I’m writing about, and how to get in contact with me!"
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#lecture-topics-and-questions",
+    "href": "teaching/quantum-mechanics.html#lecture-topics-and-questions",
+    "title": "Quantum Mechanics",
+    "section": "Lecture Topics and Questions",
+    "text": "Lecture Topics and Questions"
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#introduction-to-quantum-mechanics.-wave-function",
+    "href": "teaching/quantum-mechanics.html#introduction-to-quantum-mechanics.-wave-function",
+    "title": "Quantum Mechanics",
+    "section": "1. Introduction to Quantum Mechanics. Wave Function",
+    "text": "1. Introduction to Quantum Mechanics. Wave Function\n\nSubject and methods of quantum mechanics.\nExperimental and theoretical prerequisites for the development of quantum mechanics.\nNecessity of probabilistic and statistical interpretation of de Broglie waves.\nWave function. Probability density. Normalization condition. General requirements for the wave function."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#elementary-theory-of-linear-operators",
+    "href": "teaching/quantum-mechanics.html#elementary-theory-of-linear-operators",
+    "title": "Quantum Mechanics",
+    "section": "2. Elementary Theory of Linear Operators",
+    "text": "2. Elementary Theory of Linear Operators\n\nDefinition of an operator. Operations with operators. Commutator, anticommutator. Kernel of an operator.\nEigenfunctions and eigenvalues. Degeneracy.\nLinear, complex conjugate, inverse, transpose, Hermitian-conjugate and self-adjoint (Hermitian) operators.\nProperties of operators:\n\nproperties of eigenvalues of linear self-adjoint operators;\nproperties of eigenfunctions of linear self-adjoint operators;\nsuperposition principle;\ncompleteness of eigenfunction systems;\neigenfunctions of commuting operators;\nsimultaneous measurement of physical observables."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#operators-of-physical-observables.-schrödinger-equation",
+    "href": "teaching/quantum-mechanics.html#operators-of-physical-observables.-schrödinger-equation",
+    "title": "Quantum Mechanics",
+    "section": "3. Operators of Physical Observables. Schrödinger Equation",
+    "text": "3. Operators of Physical Observables. Schrödinger Equation\n\nOperators of physical observables in quantum mechanics. Time-dependent Schrödinger equation.\nSelf-adjointness of the Hamiltonian operator.\nExpectation values of physical observables.\nTime differentiation of operators. Constants of motion in quantum mechanics."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#space-time-properties-and-conservation-laws.-correspondence-principle",
+    "href": "teaching/quantum-mechanics.html#space-time-properties-and-conservation-laws.-correspondence-principle",
+    "title": "Quantum Mechanics",
+    "section": "4. Space-Time Properties and Conservation Laws. Correspondence Principle",
+    "text": "4. Space-Time Properties and Conservation Laws. Correspondence Principle\n\nRelation between conservation laws and symmetry invariance of the Hamiltonian.\nConservation of momentum, angular momentum, and energy.\nParity. Parity conservation law.\nEquations of motion in quantum mechanics. Ehrenfest theorem. Bohr correspondence principle."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#wave-packets.-heisenberg-uncertainty-relations",
+    "href": "teaching/quantum-mechanics.html#wave-packets.-heisenberg-uncertainty-relations",
+    "title": "Quantum Mechanics",
+    "section": "5. Wave Packets. Heisenberg Uncertainty Relations",
+    "text": "5. Wave Packets. Heisenberg Uncertainty Relations\n\nParticle modeling using wave packets.\nDerivation of Heisenberg uncertainty relations using wave packets.\nOperator derivation of uncertainty relations.\nExperimental verification of uncertainty relations."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#stationary-schrödinger-equation.-one-dimensional-problems",
+    "href": "teaching/quantum-mechanics.html#stationary-schrödinger-equation.-one-dimensional-problems",
+    "title": "Quantum Mechanics",
+    "section": "6. Stationary Schrödinger Equation. One-Dimensional Problems",
+    "text": "6. Stationary Schrödinger Equation. One-Dimensional Problems\n\nStationary states and stationarity condition.\nFree particle.\nNormalization of wave functions with continuous spectrum.\nParticle in a one-dimensional infinite potential well.\nProbability current density. Tunneling effect."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#quantum-harmonic-oscillator",
+    "href": "teaching/quantum-mechanics.html#quantum-harmonic-oscillator",
+    "title": "Quantum Mechanics",
+    "section": "7. Quantum Harmonic Oscillator",
+    "text": "7. Quantum Harmonic Oscillator\n\nFormulation of the quantum harmonic oscillator problem.\nSolution of the Schrödinger equation and analysis of results."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#quantum-theory-of-the-hydrogen-atom",
+    "href": "teaching/quantum-mechanics.html#quantum-theory-of-the-hydrogen-atom",
+    "title": "Quantum Mechanics",
+    "section": "8. Quantum Theory of the Hydrogen Atom",
+    "text": "8. Quantum Theory of the Hydrogen Atom\n\nQuantum mechanical operators in spherical coordinates.\nSchrödinger equation in spherical coordinates. Radial and angular equations."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#solution-of-the-angular-schrödinger-equation",
+    "href": "teaching/quantum-mechanics.html#solution-of-the-angular-schrödinger-equation",
+    "title": "Quantum Mechanics",
+    "section": "9. Solution of the Angular Schrödinger Equation",
+    "text": "9. Solution of the Angular Schrödinger Equation\n\nSolution of the angular equation.\nQuantization of angular momentum and its projection. Orbital and magnetic quantum numbers."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#solution-of-the-radial-schrödinger-equation",
+    "href": "teaching/quantum-mechanics.html#solution-of-the-radial-schrödinger-equation",
+    "title": "Quantum Mechanics",
+    "section": "10. Solution of the Radial Schrödinger Equation",
+    "text": "10. Solution of the Radial Schrödinger Equation\n\nSolution of the radial equation.\nEnergy quantization. Principal quantum number."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#spatial-structure-of-the-hydrogen-atom.-electron-spin",
+    "href": "teaching/quantum-mechanics.html#spatial-structure-of-the-hydrogen-atom.-electron-spin",
+    "title": "Quantum Mechanics",
+    "section": "11. Spatial Structure of the Hydrogen Atom. Electron Spin",
+    "text": "11. Spatial Structure of the Hydrogen Atom. Electron Spin\n\nAngular and radial probability distributions.\nAngular momentum and magnetic moment of the electron.\nElectron spin and its mathematical description.\nQuantum state of an electron including spin."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#quantum-mechanics-of-many-particle-systems",
+    "href": "teaching/quantum-mechanics.html#quantum-mechanics-of-many-particle-systems",
+    "title": "Quantum Mechanics",
+    "section": "12. Quantum Mechanics of Many-Particle Systems",
+    "text": "12. Quantum Mechanics of Many-Particle Systems\n\nWave function and operators for many-particle systems.\nPrinciple of indistinguishability of identical particles.\nSymmetric and antisymmetric wave functions. Pauli exclusion principle.\nSystems of identical bosons and fermions."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#approximation-methods-in-quantum-mechanics",
+    "href": "teaching/quantum-mechanics.html#approximation-methods-in-quantum-mechanics",
+    "title": "Quantum Mechanics",
+    "section": "13. Approximation Methods in Quantum Mechanics",
+    "text": "13. Approximation Methods in Quantum Mechanics\n\nOverview of approximation methods.\nTime-independent perturbation theory (non-degenerate case).\nPerturbation theory with degeneracy.\nRitz variational method."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#many-electron-atoms.-periodic-table",
+    "href": "teaching/quantum-mechanics.html#many-electron-atoms.-periodic-table",
+    "title": "Quantum Mechanics",
+    "section": "14. Many-Electron Atoms. Periodic Table",
+    "text": "14. Many-Electron Atoms. Periodic Table\n\nValence electron model of alkali atoms.\nHelium atom in the first-order perturbation theory.\nPeriodic table of elements. Ground-state electron configurations.\nHydrogen molecule. Exchange interaction."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#angular-momentum-of-many-particle-systems",
+    "href": "teaching/quantum-mechanics.html#angular-momentum-of-many-particle-systems",
+    "title": "Quantum Mechanics",
+    "section": "15. Angular Momentum of Many-Particle Systems",
+    "text": "15. Angular Momentum of Many-Particle Systems\n\nProperties of angular momentum operators.\nLS coupling and jj coupling.\nAddition of angular momenta.\nAddition of electron spins.\nOrbital, spin, and total angular momentum. Quantum numbers L, S, J."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#vector-model-of-the-atom.-atomic-spectra",
+    "href": "teaching/quantum-mechanics.html#vector-model-of-the-atom.-atomic-spectra",
+    "title": "Quantum Mechanics",
+    "section": "16. Vector Model of the Atom. Atomic Spectra",
+    "text": "16. Vector Model of the Atom. Atomic Spectra\n\nSpectral multiplets. Spin-orbit interaction. Selection rules. Forbidden transitions.\nAtomic terms. Hund’s rules.\nGyromagnetic ratio.\nConstruction of the vector model of the atom.\nZeeman effect."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#nature-of-chemical-bonding",
+    "href": "teaching/quantum-mechanics.html#nature-of-chemical-bonding",
+    "title": "Quantum Mechanics",
+    "section": "17. Nature of Chemical Bonding",
+    "text": "17. Nature of Chemical Bonding\n\nHydrogen molecule bond energy (Heitler–London method).\nPhysical interpretation of chemical bonding forces.\nVan der Waals forces.\nVibrational and rotational energy levels of the hydrogen molecule."
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#lecturehoursliterature-correspondence",
+    "href": "teaching/quantum-mechanics.html#lecturehoursliterature-correspondence",
+    "title": "Quantum Mechanics",
+    "section": "Lecture–Hours–Literature Correspondence",
+    "text": "Lecture–Hours–Literature Correspondence\n\n\n\n\n\n\n\n\n\nLecture\nTopic (Short Title)\nHours\nRecommended Literature\n\n\n\n\n1\nIntroduction. Wave Function\n2\nGriffiths, Ch. 1\n\n\n2\nLinear Operators\n2\nSakurai, Ch. 1\n\n\n3\nOperators. Schrödinger Equation\n2\nGriffiths, Ch. 2\n\n\n4\nSymmetries and Conservation Laws\n2\nLandau & Lifshitz, Vol. 3\n\n\n5\nWave Packets. Uncertainty Relations\n2\nGriffiths, Ch. 3\n\n\n6\nStationary States. 1D Problems\n2\nGriffiths, Ch. 2\n\n\n7\nHarmonic Oscillator\n2\nSakurai, Ch. 2\n\n\n8\nHydrogen Atom\n2\nGriffiths, Ch. 4\n\n\n9\nAngular Equation\n2\nLandau & Lifshitz, Vol. 3\n\n\n10\nRadial Equation\n2\nSakurai\n\n\n11\nAtomic Structure. Spin\n2\nGriffiths, Ch. 4\n\n\n12\nMany-Particle Systems\n2\nSakurai\n\n\n13\nApproximation Methods\n2\nGriffiths, Ch. 6\n\n\n14\nMany-Electron Atoms\n2\nAtkins & Friedman\n\n\n15\nAngular Momentum Addition\n2\nSakurai\n\n\n16\nAtomic Spectra\n2\nHerzberg\n\n\n17\nChemical Bonding\n2\nAtkins & Friedman"
+  },
+  {
+    "objectID": "teaching/quantum-mechanics.html#main-references",
+    "href": "teaching/quantum-mechanics.html#main-references",
+    "title": "Quantum Mechanics",
+    "section": "Main References",
+    "text": "Main References\n\nD.J. Griffiths, Introduction to Quantum Mechanics\nJ.J. Sakurai, Modern Quantum Mechanics\nL.D. Landau, E.M. Lifshitz, Quantum Mechanics\nP.W. Atkins, R.S. Friedman, Molecular Quantum Mechanics\nG. Herzberg, Atomic Spectra and Atomic Structure"
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#general-course-information",
+    "href": "teaching/molecular-dynamics.html#general-course-information",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "General Course Information",
+    "text": "General Course Information\n\n\n\nItem\nDescription\n\n\n\n\nField of Study\n10 Natural Sciences\n\n\nSpecialty\n104 Physics and Astronomy\n\n\nLevel of Education\nThird (Educational and Scientific, PhD level)\n\n\nCourse Status\nElective\n\n\nAssessment Type\nPass / Fail\n\n\nCredits\n3\n\n\nTotal Workload\n90 hours"
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#course-description",
+    "href": "teaching/molecular-dynamics.html#course-description",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Course Description",
+    "text": "Course Description\nThis course focuses on modern molecular dynamics (MD) and ab initio simulation methods applied to the investigation of metals and alloys at the atomic scale. Special attention is given to MD algorithms, density functional theory (DFT), and hands-on experience with leading computational packages such as LAMMPS and Quantum ESPRESSO.\nStudents acquire practical skills in model construction, analysis of diffusion, mechanical and thermodynamic properties of materials, as well as electronic structure calculations. The course is aimed at developing competencies required for advanced scientific research in materials science and solid-state physics."
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#course-objective",
+    "href": "teaching/molecular-dynamics.html#course-objective",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Course Objective",
+    "text": "Course Objective\nThe objective of the course is to develop systematic theoretical knowledge and practical skills in applying molecular dynamics and ab initio quantum-mechanical methods to study atomic structure, physical properties, and evolutionary processes in metals and alloys.\nSpecial emphasis is placed on the selection and application of modern interatomic potentials, DFT tools, and computational algorithms, as well as on the interpretation of simulation results for solving contemporary problems in solid-state physics and materials science."
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#learning-outcomes",
+    "href": "teaching/molecular-dynamics.html#learning-outcomes",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nCompetencies\nUpon completion of the course, PhD students will be able to:\n\nUnderstand fundamental principles of molecular dynamics (MD) and ab initio methods, including density functional theory (DFT).\nSelect and parameterize interatomic potentials for metals and alloys and assess their validity.\nPerform classical MD simulations using LAMMPS.\nConduct DFT calculations using Quantum ESPRESSO.\nApply ab initio molecular dynamics (AIMD) for modeling atomic motion at finite temperatures.\nIntegrate MD and DFT results through multiscale and machine-learning approaches.\nCritically analyze and interpret simulation results.\n\n\n\nLearning Results\nStudents will be able to:\n\nExplain physical principles underlying MD and ab initio methods.\nJustify the choice of interatomic potentials and simulation parameters.\nConstruct atomic models including defects and surfaces.\nAnalyze diffusion, mechanical, thermodynamic, and electronic properties."
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#course-workload-breakdown",
+    "href": "teaching/molecular-dynamics.html#course-workload-breakdown",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Course Workload Breakdown",
+    "text": "Course Workload Breakdown\n\n\n\nActivity\nHours\n\n\n\n\nLectures\n30\n\n\nPractical Classes\n10\n\n\nLaboratory Work\n4\n\n\nIndependent Study\n44\n\n\nTotal\n90"
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#course-content",
+    "href": "teaching/molecular-dynamics.html#course-content",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Course Content",
+    "text": "Course Content\n\nLectures\n\nModule 1. Introduction and Theoretical Foundations\n\nIntroduction to Computational Materials Science History and role of modeling; ab initio, MD, Monte Carlo methods. Hours: 2\nFundamental Atomic-Scale Equations Schrödinger equation; Born–Oppenheimer approximation. Hours: 2\nQuantum-Mechanical Calculation Methods DFT, pseudopotentials, exchange–correlation functionals. Hours: 2\n\n\n\n\nModule 2. Interatomic Interactions\n\nEmpirical Potentials for Metals EAM, MEAM, Finnis–Sinclair, Gupta potentials. Hours: 2\nConstruction and Scaling of Potentials Alloy systems and validation strategies. Hours: 2\n\n\n\n\nModule 3. Molecular Dynamics\n\nFundamentals of Classical Molecular Dynamics Integration algorithms; statistical ensembles. Hours: 2\nImplementation of MD in Software Packages LAMMPS workflows and input structures. Hours: 2\nModeling Physical Properties of Metals Elastic constants, diffusion, correlation functions. Hours: 2\nCrystal Defects and Their Dynamics Vacancies, dislocations, grain boundaries. Hours: 2\n\n\n\n\nModule 4. Interaction with Environment\n\nOxidation and Corrosion in MD Models Reactive force fields: ReaxFF, COMB. Hours: 2\nSurface Phenomena and Nanostructures Surface energy and clustering. Hours: 2\n\n\n\n\nModule 5. Ab initio Dynamics and Multiphysics\n\nAb initio Molecular Dynamics (AIMD) Car–Parrinello MD. Hours: 2\nCombining DFT and MD QM/MM and machine-learning potentials. Hours: 2\n\n\n\n\nModule 6. Practical Applications\n\nModeling Structural and Kinetic Processes in Alloys Phase transitions and diffusion. Hours: 2\nModeling Radiation Damage in Materials Displacement cascades. Hours: 2\n\n\n\n\n\nPractical Classes\n\n\n\nNo.\nTopic\nHours\n\n\n\n\n1\nCrystal lattice geometry and crystallography\n2\n\n\n2\nPhonons and vibrational properties\n2\n\n\n3\nQuantum statistics and electron gas\n2\n\n\n4\nInstallation of LAMMPS and Quantum ESPRESSO\n2\n\n\n5\nAutomation and post-processing\n2\n\n\n\n\n\n\nLaboratory Work\n\n\n\nNo.\nTopic\nHours\n\n\n\n\n1\nLattice constants and defect formation energies\n2\n\n\n2\nAlloy deformation and strength limits\n2"
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#independent-study",
+    "href": "teaching/molecular-dynamics.html#independent-study",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Independent Study",
+    "text": "Independent Study\nAnalytical mechanics, lattice dynamics, band theory, statistical thermodynamics, DFT-based elastic constant calculations.\nTotal: 44 hours"
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#assessment",
+    "href": "teaching/molecular-dynamics.html#assessment",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Assessment",
+    "text": "Assessment\n\n\n\nComponent\nWeight\n\n\n\n\nPractical classes\n35%\n\n\nLaboratory work\n30%\n\n\nAttestation tests\n20%\n\n\nIndividual assignments\n15%\n\n\nTotal\n100%"
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#recommended-literature",
+    "href": "teaching/molecular-dynamics.html#recommended-literature",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Recommended Literature",
+    "text": "Recommended Literature\n\nCore Literature\n\nKittel, C., McEuen, P. Introduction to Solid State Physics, Wiley.\nVakarchuk, I.O. Quantum Mechanics, Lviv.\nhttps://www.lammps.org\nhttps://www.quantum-espresso.org\n\n\n\nSupplementary Literature\n\nProtsenko I.Yu., Shumakova N.I., Ovcharenko Yu.M. Solid State Physics, Sumy."
+  },
+  {
+    "objectID": "teaching/molecular-dynamics.html#academic-integrity",
+    "href": "teaching/molecular-dynamics.html#academic-integrity",
+    "title": "Molecular Dynamics and ab initio Modeling in Materials Science",
+    "section": "Academic Integrity",
+    "text": "Academic Integrity\nStudents must adhere to principles of academic integrity, proper citation, and independent completion of all assignments, in accordance with the regulations of the Institute of Applied Physics, NAS of Ukraine."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact Information",
+    "section": "",
+    "text": "Yurii Ovcharenko, Candidate of Physical and Mathematical Sciences (Ukrainian degree, equivalent to a PhD in Physics), Associate Professor\n\nEmail:"
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-1.-introduction.-methods-of-analytical-mechanics",
+    "href": "teaching/statistical-physics.html#lecture-1.-introduction.-methods-of-analytical-mechanics",
+    "title": "Statistical Physics",
+    "section": "Lecture 1. Introduction. Methods of Analytical Mechanics",
+    "text": "Lecture 1. Introduction. Methods of Analytical Mechanics\n\nSubject, objectives, methods, and significance of statistical physics.\nClassification of physical systems. Types of interactions between particles.\nVirtual and real displacements. Principle of virtual work (equilibrium condition).\nGeneralized coordinates and generalized forces.\nD’Alembert–Lagrange principle of virtual displacements."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-2.-lagrange-and-hamilton-equations-for-particle-systems",
+    "href": "teaching/statistical-physics.html#lecture-2.-lagrange-and-hamilton-equations-for-particle-systems",
+    "title": "Statistical Physics",
+    "section": "Lecture 2. Lagrange and Hamilton Equations for Particle Systems",
+    "text": "Lecture 2. Lagrange and Hamilton Equations for Particle Systems\n\nLagrange equations of motion.\nLagrangian function and its relation to energy. Hamiltonian function. Generalized momenta.\nLagrangian and Hamiltonian variables. Legendre transformation. Hamilton’s (canonical) equations of motion."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-3.-phase-space.-distribution-function",
+    "href": "teaching/statistical-physics.html#lecture-3.-phase-space.-distribution-function",
+    "title": "Statistical Physics",
+    "section": "Lecture 3. Phase Space. Distribution Function",
+    "text": "Lecture 3. Phase Space. Distribution Function\n\nPhase space concept. Ensemble and time averages. Distribution function over microstates. Ergodic and quasi-ergodic hypotheses.\nLiouville theorem. Properties of the distribution function.\nFeatures of quantum systems:\n\nwave–particle duality;\ndiscreteness of physical observables;\nindistinguishability of particles, spin, Pauli exclusion principle;\nHeisenberg uncertainty relations;\nstatistical weight (thermodynamic probability), degeneracy."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-4.-gibbs-distributions-for-classical-and-quantum-systems",
+    "href": "teaching/statistical-physics.html#lecture-4.-gibbs-distributions-for-classical-and-quantum-systems",
+    "title": "Statistical Physics",
+    "section": "Lecture 4. Gibbs Distributions for Classical and Quantum Systems",
+    "text": "Lecture 4. Gibbs Distributions for Classical and Quantum Systems\n\nDefinition and properties of the Dirac delta function and its applications.\nMicrocanonical Gibbs distribution.\nCanonical Gibbs distribution. Partition function and statistical integral.\nGrand canonical Gibbs distribution.\nRelation between partition function and statistical integral. Physical meaning and properties of the canonical distribution."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-5.-maxwell-and-boltzmann-distributions",
+    "href": "teaching/statistical-physics.html#lecture-5.-maxwell-and-boltzmann-distributions",
+    "title": "Statistical Physics",
+    "section": "Lecture 5. Maxwell and Boltzmann Distributions",
+    "text": "Lecture 5. Maxwell and Boltzmann Distributions\n\nGeneral Maxwell–Boltzmann distribution.\nBoltzmann distribution in an external potential. Barometric formula. Maxwell distribution of molecular speeds.\nMaxwell distribution of velocity components.\nMean molecular speed.\nRoot-mean-square molecular speed.\nMost probable molecular speed."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-6.-applications-of-maxwell-and-boltzmann-distributions",
+    "href": "teaching/statistical-physics.html#lecture-6.-applications-of-maxwell-and-boltzmann-distributions",
+    "title": "Statistical Physics",
+    "section": "Lecture 6. Applications of Maxwell and Boltzmann Distributions",
+    "text": "Lecture 6. Applications of Maxwell and Boltzmann Distributions\n\nMolecular flux to a surface. Gas pressure.\nThermionic emission. Richardson equation.\nContact potential difference: metal–metal, semiconductor–semiconductor, metal–semiconductor systems.\nDistribution of molecules in a centrifuge.\nPlanetary atmospheres."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-7.-statistical-foundations-of-thermodynamic-laws",
+    "href": "teaching/statistical-physics.html#lecture-7.-statistical-foundations-of-thermodynamic-laws",
+    "title": "Statistical Physics",
+    "section": "Lecture 7. Statistical Foundations of Thermodynamic Laws",
+    "text": "Lecture 7. Statistical Foundations of Thermodynamic Laws\n\nPhenomenological and statistical thermodynamics. Internal energy of a macroscopic system.\nQuasistatic processes. External parameters. Work and heat from the statistical point of view. First law of thermodynamics.\nEntropy in statistical physics. Gibbs theorem. Entropy of nonequilibrium systems. Entropy increase law. Second law of thermodynamics.\nStatistical interpretation of the second law of thermodynamics.\nStatistical foundation of the third law of thermodynamics."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-8.-thermodynamic-potentials",
+    "href": "teaching/statistical-physics.html#lecture-8.-thermodynamic-potentials",
+    "title": "Statistical Physics",
+    "section": "Lecture 8. Thermodynamic Potentials",
+    "text": "Lecture 8. Thermodynamic Potentials\n\nLiquid–vapor phase transition.\nMethod of thermodynamic potentials. Internal energy, free energy, chemical potential, grand potential.\nCalculation of pressure, volume, temperature, entropy. First and second groups of Maxwell relations.\nFundamental thermodynamic equation for systems with variable particle number.\nStatistical calculation of thermodynamic potentials."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-9.-thermodynamic-properties-of-classical-ideal-gases",
+    "href": "teaching/statistical-physics.html#lecture-9.-thermodynamic-properties-of-classical-ideal-gases",
+    "title": "Statistical Physics",
+    "section": "Lecture 9. Thermodynamic Properties of Classical Ideal Gases",
+    "text": "Lecture 9. Thermodynamic Properties of Classical Ideal Gases\n\nEquipartition theorem.\nClassical theory of heat capacity of ideal gases.\nQuantum theory of heat capacity of ideal gases."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-10.-interacting-particle-systems.-quantum-statistics",
+    "href": "teaching/statistical-physics.html#lecture-10.-interacting-particle-systems.-quantum-statistics",
+    "title": "Statistical Physics",
+    "section": "Lecture 10. Interacting Particle Systems. Quantum Statistics",
+    "text": "Lecture 10. Interacting Particle Systems. Quantum Statistics\n\nDistribution of particles over quantum states. Grand potential of a quantum state and macroscopic system.\nMaxwell–Boltzmann statistics.\nFermi–Dirac statistics.\nBose–Einstein statistics.\nDegenerate and non-degenerate systems. Degeneracy temperature."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-11.-applications-of-fermidirac-statistics-to-electron-systems",
+    "href": "teaching/statistical-physics.html#lecture-11.-applications-of-fermidirac-statistics-to-electron-systems",
+    "title": "Statistical Physics",
+    "section": "Lecture 11. Applications of Fermi–Dirac Statistics to Electron Systems",
+    "text": "Lecture 11. Applications of Fermi–Dirac Statistics to Electron Systems\n\nDegenerate electron gas. Density of states. Fermi energy and Fermi temperature.\nInternal energy of an electron gas at absolute zero and its temperature dependence.\nHeat capacity of an electron gas in metals at constant volume."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-12.-applications-of-boseeinstein-statistics-to-boson-systems",
+    "href": "teaching/statistical-physics.html#lecture-12.-applications-of-boseeinstein-statistics-to-boson-systems",
+    "title": "Statistical Physics",
+    "section": "Lecture 12. Applications of Bose–Einstein Statistics to Boson Systems",
+    "text": "Lecture 12. Applications of Bose–Einstein Statistics to Boson Systems\n\nTheory of real gases. Van der Waals equation. Van der Waals isotherms. Critical parameters.\nBose gas:\n\nmassive bosons and Bose–Einstein condensation;\nphotons as massless bosons. Theory of thermal radiation."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-13.-fluctuation-theory",
+    "href": "teaching/statistical-physics.html#lecture-13.-fluctuation-theory",
+    "title": "Statistical Physics",
+    "section": "Lecture 13. Fluctuation Theory",
+    "text": "Lecture 13. Fluctuation Theory\n\nFluctuations. Mean square fluctuations. Gaussian distribution of fluctuations.\nFluctuations of volume, particle number, and density.\nFluctuations of internal energy and temperature.\nElectrical fluctuations. Shot noise and Johnson–Nyquist thermal noise."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-14.-boltzmann-kinetic-equation",
+    "href": "teaching/statistical-physics.html#lecture-14.-boltzmann-kinetic-equation",
+    "title": "Statistical Physics",
+    "section": "Lecture 14. Boltzmann Kinetic Equation",
+    "text": "Lecture 14. Boltzmann Kinetic Equation\n\nNonequilibrium states. Nonequilibrium distribution function.\nBoltzmann equation as a consequence of the Liouville theorem.\nCollision integral.\nRelaxation time approximation.\nTransport phenomena described by the Boltzmann equation."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-15.-transport-phenomena",
+    "href": "teaching/statistical-physics.html#lecture-15.-transport-phenomena",
+    "title": "Statistical Physics",
+    "section": "Lecture 15. Transport Phenomena",
+    "text": "Lecture 15. Transport Phenomena\n\nMean free path. Effective cross section.\nAttenuation of molecular beams in gases.\nViscosity and thermal conductivity of gases.\nSelf-diffusion in gases.\nRarefied gas phenomena. Effusion."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-16.-systems-with-variable-particle-number.-chemical-potential",
+    "href": "teaching/statistical-physics.html#lecture-16.-systems-with-variable-particle-number.-chemical-potential",
+    "title": "Statistical Physics",
+    "section": "Lecture 16. Systems with Variable Particle Number. Chemical Potential",
+    "text": "Lecture 16. Systems with Variable Particle Number. Chemical Potential\n\nDefinition of chemical potential via thermodynamic potentials.\nEntropy increase in equilibration processes. Extremal properties of thermodynamic functions.\nThermodynamic inequalities."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecture-17.-theory-of-phase-transitions",
+    "href": "teaching/statistical-physics.html#lecture-17.-theory-of-phase-transitions",
+    "title": "Statistical Physics",
+    "section": "Lecture 17. Theory of Phase Transitions",
+    "text": "Lecture 17. Theory of Phase Transitions\n\nPhase concept. Phase equilibrium. First-order phase transitions.\nTriple point. Superheating and supercooling.\nSecond-order phase transitions.\nMulticomponent systems. Gibbs phase rule.\nChemical equilibrium in homogeneous systems. Law of mass action."
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#lecturehoursliterature-correspondence",
+    "href": "teaching/statistical-physics.html#lecturehoursliterature-correspondence",
+    "title": "Statistical Physics",
+    "section": "Lecture–Hours–Literature Correspondence",
+    "text": "Lecture–Hours–Literature Correspondence\n\n\n\nLecture\nTopic (Short Title)\nHours\nRecommended Literature\n\n\n\n\n1\nAnalytical Mechanics Basics\n2\nLandau & Lifshitz, Vol. 1\n\n\n2\nLagrange and Hamilton Formalism\n2\nGoldstein\n\n\n3\nPhase Space and Distribution\n2\nHuang\n\n\n4\nGibbs Ensembles\n2\nLandau & Lifshitz, Vol. 5\n\n\n5\nMaxwell–Boltzmann Statistics\n2\nReif\n\n\n6\nApplications of MB Statistics\n2\nReif\n\n\n7\nLaws of Thermodynamics\n2\nCallen\n\n\n8\nThermodynamic Potentials\n2\nLandau & Lifshitz, Vol. 5\n\n\n9\nIdeal Gases\n2\nHuang\n\n\n10\nQuantum Statistics\n2\nPathria & Beale\n\n\n11\nElectron Gas\n2\nAshcroft & Mermin\n\n\n12\nBose Systems\n2\nPathria & Beale\n\n\n13\nFluctuations\n2\nLandau & Lifshitz, Vol. 5\n\n\n14\nBoltzmann Equation\n2\nChapman & Cowling\n\n\n15\nTransport Phenomena\n2\nReif\n\n\n16\nChemical Potential\n2\nCallen\n\n\n17\nPhase Transitions\n2\nStanley"
+  },
+  {
+    "objectID": "teaching/statistical-physics.html#main-references",
+    "href": "teaching/statistical-physics.html#main-references",
+    "title": "Statistical Physics",
+    "section": "Main References",
+    "text": "Main References\n\nL.D. Landau, E.M. Lifshitz, Statistical Physics\nR.K. Pathria, P.D. Beale, Statistical Mechanics\nF. Reif, Fundamentals of Statistical and Thermal Physics\nK. Huang, Statistical Mechanics\nH.B. Callen, Thermodynamics and an Introduction to Thermostatistics\nN.W. Ashcroft, N.D. Mermin, Solid State Physics"
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-topics-and-questions",
+    "href": "teaching/solid-state-physics.html#lecture-topics-and-questions",
+    "title": "Solid State Physics",
+    "section": "Lecture Topics and Questions",
+    "text": "Lecture Topics and Questions"
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry",
+    "href": "teaching/solid-state-physics.html#lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry",
+    "title": "Solid State Physics",
+    "section": "Lecture 1. Introduction to Solid State Physics. Crystal Lattice Geometry",
+    "text": "Lecture 1. Introduction to Solid State Physics. Crystal Lattice Geometry\n\nSubject, experimental and theoretical methods of solid state physics. Role of solid state physics in modern physical science.\nCrystalline and amorphous solids. Types of crystal lattices: Bravais lattice and lattice with a basis. Unit cell.\nBravais lattices.\nIndices of lattice points, crystallographic directions and planes. Miller indices."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice",
+    "href": "teaching/solid-state-physics.html#lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice",
+    "title": "Solid State Physics",
+    "section": "Lecture 2. Wave Propagation in Periodic Structures. Reciprocal Lattice",
+    "text": "Lecture 2. Wave Propagation in Periodic Structures. Reciprocal Lattice\n\nDiffraction as the primary method for crystal structure determination. Wulff–Bragg law.\nLaue equations.\nReciprocal lattice and its properties.\nEwald construction.\nBrillouin zones."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects",
+    "href": "teaching/solid-state-physics.html#lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects",
+    "title": "Solid State Physics",
+    "section": "Lecture 3. Types of Chemical Bonding in Crystals. Crystal Defects",
+    "text": "Lecture 3. Types of Chemical Bonding in Crystals. Crystal Defects\n\nGeneral characteristics of chemical bonding in solids:\n\nionic bonding;\ncovalent bonding;\nmetallic bonding;\nmolecular (van der Waals) bonding;\nhydrogen bonding.\n\nCrystal defects:\n\npoint defects: Frenkel and Schottky defects;\nline defects (dislocations);\nsurface defects;\nvolume defects."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals",
+    "href": "teaching/solid-state-physics.html#lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals",
+    "title": "Solid State Physics",
+    "section": "Lecture 4. Approximate Methods for Solving the Schrödinger Equation in Crystals",
+    "text": "Lecture 4. Approximate Methods for Solving the Schrödinger Equation in Crystals\n\nSchrödinger equation for electrons in a crystal.\nAdiabatic approximation. Valence approximation.\nHartree–Fock self-consistent field method (single-electron approximation).\nBloch theorem.\nQualitative analysis of the electronic energy spectrum. Formation of energy bands.\nTight-binding approximation. Band formation and bandwidths for SC, BCC, and FCC lattices."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-5.-kronigpenney-model.-band-filling",
+    "href": "teaching/solid-state-physics.html#lecture-5.-kronigpenney-model.-band-filling",
+    "title": "Solid State Physics",
+    "section": "Lecture 5. Kronig–Penney Model. Band Filling",
+    "text": "Lecture 5. Kronig–Penney Model. Band Filling\n\nSchrödinger equation with the periodic Kronig–Penney potential.\nAnalysis of solutions:\n\nweak electron–atom interaction;\nstrong electron–atom interaction.\n\nFilling of energy bands in mono-, di-, and multivalent materials. Conductors, semiconductors, and insulators."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles",
+    "href": "teaching/solid-state-physics.html#lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles",
+    "title": "Solid State Physics",
+    "section": "Lecture 6. Normal Vibrations of the Crystal Lattice. Quasiparticles",
+    "text": "Lecture 6. Normal Vibrations of the Crystal Lattice. Quasiparticles\n\nLattice vibrations. Harmonic and anharmonic effects. Phonons.\nQuasiparticle method in solid state physics. Examples of quasiparticles. Comparison between quasiparticles and real particles.\nAcoustic and optical vibrations:\n\none-dimensional monatomic lattice;\none-dimensional diatomic lattice.\n\nAnharmonicity and thermal expansion."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-7.-phonon-density-of-states.-lattice-heat-capacity",
+    "href": "teaching/solid-state-physics.html#lecture-7.-phonon-density-of-states.-lattice-heat-capacity",
+    "title": "Solid State Physics",
+    "section": "Lecture 7. Phonon Density of States. Lattice Heat Capacity",
+    "text": "Lecture 7. Phonon Density of States. Lattice Heat Capacity\n\nPhonon density of states. Debye frequency and Debye temperature.\nExperimental data and classical theory of lattice heat capacity.\nEinstein theory of lattice heat capacity.\nDebye theory of lattice heat capacity.\nElectronic heat capacity."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation",
+    "href": "teaching/solid-state-physics.html#lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation",
+    "title": "Solid State Physics",
+    "section": "Lecture 8. Electron Gas in Metals. Effective Mass. Boltzmann Equation",
+    "text": "Lecture 8. Electron Gas in Metals. Effective Mass. Boltzmann Equation\n\nMaxwell–Boltzmann, Fermi–Dirac, and Bose–Einstein statistics for a gas of quasiparticles.\nChemical potential, Fermi energy, and Fermi level in metals.\nElectron as a quasiparticle. Effective mass and methods of its determination.\nBoltzmann kinetic equation for electrons in metals."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-9.-electrical-conductivity-of-metals.-ohms-law",
+    "href": "teaching/solid-state-physics.html#lecture-9.-electrical-conductivity-of-metals.-ohms-law",
+    "title": "Solid State Physics",
+    "section": "Lecture 9. Electrical Conductivity of Metals. Ohm’s Law",
+    "text": "Lecture 9. Electrical Conductivity of Metals. Ohm’s Law\n\nBasic concepts of the classical theory of electrical conductivity in metals.\nBoltzmann equation in the relaxation-time approximation.\nOhm’s law and its analysis.\nComparison of experimental and theoretical results:\n\nBloch–Grüneisen law;\nelectron–phonon and electron–electron scattering; Matthiessen’s rule;\nKondo effect;\nelectron–magnon scattering."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-10.-thermal-conductivity-of-metals",
+    "href": "teaching/solid-state-physics.html#lecture-10.-thermal-conductivity-of-metals",
+    "title": "Solid State Physics",
+    "section": "Lecture 10. Thermal Conductivity of Metals",
+    "text": "Lecture 10. Thermal Conductivity of Metals"
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-11.-classification-of-semiconductors.-carrier-statistics",
+    "href": "teaching/solid-state-physics.html#lecture-11.-classification-of-semiconductors.-carrier-statistics",
+    "title": "Solid State Physics",
+    "section": "Lecture 11. Classification of Semiconductors. Carrier Statistics",
+    "text": "Lecture 11. Classification of Semiconductors. Carrier Statistics\n\nGeneral characteristics of semiconductors.\nIntrinsic and extrinsic semiconductors.\nDegeneracy. Degenerate and non-degenerate semiconductors.\nEquilibrium carrier concentration in intrinsic semiconductors. Generalized carrier statistics.\nEquilibrium carrier concentration in doped semiconductors.\nTemperature dependence of the chemical potential in intrinsic and extrinsic semiconductors."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect",
+    "href": "teaching/solid-state-physics.html#lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect",
+    "title": "Solid State Physics",
+    "section": "Lecture 12. Electrical Conductivity of Semiconductors. Hall Effect",
+    "text": "Lecture 12. Electrical Conductivity of Semiconductors. Hall Effect\n\nElectrical conductivity of intrinsic semiconductors.\nElectrical conductivity of doped semiconductors.\nDetermination of the energy band gap.\nHall effect:\n\nin metals;\nin semiconductors."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-13.-contact-and-thermoelectric-phenomena",
+    "href": "teaching/solid-state-physics.html#lecture-13.-contact-and-thermoelectric-phenomena",
+    "title": "Solid State Physics",
+    "section": "Lecture 13. Contact and Thermoelectric Phenomena",
+    "text": "Lecture 13. Contact and Thermoelectric Phenomena\n\nMetal–metal contact.\nMetal–semiconductor contact.\np–n junction.\nRectification of electric current.\nThermoelectric effects."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-14.-diamagnetism-and-paramagnetism",
+    "href": "teaching/solid-state-physics.html#lecture-14.-diamagnetism-and-paramagnetism",
+    "title": "Solid State Physics",
+    "section": "Lecture 14. Diamagnetism and Paramagnetism",
+    "text": "Lecture 14. Diamagnetism and Paramagnetism\n\nGeneral properties of magnetic materials. Curie and Néel temperatures.\nElementary theory of diamagnetism.\nClassical Langevin theory of paramagnetism.\nPauli paramagnetism and Landau diamagnetism."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-15.-theories-of-ferromagnetism",
+    "href": "teaching/solid-state-physics.html#lecture-15.-theories-of-ferromagnetism",
+    "title": "Solid State Physics",
+    "section": "Lecture 15. Theories of Ferromagnetism",
+    "text": "Lecture 15. Theories of Ferromagnetism\n\nWeiss theory of ferromagnetism.\nThermodynamic (Landau) theory of ferromagnetism.\nExchange interaction in strongly magnetic materials."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-16.-superconductivity.-bcs-theory",
+    "href": "teaching/solid-state-physics.html#lecture-16.-superconductivity.-bcs-theory",
+    "title": "Solid State Physics",
+    "section": "Lecture 16. Superconductivity. BCS Theory",
+    "text": "Lecture 16. Superconductivity. BCS Theory\n\nSuperconductivity phenomenon. Critical temperature.\nMeissner effect.\nFormation of Cooper pairs. Microscopic origin of superconductivity."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecture-17.-experimental-methods-in-solid-state-physics",
+    "href": "teaching/solid-state-physics.html#lecture-17.-experimental-methods-in-solid-state-physics",
+    "title": "Solid State Physics",
+    "section": "Lecture 17. Experimental Methods in Solid State Physics",
+    "text": "Lecture 17. Experimental Methods in Solid State Physics\n\nInvestigation of crystal structure, elemental and phase composition.\nStudy of electronic structure and magnetic properties of crystals."
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#lecturehoursliterature-correspondence",
+    "href": "teaching/solid-state-physics.html#lecturehoursliterature-correspondence",
+    "title": "Solid State Physics",
+    "section": "Lecture–Hours–Literature Correspondence",
+    "text": "Lecture–Hours–Literature Correspondence\n\n\n\nLecture\nTopic (Short Title)\nHours\nRecommended Literature\n\n\n\n\n1\nCrystal Lattice Geometry\n2\nKittel\n\n\n2\nReciprocal Lattice and Diffraction\n2\nAshcroft & Mermin\n\n\n3\nChemical Bonding and Defects\n2\nKittel\n\n\n4\nBand Theory Fundamentals\n2\nAshcroft & Mermin\n\n\n5\nKronig–Penney Model\n2\nKittel\n\n\n6\nLattice Vibrations\n2\nKittel\n\n\n7\nHeat Capacity of Solids\n2\nKittel\n\n\n8\nElectron Gas in Metals\n2\nAshcroft & Mermin\n\n\n9\nElectrical Conductivity\n2\nZiman\n\n\n10\nThermal Conductivity\n2\nZiman\n\n\n11\nSemiconductor Statistics\n2\nSze\n\n\n12\nHall Effect\n2\nAshcroft & Mermin\n\n\n13\nContacts and Thermoelectricity\n2\nSze\n\n\n14\nDia- and Paramagnetism\n2\nKittel\n\n\n15\nFerromagnetism\n2\nKittel\n\n\n16\nSuperconductivity\n2\nTinkham\n\n\n17\nExperimental Methods\n2\nCullity"
+  },
+  {
+    "objectID": "teaching/solid-state-physics.html#main-references",
+    "href": "teaching/solid-state-physics.html#main-references",
+    "title": "Solid State Physics",
+    "section": "Main References",
+    "text": "Main References\n\nC. Kittel, Introduction to Solid State Physics\nN.W. Ashcroft, N.D. Mermin, Solid State Physics\nJ.M. Ziman, Electrons and Phonons\nS.M. Sze, Physics of Semiconductor Devices\nM. Tinkham, Introduction to Superconductivity\nB.D. Cullity, Elements of X-Ray Diffraction"
+  },
+  {
+    "objectID": "posts/2025-03-16-academia-to-industry/index.html",
+    "href": "posts/2025-03-16-academia-to-industry/index.html",
+    "title": "MD simulation",
+    "section": "",
+    "text": "In the MD simulation procedure there are several limitations, approximations, and parameters that define the accuracy of the obtained results. Among the most important ones are the interatomic interaction potential, simulation time-step, total simulation time, initial conditions, etc. Hence, the first important task in MD simulations is to prepare a model system for further study. In Table Table 1 we collect the main parameters used for simulations of atomic displacements in cascades and for studying defect structure evolution in \\(\\alpha\\)-Zr crystals subjected to irradiation.\n\n\n\nTable 1: Simulation parameters\n\n\n\n\n\n\n\n\n\nParameter\nValue\n\n\n\n\nSimulation box size, Å\n\\(163.1 \\times 169.498 \\times 159.805\\)\n\n\nNumber of atoms \\(N\\)\n180 000\n\n\nBoundary conditions along X, Y, Z axes\nperiodic, periodic, periodic\n\n\nCrystal temperature \\(T\\), K\n300, 400, 500\n\n\nPrimary knock-on atom (PKA) energy \\(E_{pka}\\), keV\n2, 6, 10\n\n\nPKA moving direction\n\\(\\langle 0001 \\rangle\\), \\(\\langle 01\\overline{1}0 \\rangle\\)\n\n\nThermostat parameter \\(\\langle \\tau \\rangle\\), ps\n0.2\n\n\nTime step \\(\\Delta t\\), fs\n\\(0.1 \\div 1\\)\n\n\nTotal simulation time \\(t\\), ps\n610\n\n\n\n\n\n\nIn cascade studies it is important that the maximal size of a cascade is smaller than the size of the simulated crystal. Hence, the linear size of the model can be varied with changes in the energy of the bombarding particle, which affects the maximal cascade size. The most important parameters for our MD simulations are the thermostat parameter \\(\\langle \\tau \\rangle\\) and the simulation time-step \\(\\Delta t = 0.1 \\div 1~\\text{fs}\\).\nThe thermostat parameter \\(\\langle \\tau \\rangle\\) is the mean time over which energy exchange between the system and the thermostat occurs. Since energy in the crystal is transferred from atom to atom, the mean time for energy exchange between two atoms or between an atom and the thermostat is determined by the mean period of atomic oscillations. Thus, the quantity \\(\\langle \\tau \\rangle\\) corresponds to the mean period of atomic oscillations in the crystal.\nThe simulation time-step \\(\\Delta t\\) must be much smaller than \\(\\langle \\tau \\rangle\\) to ensure accurate tracking of atomic positions. In our computations, two values of the simulation time-step were used. The minimal value was chosen as \\(\\langle \\tau \\rangle / 2000\\), which gives \\(\\Delta t = 0.1~\\text{fs}\\). This value was used during cascade development, when a large number of atoms attain high kinetic energies. The maximal time-step was fixed as \\(\\Delta t = 1~\\text{fs}\\) (\\(\\langle \\tau \\rangle / 200\\)) and was used before cascade initiation and after its relaxation.\nThe value of \\(\\langle \\tau \\rangle\\) can be obtained within the harmonic approximation. It is known that atoms in a crystal oscillate with frequencies \\(\\omega\\) ranging from zero to the Debye frequency \\(\\omega_D\\). The corresponding distribution function \\(g(\\omega)\\) satisfies the relation [@MD:Kittel]:\n\\[\ng(\\omega) = \\frac{dz}{d\\omega} = \\frac{9N\\omega^2}{\\omega_{\\text{max}}^3}.\n\\tag{1}\\]\nRewriting Eq. Equation 1, one obtains the distribution function over the oscillation period:\n\\[\ng(\\tau) = \\frac{72N\\pi^3}{\\omega_{\\text{max}}^3 \\tau^4}.\n\\]\nTaking into account that the total number of elastic waves generated by atoms in the crystal equals \\(3N\\), the mean period of atomic oscillations can be written as\n\\[\n\\langle \\tau \\rangle =\n\\int\\limits_{2\\pi / \\omega_{\\text{max}}}^{\\infty}\n\\frac{24\\pi^3}{\\omega_{\\text{max}}^3 \\tau^3} \\, d\\tau\n= \\frac{3\\pi}{\\omega_{\\text{max}}}\n= \\frac{3\\pi\\hbar}{kT_D}\n\\simeq 0.2~\\text{ps}.\n\\tag{2}\\]\nUsing experimental data for the Debye temperature \\(T_D = 291~\\text{K}\\) for pure \\(\\alpha\\)-Zr and the relation \\(\\omega_D = kT_D / \\hbar\\), where \\(k\\) and \\(\\hbar\\) are the Boltzmann and Planck constants, respectively, the mean period of atomic oscillations is found to be \\(\\langle \\tau \\rangle = 0.2~\\text{ps}\\)."
+  },
+  {
+    "objectID": "posts/2025-03-16-academia-to-industry/index.html#the-calculation-of-parameters-for-process-simulations-in-alpha-zr-crystals-using-molecular-dynamics",
+    "href": "posts/2025-03-16-academia-to-industry/index.html#the-calculation-of-parameters-for-process-simulations-in-alpha-zr-crystals-using-molecular-dynamics",
+    "title": "MD simulation",
+    "section": "",
+    "text": "In the MD simulation procedure there are several limitations, approximations, and parameters that define the accuracy of the obtained results. Among the most important ones are the interatomic interaction potential, simulation time-step, total simulation time, initial conditions, etc. Hence, the first important task in MD simulations is to prepare a model system for further study. In Table Table 1 we collect the main parameters used for simulations of atomic displacements in cascades and for studying defect structure evolution in \\(\\alpha\\)-Zr crystals subjected to irradiation.\n\n\n\nTable 1: Simulation parameters\n\n\n\n\n\n\n\n\n\nParameter\nValue\n\n\n\n\nSimulation box size, Å\n\\(163.1 \\times 169.498 \\times 159.805\\)\n\n\nNumber of atoms \\(N\\)\n180 000\n\n\nBoundary conditions along X, Y, Z axes\nperiodic, periodic, periodic\n\n\nCrystal temperature \\(T\\), K\n300, 400, 500\n\n\nPrimary knock-on atom (PKA) energy \\(E_{pka}\\), keV\n2, 6, 10\n\n\nPKA moving direction\n\\(\\langle 0001 \\rangle\\), \\(\\langle 01\\overline{1}0 \\rangle\\)\n\n\nThermostat parameter \\(\\langle \\tau \\rangle\\), ps\n0.2\n\n\nTime step \\(\\Delta t\\), fs\n\\(0.1 \\div 1\\)\n\n\nTotal simulation time \\(t\\), ps\n610\n\n\n\n\n\n\nIn cascade studies it is important that the maximal size of a cascade is smaller than the size of the simulated crystal. Hence, the linear size of the model can be varied with changes in the energy of the bombarding particle, which affects the maximal cascade size. The most important parameters for our MD simulations are the thermostat parameter \\(\\langle \\tau \\rangle\\) and the simulation time-step \\(\\Delta t = 0.1 \\div 1~\\text{fs}\\).\nThe thermostat parameter \\(\\langle \\tau \\rangle\\) is the mean time over which energy exchange between the system and the thermostat occurs. Since energy in the crystal is transferred from atom to atom, the mean time for energy exchange between two atoms or between an atom and the thermostat is determined by the mean period of atomic oscillations. Thus, the quantity \\(\\langle \\tau \\rangle\\) corresponds to the mean period of atomic oscillations in the crystal.\nThe simulation time-step \\(\\Delta t\\) must be much smaller than \\(\\langle \\tau \\rangle\\) to ensure accurate tracking of atomic positions. In our computations, two values of the simulation time-step were used. The minimal value was chosen as \\(\\langle \\tau \\rangle / 2000\\), which gives \\(\\Delta t = 0.1~\\text{fs}\\). This value was used during cascade development, when a large number of atoms attain high kinetic energies. The maximal time-step was fixed as \\(\\Delta t = 1~\\text{fs}\\) (\\(\\langle \\tau \\rangle / 200\\)) and was used before cascade initiation and after its relaxation.\nThe value of \\(\\langle \\tau \\rangle\\) can be obtained within the harmonic approximation. It is known that atoms in a crystal oscillate with frequencies \\(\\omega\\) ranging from zero to the Debye frequency \\(\\omega_D\\). The corresponding distribution function \\(g(\\omega)\\) satisfies the relation [@MD:Kittel]:\n\\[\ng(\\omega) = \\frac{dz}{d\\omega} = \\frac{9N\\omega^2}{\\omega_{\\text{max}}^3}.\n\\tag{1}\\]\nRewriting Eq. Equation 1, one obtains the distribution function over the oscillation period:\n\\[\ng(\\tau) = \\frac{72N\\pi^3}{\\omega_{\\text{max}}^3 \\tau^4}.\n\\]\nTaking into account that the total number of elastic waves generated by atoms in the crystal equals \\(3N\\), the mean period of atomic oscillations can be written as\n\\[\n\\langle \\tau \\rangle =\n\\int\\limits_{2\\pi / \\omega_{\\text{max}}}^{\\infty}\n\\frac{24\\pi^3}{\\omega_{\\text{max}}^3 \\tau^3} \\, d\\tau\n= \\frac{3\\pi}{\\omega_{\\text{max}}}\n= \\frac{3\\pi\\hbar}{kT_D}\n\\simeq 0.2~\\text{ps}.\n\\tag{2}\\]\nUsing experimental data for the Debye temperature \\(T_D = 291~\\text{K}\\) for pure \\(\\alpha\\)-Zr and the relation \\(\\omega_D = kT_D / \\hbar\\), where \\(k\\) and \\(\\hbar\\) are the Boltzmann and Planck constants, respectively, the mean period of atomic oscillations is found to be \\(\\langle \\tau \\rangle = 0.2~\\text{ps}\\)."
+  }
+]
