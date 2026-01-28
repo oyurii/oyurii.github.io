@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Physics – Yurii Ovcharenko</title>
+<title>Solid State Physics – Yurii Ovcharenko</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,14 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0f9d2414e414287152aca3c09d00ab0c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c462e89d5b149865bbee2eee3df2c807.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0f9d2414e414287152aca3c09d00ab0c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -330,40 +330,47 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#course-description" id="toc-course-description" class="nav-link active" data-scroll-target="#course-description">Course Description</a></li>
-  <li><a href="#part-1.-fundamental-principles-of-statistical-physics" id="toc-part-1.-fundamental-principles-of-statistical-physics" class="nav-link" data-scroll-target="#part-1.-fundamental-principles-of-statistical-physics">Part 1. Fundamental Principles of Statistical Physics</a>
+  <li><a href="#lecture-topics-and-questions" id="toc-lecture-topics-and-questions" class="nav-link" data-scroll-target="#lecture-topics-and-questions">Lecture Topics and Questions</a></li>
+  <li><a href="#part-1.-crystal-lattice-geometry" id="toc-part-1.-crystal-lattice-geometry" class="nav-link" data-scroll-target="#part-1.-crystal-lattice-geometry">Part 1. Crystal Lattice Geometry</a>
   <ul>
-  <li><a href="#lecture-1.-introduction.-methods-of-analytical-mechanics" id="toc-lecture-1.-introduction.-methods-of-analytical-mechanics" class="nav-link" data-scroll-target="#lecture-1.-introduction.-methods-of-analytical-mechanics">Lecture 1. Introduction. Methods of Analytical Mechanics</a></li>
-  <li><a href="#lecture-2.-lagrange-and-hamilton-equations-for-particle-systems" id="toc-lecture-2.-lagrange-and-hamilton-equations-for-particle-systems" class="nav-link" data-scroll-target="#lecture-2.-lagrange-and-hamilton-equations-for-particle-systems">Lecture 2. Lagrange and Hamilton Equations for Particle Systems</a></li>
-  <li><a href="#lecture-3.-phase-space.-distribution-function" id="toc-lecture-3.-phase-space.-distribution-function" class="nav-link" data-scroll-target="#lecture-3.-phase-space.-distribution-function">Lecture 3. Phase Space. Distribution Function</a></li>
-  <li><a href="#lecture-4.-gibbs-distributions-for-classical-and-quantum-systems" id="toc-lecture-4.-gibbs-distributions-for-classical-and-quantum-systems" class="nav-link" data-scroll-target="#lecture-4.-gibbs-distributions-for-classical-and-quantum-systems">Lecture 4. Gibbs Distributions for Classical and Quantum Systems</a></li>
+  <li><a href="#lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry" id="toc-lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry" class="nav-link" data-scroll-target="#lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry">Lecture 1. Introduction to Solid State Physics. Crystal Lattice Geometry</a></li>
+  <li><a href="#lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice" id="toc-lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice" class="nav-link" data-scroll-target="#lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice">Lecture 2. Wave Propagation in Periodic Structures. Reciprocal Lattice</a></li>
+  <li><a href="#lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects" id="toc-lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects" class="nav-link" data-scroll-target="#lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects">Lecture 3. Types of Chemical Bonding in Crystals. Crystal Defects</a></li>
   </ul></li>
-  <li><a href="#part-2.-statistical-distributions-for-ideal-gases" id="toc-part-2.-statistical-distributions-for-ideal-gases" class="nav-link" data-scroll-target="#part-2.-statistical-distributions-for-ideal-gases">Part 2. Statistical Distributions for Ideal Gases</a>
+  <li><a href="#part-2.-band-theory-of-solids" id="toc-part-2.-band-theory-of-solids" class="nav-link" data-scroll-target="#part-2.-band-theory-of-solids">Part 2. Band Theory of Solids</a>
   <ul>
-  <li><a href="#lecture-5.-maxwell-and-boltzmann-distributions" id="toc-lecture-5.-maxwell-and-boltzmann-distributions" class="nav-link" data-scroll-target="#lecture-5.-maxwell-and-boltzmann-distributions">Lecture 5. Maxwell and Boltzmann Distributions</a></li>
-  <li><a href="#lecture-6.-applications-of-maxwell-and-boltzmann-distributions" id="toc-lecture-6.-applications-of-maxwell-and-boltzmann-distributions" class="nav-link" data-scroll-target="#lecture-6.-applications-of-maxwell-and-boltzmann-distributions">Lecture 6. Applications of Maxwell and Boltzmann Distributions</a></li>
+  <li><a href="#lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals" id="toc-lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals" class="nav-link" data-scroll-target="#lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals">Lecture 4. Approximate Methods for Solving the Schrödinger Equation in Crystals</a></li>
+  <li><a href="#lecture-5.-kronigpenney-model.-band-filling" id="toc-lecture-5.-kronigpenney-model.-band-filling" class="nav-link" data-scroll-target="#lecture-5.-kronigpenney-model.-band-filling">Lecture 5. Kronig–Penney Model. Band Filling</a></li>
   </ul></li>
-  <li><a href="#part-3.-foundations-of-statistical-thermodynamics" id="toc-part-3.-foundations-of-statistical-thermodynamics" class="nav-link" data-scroll-target="#part-3.-foundations-of-statistical-thermodynamics">Part 3. Foundations of Statistical Thermodynamics</a>
+  <li><a href="#part-3.-crystal-lattice-dynamics" id="toc-part-3.-crystal-lattice-dynamics" class="nav-link" data-scroll-target="#part-3.-crystal-lattice-dynamics">Part 3. Crystal Lattice Dynamics</a>
   <ul>
-  <li><a href="#lecture-7.-statistical-foundations-of-thermodynamic-laws" id="toc-lecture-7.-statistical-foundations-of-thermodynamic-laws" class="nav-link" data-scroll-target="#lecture-7.-statistical-foundations-of-thermodynamic-laws">Lecture 7. Statistical Foundations of Thermodynamic Laws</a></li>
-  <li><a href="#lecture-8.-thermodynamic-potentials" id="toc-lecture-8.-thermodynamic-potentials" class="nav-link" data-scroll-target="#lecture-8.-thermodynamic-potentials">Lecture 8. Thermodynamic Potentials</a></li>
-  <li><a href="#lecture-9.-thermodynamic-properties-of-classical-ideal-gases" id="toc-lecture-9.-thermodynamic-properties-of-classical-ideal-gases" class="nav-link" data-scroll-target="#lecture-9.-thermodynamic-properties-of-classical-ideal-gases">Lecture 9. Thermodynamic Properties of Classical Ideal Gases</a></li>
-  <li><a href="#lecture-10.-interacting-particle-systems.-quantum-statistics" id="toc-lecture-10.-interacting-particle-systems.-quantum-statistics" class="nav-link" data-scroll-target="#lecture-10.-interacting-particle-systems.-quantum-statistics">Lecture 10. Interacting Particle Systems. Quantum Statistics</a></li>
-  <li><a href="#lecture-11.-applications-of-fermidirac-statistics-to-electron-systems" id="toc-lecture-11.-applications-of-fermidirac-statistics-to-electron-systems" class="nav-link" data-scroll-target="#lecture-11.-applications-of-fermidirac-statistics-to-electron-systems">Lecture 11. Applications of Fermi–Dirac Statistics to Electron Systems</a></li>
-  <li><a href="#lecture-12.-applications-of-boseeinstein-statistics-to-boson-systems" id="toc-lecture-12.-applications-of-boseeinstein-statistics-to-boson-systems" class="nav-link" data-scroll-target="#lecture-12.-applications-of-boseeinstein-statistics-to-boson-systems">Lecture 12. Applications of Bose–Einstein Statistics to Boson Systems</a></li>
+  <li><a href="#lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles" id="toc-lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles" class="nav-link" data-scroll-target="#lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles">Lecture 6. Normal Vibrations of the Crystal Lattice. Quasiparticles</a></li>
+  <li><a href="#lecture-7.-phonon-density-of-states.-lattice-heat-capacity" id="toc-lecture-7.-phonon-density-of-states.-lattice-heat-capacity" class="nav-link" data-scroll-target="#lecture-7.-phonon-density-of-states.-lattice-heat-capacity">Lecture 7. Phonon Density of States. Lattice Heat Capacity</a></li>
   </ul></li>
-  <li><a href="#part-4.-fluctuations" id="toc-part-4.-fluctuations" class="nav-link" data-scroll-target="#part-4.-fluctuations">Part 4. Fluctuations</a>
+  <li><a href="#part-4.-electron-gas-in-metals" id="toc-part-4.-electron-gas-in-metals" class="nav-link" data-scroll-target="#part-4.-electron-gas-in-metals">Part 4. Electron Gas in Metals</a>
   <ul>
-  <li><a href="#lecture-13.-fluctuation-theory" id="toc-lecture-13.-fluctuation-theory" class="nav-link" data-scroll-target="#lecture-13.-fluctuation-theory">Lecture 13. Fluctuation Theory</a></li>
+  <li><a href="#lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation" id="toc-lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation" class="nav-link" data-scroll-target="#lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation">Lecture 8. Electron Gas in Metals. Effective Mass. Boltzmann Equation</a></li>
+  <li><a href="#lecture-9.-electrical-conductivity-of-metals.-ohms-law" id="toc-lecture-9.-electrical-conductivity-of-metals.-ohms-law" class="nav-link" data-scroll-target="#lecture-9.-electrical-conductivity-of-metals.-ohms-law">Lecture 9. Electrical Conductivity of Metals. Ohm’s Law</a></li>
+  <li><a href="#lecture-10.-thermal-conductivity-of-metals" id="toc-lecture-10.-thermal-conductivity-of-metals" class="nav-link" data-scroll-target="#lecture-10.-thermal-conductivity-of-metals">Lecture 10. Thermal Conductivity of Metals</a></li>
   </ul></li>
-  <li><a href="#part-5.-elements-of-physical-kinetics" id="toc-part-5.-elements-of-physical-kinetics" class="nav-link" data-scroll-target="#part-5.-elements-of-physical-kinetics">Part 5. Elements of Physical Kinetics</a>
+  <li><a href="#part-5.-electronic-theory-of-semiconductors" id="toc-part-5.-electronic-theory-of-semiconductors" class="nav-link" data-scroll-target="#part-5.-electronic-theory-of-semiconductors">Part 5. Electronic Theory of Semiconductors</a>
   <ul>
-  <li><a href="#lecture-14.-boltzmann-kinetic-equation" id="toc-lecture-14.-boltzmann-kinetic-equation" class="nav-link" data-scroll-target="#lecture-14.-boltzmann-kinetic-equation">Lecture 14. Boltzmann Kinetic Equation</a></li>
-  <li><a href="#lecture-15.-transport-phenomena" id="toc-lecture-15.-transport-phenomena" class="nav-link" data-scroll-target="#lecture-15.-transport-phenomena">Lecture 15. Transport Phenomena</a></li>
+  <li><a href="#lecture-11.-classification-of-semiconductors.-carrier-statistics" id="toc-lecture-11.-classification-of-semiconductors.-carrier-statistics" class="nav-link" data-scroll-target="#lecture-11.-classification-of-semiconductors.-carrier-statistics">Lecture 11. Classification of Semiconductors. Carrier Statistics</a></li>
+  <li><a href="#lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect" id="toc-lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect" class="nav-link" data-scroll-target="#lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect">Lecture 12. Electrical Conductivity of Semiconductors. Hall Effect</a></li>
+  <li><a href="#lecture-13.-contact-and-thermoelectric-phenomena" id="toc-lecture-13.-contact-and-thermoelectric-phenomena" class="nav-link" data-scroll-target="#lecture-13.-contact-and-thermoelectric-phenomena">Lecture 13. Contact and Thermoelectric Phenomena</a></li>
   </ul></li>
-  <li><a href="#part-6.-variable-particle-systems.-phase-transitions" id="toc-part-6.-variable-particle-systems.-phase-transitions" class="nav-link" data-scroll-target="#part-6.-variable-particle-systems.-phase-transitions">Part 6. Variable-Particle Systems. Phase Transitions</a>
+  <li><a href="#part-6.-microscopic-theories-of-magnetism" id="toc-part-6.-microscopic-theories-of-magnetism" class="nav-link" data-scroll-target="#part-6.-microscopic-theories-of-magnetism">Part 6. Microscopic Theories of Magnetism</a>
   <ul>
-  <li><a href="#lecture-16.-systems-with-variable-particle-number.-chemical-potential" id="toc-lecture-16.-systems-with-variable-particle-number.-chemical-potential" class="nav-link" data-scroll-target="#lecture-16.-systems-with-variable-particle-number.-chemical-potential">Lecture 16. Systems with Variable Particle Number. Chemical Potential</a></li>
-  <li><a href="#lecture-17.-theory-of-phase-transitions" id="toc-lecture-17.-theory-of-phase-transitions" class="nav-link" data-scroll-target="#lecture-17.-theory-of-phase-transitions">Lecture 17. Theory of Phase Transitions</a></li>
+  <li><a href="#lecture-14.-diamagnetism-and-paramagnetism" id="toc-lecture-14.-diamagnetism-and-paramagnetism" class="nav-link" data-scroll-target="#lecture-14.-diamagnetism-and-paramagnetism">Lecture 14. Diamagnetism and Paramagnetism</a></li>
+  <li><a href="#lecture-15.-theories-of-ferromagnetism" id="toc-lecture-15.-theories-of-ferromagnetism" class="nav-link" data-scroll-target="#lecture-15.-theories-of-ferromagnetism">Lecture 15. Theories of Ferromagnetism</a></li>
+  </ul></li>
+  <li><a href="#part-7.-superconductivity" id="toc-part-7.-superconductivity" class="nav-link" data-scroll-target="#part-7.-superconductivity">Part 7. Superconductivity</a>
+  <ul>
+  <li><a href="#lecture-16.-superconductivity.-bcs-theory" id="toc-lecture-16.-superconductivity.-bcs-theory" class="nav-link" data-scroll-target="#lecture-16.-superconductivity.-bcs-theory">Lecture 16. Superconductivity. BCS Theory</a></li>
+  </ul></li>
+  <li><a href="#part-8.-experimental-methods-of-solid-state-physics" id="toc-part-8.-experimental-methods-of-solid-state-physics" class="nav-link" data-scroll-target="#part-8.-experimental-methods-of-solid-state-physics">Part 8. Experimental Methods of Solid State Physics</a>
+  <ul>
+  <li><a href="#lecture-17.-experimental-methods-in-solid-state-physics" id="toc-lecture-17.-experimental-methods-in-solid-state-physics" class="nav-link" data-scroll-target="#lecture-17.-experimental-methods-in-solid-state-physics">Lecture 17. Experimental Methods in Solid State Physics</a></li>
   <li><a href="#lecturehoursliterature-correspondence" id="toc-lecturehoursliterature-correspondence" class="nav-link" data-scroll-target="#lecturehoursliterature-correspondence">Lecture–Hours–Literature Correspondence</a></li>
   <li><a href="#main-references" id="toc-main-references" class="nav-link" data-scroll-target="#main-references">Main References</a></li>
   </ul></li>
@@ -376,7 +383,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Statistical Physics</h1>
+<h1 class="title">Solid State Physics</h1>
 </div>
 
 
@@ -394,201 +401,222 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email" class="level5 access-info">
-<h5 class="anchored" data-anchor-id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email"><strong><em><a href="https://github.com/oyurii/sph-private" target="_blank" rel="noopener noreferrer">Full access</a> to the website materials is granted exclusively to authorized users. For access requests, please contact the site author via email:</em></strong> <a data-email=""></a></h5>
+<h5 class="anchored" data-anchor-id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email"><strong><em><a href="https://github.com/oyurii/ssph-private" target="_blank" rel="noopener noreferrer">Full access</a> to the website materials is granted exclusively to authorized users. For access requests, please contact the site author via email:</em></strong> <a data-email=""></a></h5>
 </section>
 <section id="course-description" class="level3">
 <h3 class="anchored" data-anchor-id="course-description">Course Description</h3>
-<p>This course introduces the fundamental principles of statistical physics and statistical thermodynamics. The course develops the connection between microscopic dynamics and macroscopic thermodynamic behavior, covers Gibbs ensembles, classical and quantum statistics, ideal and interacting systems, fluctuations, kinetic theory, transport phenomena, and phase transitions.</p>
+<p>This course provides a comprehensive introduction to solid state physics. The course focuses on crystal structure, lattice dynamics, electronic band theory, electron transport in metals and semiconductors, magnetism, superconductivity, and experimental methods for studying solids. Special attention is paid to the microscopic physical mechanisms underlying macroscopic properties of solid materials.</p>
 <hr>
 </section>
-<section id="part-1.-fundamental-principles-of-statistical-physics" class="level1">
-<h1>Part 1. Fundamental Principles of Statistical Physics</h1>
-<section id="lecture-1.-introduction.-methods-of-analytical-mechanics" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-1.-introduction.-methods-of-analytical-mechanics">Lecture 1. Introduction. Methods of Analytical Mechanics</h2>
+<section id="lecture-topics-and-questions" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-topics-and-questions">Lecture Topics and Questions</h2>
+</section>
+<section id="part-1.-crystal-lattice-geometry" class="level1">
+<h1>Part 1. Crystal Lattice Geometry</h1>
+<section id="lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry">Lecture 1. Introduction to Solid State Physics. Crystal Lattice Geometry</h2>
 <ol type="1">
-<li>Subject, objectives, methods, and significance of statistical physics.</li>
-<li>Classification of physical systems. Types of interactions between particles.</li>
-<li>Virtual and real displacements. Principle of virtual work (equilibrium condition).</li>
-<li>Generalized coordinates and generalized forces.</li>
-<li>D’Alembert–Lagrange principle of virtual displacements.</li>
+<li>Subject, experimental and theoretical methods of solid state physics. Role of solid state physics in modern physical science.</li>
+<li>Crystalline and amorphous solids. Types of crystal lattices: Bravais lattice and lattice with a basis. Unit cell.</li>
+<li>Bravais lattices.</li>
+<li>Indices of lattice points, crystallographic directions and planes. Miller indices.</li>
 </ol>
 </section>
-<section id="lecture-2.-lagrange-and-hamilton-equations-for-particle-systems" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-2.-lagrange-and-hamilton-equations-for-particle-systems">Lecture 2. Lagrange and Hamilton Equations for Particle Systems</h2>
+<section id="lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice">Lecture 2. Wave Propagation in Periodic Structures. Reciprocal Lattice</h2>
 <ol type="1">
-<li>Lagrange equations of motion.</li>
-<li>Lagrangian function and its relation to energy. Hamiltonian function. Generalized momenta.</li>
-<li>Lagrangian and Hamiltonian variables. Legendre transformation. Hamilton’s (canonical) equations of motion.</li>
+<li>Diffraction as the primary method for crystal structure determination. Wulff–Bragg law.</li>
+<li>Laue equations.</li>
+<li>Reciprocal lattice and its properties.</li>
+<li>Ewald construction.</li>
+<li>Brillouin zones.</li>
 </ol>
 </section>
-<section id="lecture-3.-phase-space.-distribution-function" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-3.-phase-space.-distribution-function">Lecture 3. Phase Space. Distribution Function</h2>
+<section id="lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects">Lecture 3. Types of Chemical Bonding in Crystals. Crystal Defects</h2>
 <ol type="1">
-<li>Phase space concept. Ensemble and time averages. Distribution function over microstates. Ergodic and quasi-ergodic hypotheses.</li>
-<li>Liouville theorem. Properties of the distribution function.</li>
-<li>Features of quantum systems:
+<li>General characteristics of chemical bonding in solids:
 <ul>
-<li>wave–particle duality;</li>
-<li>discreteness of physical observables;</li>
-<li>indistinguishability of particles, spin, Pauli exclusion principle;</li>
-<li>Heisenberg uncertainty relations;</li>
-<li>statistical weight (thermodynamic probability), degeneracy.</li>
+<li>ionic bonding;</li>
+<li>covalent bonding;</li>
+<li>metallic bonding;</li>
+<li>molecular (van der Waals) bonding;</li>
+<li>hydrogen bonding.</li>
 </ul></li>
-</ol>
-</section>
-<section id="lecture-4.-gibbs-distributions-for-classical-and-quantum-systems" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-4.-gibbs-distributions-for-classical-and-quantum-systems">Lecture 4. Gibbs Distributions for Classical and Quantum Systems</h2>
-<ol type="1">
-<li>Definition and properties of the Dirac delta function and its applications.</li>
-<li>Microcanonical Gibbs distribution.</li>
-<li>Canonical Gibbs distribution. Partition function and statistical integral.</li>
-<li>Grand canonical Gibbs distribution.</li>
-<li>Relation between partition function and statistical integral. Physical meaning and properties of the canonical distribution.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-2.-statistical-distributions-for-ideal-gases" class="level1">
-<h1>Part 2. Statistical Distributions for Ideal Gases</h1>
-<section id="lecture-5.-maxwell-and-boltzmann-distributions" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-5.-maxwell-and-boltzmann-distributions">Lecture 5. Maxwell and Boltzmann Distributions</h2>
-<ol type="1">
-<li>General Maxwell–Boltzmann distribution.</li>
-<li>Boltzmann distribution in an external potential. Barometric formula. Maxwell distribution of molecular speeds.</li>
-<li>Maxwell distribution of velocity components.</li>
-<li>Mean molecular speed.</li>
-<li>Root-mean-square molecular speed.</li>
-<li>Most probable molecular speed.</li>
-</ol>
-</section>
-<section id="lecture-6.-applications-of-maxwell-and-boltzmann-distributions" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-6.-applications-of-maxwell-and-boltzmann-distributions">Lecture 6. Applications of Maxwell and Boltzmann Distributions</h2>
-<ol type="1">
-<li>Molecular flux to a surface. Gas pressure.</li>
-<li>Thermionic emission. Richardson equation.</li>
-<li>Contact potential difference: metal–metal, semiconductor–semiconductor, metal–semiconductor systems.</li>
-<li>Distribution of molecules in a centrifuge.</li>
-<li>Planetary atmospheres.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-3.-foundations-of-statistical-thermodynamics" class="level1">
-<h1>Part 3. Foundations of Statistical Thermodynamics</h1>
-<section id="lecture-7.-statistical-foundations-of-thermodynamic-laws" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-7.-statistical-foundations-of-thermodynamic-laws">Lecture 7. Statistical Foundations of Thermodynamic Laws</h2>
-<ol type="1">
-<li>Phenomenological and statistical thermodynamics. Internal energy of a macroscopic system.</li>
-<li>Quasistatic processes. External parameters. Work and heat from the statistical point of view. First law of thermodynamics.</li>
-<li>Entropy in statistical physics. Gibbs theorem. Entropy of nonequilibrium systems. Entropy increase law. Second law of thermodynamics.</li>
-<li>Statistical interpretation of the second law of thermodynamics.</li>
-<li>Statistical foundation of the third law of thermodynamics.</li>
-</ol>
-</section>
-<section id="lecture-8.-thermodynamic-potentials" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-8.-thermodynamic-potentials">Lecture 8. Thermodynamic Potentials</h2>
-<ol type="1">
-<li>Liquid–vapor phase transition.</li>
-<li>Method of thermodynamic potentials. Internal energy, free energy, chemical potential, grand potential.</li>
-<li>Calculation of pressure, volume, temperature, entropy. First and second groups of Maxwell relations.</li>
-<li>Fundamental thermodynamic equation for systems with variable particle number.</li>
-<li>Statistical calculation of thermodynamic potentials.</li>
-</ol>
-</section>
-<section id="lecture-9.-thermodynamic-properties-of-classical-ideal-gases" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-9.-thermodynamic-properties-of-classical-ideal-gases">Lecture 9. Thermodynamic Properties of Classical Ideal Gases</h2>
-<ol type="1">
-<li>Equipartition theorem.</li>
-<li>Classical theory of heat capacity of ideal gases.</li>
-<li>Quantum theory of heat capacity of ideal gases.</li>
-</ol>
-</section>
-<section id="lecture-10.-interacting-particle-systems.-quantum-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-10.-interacting-particle-systems.-quantum-statistics">Lecture 10. Interacting Particle Systems. Quantum Statistics</h2>
-<ol type="1">
-<li>Distribution of particles over quantum states. Grand potential of a quantum state and macroscopic system.</li>
-<li>Maxwell–Boltzmann statistics.</li>
-<li>Fermi–Dirac statistics.</li>
-<li>Bose–Einstein statistics.</li>
-<li>Degenerate and non-degenerate systems. Degeneracy temperature.</li>
-</ol>
-</section>
-<section id="lecture-11.-applications-of-fermidirac-statistics-to-electron-systems" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-11.-applications-of-fermidirac-statistics-to-electron-systems">Lecture 11. Applications of Fermi–Dirac Statistics to Electron Systems</h2>
-<ol type="1">
-<li>Degenerate electron gas. Density of states. Fermi energy and Fermi temperature.</li>
-<li>Internal energy of an electron gas at absolute zero and its temperature dependence.</li>
-<li>Heat capacity of an electron gas in metals at constant volume.</li>
-</ol>
-</section>
-<section id="lecture-12.-applications-of-boseeinstein-statistics-to-boson-systems" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-12.-applications-of-boseeinstein-statistics-to-boson-systems">Lecture 12. Applications of Bose–Einstein Statistics to Boson Systems</h2>
-<ol type="1">
-<li>Theory of real gases. Van der Waals equation. Van der Waals isotherms. Critical parameters.</li>
-<li>Bose gas:
+<li>Crystal defects:
 <ul>
-<li>massive bosons and Bose–Einstein condensation;</li>
-<li>photons as massless bosons. Theory of thermal radiation.</li>
+<li>point defects: Frenkel and Schottky defects;</li>
+<li>line defects (dislocations);</li>
+<li>surface defects;</li>
+<li>volume defects.</li>
 </ul></li>
 </ol>
 <hr>
 </section>
 </section>
-<section id="part-4.-fluctuations" class="level1">
-<h1>Part 4. Fluctuations</h1>
-<section id="lecture-13.-fluctuation-theory" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-13.-fluctuation-theory">Lecture 13. Fluctuation Theory</h2>
+<section id="part-2.-band-theory-of-solids" class="level1">
+<h1>Part 2. Band Theory of Solids</h1>
+<section id="lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals">Lecture 4. Approximate Methods for Solving the Schrödinger Equation in Crystals</h2>
 <ol type="1">
-<li>Fluctuations. Mean square fluctuations. Gaussian distribution of fluctuations.</li>
-<li>Fluctuations of volume, particle number, and density.</li>
-<li>Fluctuations of internal energy and temperature.</li>
-<li>Electrical fluctuations. Shot noise and Johnson–Nyquist thermal noise.</li>
+<li>Schrödinger equation for electrons in a crystal.</li>
+<li>Adiabatic approximation. Valence approximation.</li>
+<li>Hartree–Fock self-consistent field method (single-electron approximation).</li>
+<li>Bloch theorem.</li>
+<li>Qualitative analysis of the electronic energy spectrum. Formation of energy bands.</li>
+<li>Tight-binding approximation. Band formation and bandwidths for SC, BCC, and FCC lattices.</li>
+</ol>
+</section>
+<section id="lecture-5.-kronigpenney-model.-band-filling" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-5.-kronigpenney-model.-band-filling">Lecture 5. Kronig–Penney Model. Band Filling</h2>
+<ol type="1">
+<li>Schrödinger equation with the periodic Kronig–Penney potential.</li>
+<li>Analysis of solutions:
+<ul>
+<li>weak electron–atom interaction;</li>
+<li>strong electron–atom interaction.</li>
+</ul></li>
+<li>Filling of energy bands in mono-, di-, and multivalent materials. Conductors, semiconductors, and insulators.</li>
 </ol>
 <hr>
 </section>
 </section>
-<section id="part-5.-elements-of-physical-kinetics" class="level1">
-<h1>Part 5. Elements of Physical Kinetics</h1>
-<section id="lecture-14.-boltzmann-kinetic-equation" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-14.-boltzmann-kinetic-equation">Lecture 14. Boltzmann Kinetic Equation</h2>
+<section id="part-3.-crystal-lattice-dynamics" class="level1">
+<h1>Part 3. Crystal Lattice Dynamics</h1>
+<section id="lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles">Lecture 6. Normal Vibrations of the Crystal Lattice. Quasiparticles</h2>
 <ol type="1">
-<li>Nonequilibrium states. Nonequilibrium distribution function.</li>
-<li>Boltzmann equation as a consequence of the Liouville theorem.</li>
-<li>Collision integral.</li>
-<li>Relaxation time approximation.</li>
-<li>Transport phenomena described by the Boltzmann equation.</li>
+<li>Lattice vibrations. Harmonic and anharmonic effects. Phonons.</li>
+<li>Quasiparticle method in solid state physics. Examples of quasiparticles. Comparison between quasiparticles and real particles.</li>
+<li>Acoustic and optical vibrations:
+<ul>
+<li>one-dimensional monatomic lattice;</li>
+<li>one-dimensional diatomic lattice.</li>
+</ul></li>
+<li>Anharmonicity and thermal expansion.</li>
 </ol>
 </section>
-<section id="lecture-15.-transport-phenomena" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-15.-transport-phenomena">Lecture 15. Transport Phenomena</h2>
+<section id="lecture-7.-phonon-density-of-states.-lattice-heat-capacity" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-7.-phonon-density-of-states.-lattice-heat-capacity">Lecture 7. Phonon Density of States. Lattice Heat Capacity</h2>
 <ol type="1">
-<li>Mean free path. Effective cross section.</li>
-<li>Attenuation of molecular beams in gases.</li>
-<li>Viscosity and thermal conductivity of gases.</li>
-<li>Self-diffusion in gases.</li>
-<li>Rarefied gas phenomena. Effusion.</li>
+<li>Phonon density of states. Debye frequency and Debye temperature.</li>
+<li>Experimental data and classical theory of lattice heat capacity.</li>
+<li>Einstein theory of lattice heat capacity.</li>
+<li>Debye theory of lattice heat capacity.</li>
+<li>Electronic heat capacity.</li>
 </ol>
 <hr>
 </section>
 </section>
-<section id="part-6.-variable-particle-systems.-phase-transitions" class="level1">
-<h1>Part 6. Variable-Particle Systems. Phase Transitions</h1>
-<section id="lecture-16.-systems-with-variable-particle-number.-chemical-potential" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-16.-systems-with-variable-particle-number.-chemical-potential">Lecture 16. Systems with Variable Particle Number. Chemical Potential</h2>
+<section id="part-4.-electron-gas-in-metals" class="level1">
+<h1>Part 4. Electron Gas in Metals</h1>
+<section id="lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation">Lecture 8. Electron Gas in Metals. Effective Mass. Boltzmann Equation</h2>
 <ol type="1">
-<li>Definition of chemical potential via thermodynamic potentials.</li>
-<li>Entropy increase in equilibration processes. Extremal properties of thermodynamic functions.</li>
-<li>Thermodynamic inequalities.</li>
+<li>Maxwell–Boltzmann, Fermi–Dirac, and Bose–Einstein statistics for a gas of quasiparticles.</li>
+<li>Chemical potential, Fermi energy, and Fermi level in metals.</li>
+<li>Electron as a quasiparticle. Effective mass and methods of its determination.</li>
+<li>Boltzmann kinetic equation for electrons in metals.</li>
 </ol>
 </section>
-<section id="lecture-17.-theory-of-phase-transitions" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-17.-theory-of-phase-transitions">Lecture 17. Theory of Phase Transitions</h2>
+<section id="lecture-9.-electrical-conductivity-of-metals.-ohms-law" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-9.-electrical-conductivity-of-metals.-ohms-law">Lecture 9. Electrical Conductivity of Metals. Ohm’s Law</h2>
 <ol type="1">
-<li>Phase concept. Phase equilibrium. First-order phase transitions.</li>
-<li>Triple point. Superheating and supercooling.</li>
-<li>Second-order phase transitions.</li>
-<li>Multicomponent systems. Gibbs phase rule.</li>
-<li>Chemical equilibrium in homogeneous systems. Law of mass action.</li>
+<li>Basic concepts of the classical theory of electrical conductivity in metals.</li>
+<li>Boltzmann equation in the relaxation-time approximation.</li>
+<li>Ohm’s law and its analysis.</li>
+<li>Comparison of experimental and theoretical results:
+<ul>
+<li>Bloch–Grüneisen law;</li>
+<li>electron–phonon and electron–electron scattering; Matthiessen’s rule;</li>
+<li>Kondo effect;</li>
+<li>electron–magnon scattering.</li>
+</ul></li>
+</ol>
+</section>
+<section id="lecture-10.-thermal-conductivity-of-metals" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-10.-thermal-conductivity-of-metals">Lecture 10. Thermal Conductivity of Metals</h2>
+<hr>
+</section>
+</section>
+<section id="part-5.-electronic-theory-of-semiconductors" class="level1">
+<h1>Part 5. Electronic Theory of Semiconductors</h1>
+<section id="lecture-11.-classification-of-semiconductors.-carrier-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-11.-classification-of-semiconductors.-carrier-statistics">Lecture 11. Classification of Semiconductors. Carrier Statistics</h2>
+<ol type="1">
+<li>General characteristics of semiconductors.</li>
+<li>Intrinsic and extrinsic semiconductors.</li>
+<li>Degeneracy. Degenerate and non-degenerate semiconductors.</li>
+<li>Equilibrium carrier concentration in intrinsic semiconductors. Generalized carrier statistics.</li>
+<li>Equilibrium carrier concentration in doped semiconductors.</li>
+<li>Temperature dependence of the chemical potential in intrinsic and extrinsic semiconductors.</li>
+</ol>
+</section>
+<section id="lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect">Lecture 12. Electrical Conductivity of Semiconductors. Hall Effect</h2>
+<ol type="1">
+<li>Electrical conductivity of intrinsic semiconductors.</li>
+<li>Electrical conductivity of doped semiconductors.</li>
+<li>Determination of the energy band gap.</li>
+<li>Hall effect:
+<ul>
+<li>in metals;</li>
+<li>in semiconductors.</li>
+</ul></li>
+</ol>
+</section>
+<section id="lecture-13.-contact-and-thermoelectric-phenomena" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-13.-contact-and-thermoelectric-phenomena">Lecture 13. Contact and Thermoelectric Phenomena</h2>
+<ol type="1">
+<li>Metal–metal contact.</li>
+<li>Metal–semiconductor contact.</li>
+<li>p–n junction.</li>
+<li>Rectification of electric current.</li>
+<li>Thermoelectric effects.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-6.-microscopic-theories-of-magnetism" class="level1">
+<h1>Part 6. Microscopic Theories of Magnetism</h1>
+<section id="lecture-14.-diamagnetism-and-paramagnetism" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-14.-diamagnetism-and-paramagnetism">Lecture 14. Diamagnetism and Paramagnetism</h2>
+<ol type="1">
+<li>General properties of magnetic materials. Curie and Néel temperatures.</li>
+<li>Elementary theory of diamagnetism.</li>
+<li>Classical Langevin theory of paramagnetism.</li>
+<li>Pauli paramagnetism and Landau diamagnetism.</li>
+</ol>
+</section>
+<section id="lecture-15.-theories-of-ferromagnetism" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-15.-theories-of-ferromagnetism">Lecture 15. Theories of Ferromagnetism</h2>
+<ol type="1">
+<li>Weiss theory of ferromagnetism.</li>
+<li>Thermodynamic (Landau) theory of ferromagnetism.</li>
+<li>Exchange interaction in strongly magnetic materials.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-7.-superconductivity" class="level1">
+<h1>Part 7. Superconductivity</h1>
+<section id="lecture-16.-superconductivity.-bcs-theory" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-16.-superconductivity.-bcs-theory">Lecture 16. Superconductivity. BCS Theory</h2>
+<ol type="1">
+<li>Superconductivity phenomenon. Critical temperature.</li>
+<li>Meissner effect.</li>
+<li>Formation of Cooper pairs. Microscopic origin of superconductivity.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-8.-experimental-methods-of-solid-state-physics" class="level1">
+<h1>Part 8. Experimental Methods of Solid State Physics</h1>
+<section id="lecture-17.-experimental-methods-in-solid-state-physics" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-17.-experimental-methods-in-solid-state-physics">Lecture 17. Experimental Methods in Solid State Physics</h2>
+<ol type="1">
+<li>Investigation of crystal structure, elemental and phase composition.</li>
+<li>Study of electronic structure and magnetic properties of crystals.</li>
 </ol>
 <hr>
 </section>
@@ -606,105 +634,105 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1</td>
-<td>Analytical Mechanics Basics</td>
+<td>Crystal Lattice Geometry</td>
 <td style="text-align: center;">2</td>
-<td>Landau &amp; Lifshitz, Vol. 1</td>
+<td>Kittel</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
-<td>Lagrange and Hamilton Formalism</td>
-<td style="text-align: center;">2</td>
-<td>Goldstein</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td>Phase Space and Distribution</td>
-<td style="text-align: center;">2</td>
-<td>Huang</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td>Gibbs Ensembles</td>
-<td style="text-align: center;">2</td>
-<td>Landau &amp; Lifshitz, Vol. 5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td>Maxwell–Boltzmann Statistics</td>
-<td style="text-align: center;">2</td>
-<td>Reif</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">6</td>
-<td>Applications of MB Statistics</td>
-<td style="text-align: center;">2</td>
-<td>Reif</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">7</td>
-<td>Laws of Thermodynamics</td>
-<td style="text-align: center;">2</td>
-<td>Callen</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">8</td>
-<td>Thermodynamic Potentials</td>
-<td style="text-align: center;">2</td>
-<td>Landau &amp; Lifshitz, Vol. 5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">9</td>
-<td>Ideal Gases</td>
-<td style="text-align: center;">2</td>
-<td>Huang</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10</td>
-<td>Quantum Statistics</td>
-<td style="text-align: center;">2</td>
-<td>Pathria &amp; Beale</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">11</td>
-<td>Electron Gas</td>
+<td>Reciprocal Lattice and Diffraction</td>
 <td style="text-align: center;">2</td>
 <td>Ashcroft &amp; Mermin</td>
 </tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Chemical Bonding and Defects</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Band Theory Fundamentals</td>
+<td style="text-align: center;">2</td>
+<td>Ashcroft &amp; Mermin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Kronig–Penney Model</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Lattice Vibrations</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>Heat Capacity of Solids</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>Electron Gas in Metals</td>
+<td style="text-align: center;">2</td>
+<td>Ashcroft &amp; Mermin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>Electrical Conductivity</td>
+<td style="text-align: center;">2</td>
+<td>Ziman</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td>Thermal Conductivity</td>
+<td style="text-align: center;">2</td>
+<td>Ziman</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td>Semiconductor Statistics</td>
+<td style="text-align: center;">2</td>
+<td>Sze</td>
+</tr>
 <tr class="even">
 <td style="text-align: right;">12</td>
-<td>Bose Systems</td>
+<td>Hall Effect</td>
 <td style="text-align: center;">2</td>
-<td>Pathria &amp; Beale</td>
+<td>Ashcroft &amp; Mermin</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">13</td>
-<td>Fluctuations</td>
+<td>Contacts and Thermoelectricity</td>
 <td style="text-align: center;">2</td>
-<td>Landau &amp; Lifshitz, Vol. 5</td>
+<td>Sze</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">14</td>
-<td>Boltzmann Equation</td>
+<td>Dia- and Paramagnetism</td>
 <td style="text-align: center;">2</td>
-<td>Chapman &amp; Cowling</td>
+<td>Kittel</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">15</td>
-<td>Transport Phenomena</td>
+<td>Ferromagnetism</td>
 <td style="text-align: center;">2</td>
-<td>Reif</td>
+<td>Kittel</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">16</td>
-<td>Chemical Potential</td>
+<td>Superconductivity</td>
 <td style="text-align: center;">2</td>
-<td>Callen</td>
+<td>Tinkham</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">17</td>
-<td>Phase Transitions</td>
+<td>Experimental Methods</td>
 <td style="text-align: center;">2</td>
-<td>Stanley</td>
+<td>Cullity</td>
 </tr>
 </tbody>
 </table>
@@ -713,12 +741,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="main-references" class="level2">
 <h2 class="anchored" data-anchor-id="main-references">Main References</h2>
 <ul>
-<li>L.D. Landau, E.M. Lifshitz, <em>Statistical Physics</em></li>
-<li>R.K. Pathria, P.D. Beale, <em>Statistical Mechanics</em></li>
-<li>F. Reif, <em>Fundamentals of Statistical and Thermal Physics</em></li>
-<li>K. Huang, <em>Statistical Mechanics</em></li>
-<li>H.B. Callen, <em>Thermodynamics and an Introduction to Thermostatistics</em></li>
+<li>C. Kittel, <em>Introduction to Solid State Physics</em></li>
 <li>N.W. Ashcroft, N.D. Mermin, <em>Solid State Physics</em></li>
+<li>J.M. Ziman, <em>Electrons and Phonons</em></li>
+<li>S.M. Sze, <em>Physics of Semiconductor Devices</em></li>
+<li>M. Tinkham, <em>Introduction to Superconductivity</em></li>
+<li>B.D. Cullity, <em>Elements of X-Ray Diffraction</em></li>
 </ul>
 
 

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Solid State Physics – Yurii Ovcharenko</title>
+<title>Molecular Dynamics and ab initio Modeling in Materials Science – Yurii Ovcharenko</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,14 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0f9d2414e414287152aca3c09d00ab0c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c462e89d5b149865bbee2eee3df2c807.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0f9d2414e414287152aca3c09d00ab0c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -329,51 +329,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-description" id="toc-course-description" class="nav-link active" data-scroll-target="#course-description">Course Description</a></li>
-  <li><a href="#lecture-topics-and-questions" id="toc-lecture-topics-and-questions" class="nav-link" data-scroll-target="#lecture-topics-and-questions">Lecture Topics and Questions</a></li>
-  <li><a href="#part-1.-crystal-lattice-geometry" id="toc-part-1.-crystal-lattice-geometry" class="nav-link" data-scroll-target="#part-1.-crystal-lattice-geometry">Part 1. Crystal Lattice Geometry</a>
+  <li><a href="#general-course-information" id="toc-general-course-information" class="nav-link active" data-scroll-target="#general-course-information">General Course Information</a></li>
+  <li><a href="#course-description" id="toc-course-description" class="nav-link" data-scroll-target="#course-description">Course Description</a></li>
+  <li><a href="#course-objective" id="toc-course-objective" class="nav-link" data-scroll-target="#course-objective">Course Objective</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a>
   <ul>
-  <li><a href="#lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry" id="toc-lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry" class="nav-link" data-scroll-target="#lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry">Lecture 1. Introduction to Solid State Physics. Crystal Lattice Geometry</a></li>
-  <li><a href="#lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice" id="toc-lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice" class="nav-link" data-scroll-target="#lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice">Lecture 2. Wave Propagation in Periodic Structures. Reciprocal Lattice</a></li>
-  <li><a href="#lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects" id="toc-lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects" class="nav-link" data-scroll-target="#lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects">Lecture 3. Types of Chemical Bonding in Crystals. Crystal Defects</a></li>
+  <li><a href="#competencies" id="toc-competencies" class="nav-link" data-scroll-target="#competencies">Competencies</a></li>
+  <li><a href="#learning-results" id="toc-learning-results" class="nav-link" data-scroll-target="#learning-results">Learning Results</a></li>
   </ul></li>
-  <li><a href="#part-2.-band-theory-of-solids" id="toc-part-2.-band-theory-of-solids" class="nav-link" data-scroll-target="#part-2.-band-theory-of-solids">Part 2. Band Theory of Solids</a>
+  <li><a href="#course-workload-breakdown" id="toc-course-workload-breakdown" class="nav-link" data-scroll-target="#course-workload-breakdown">Course Workload Breakdown</a></li>
+  <li><a href="#course-content" id="toc-course-content" class="nav-link" data-scroll-target="#course-content">Course Content</a>
   <ul>
-  <li><a href="#lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals" id="toc-lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals" class="nav-link" data-scroll-target="#lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals">Lecture 4. Approximate Methods for Solving the Schrödinger Equation in Crystals</a></li>
-  <li><a href="#lecture-5.-kronigpenney-model.-band-filling" id="toc-lecture-5.-kronigpenney-model.-band-filling" class="nav-link" data-scroll-target="#lecture-5.-kronigpenney-model.-band-filling">Lecture 5. Kronig–Penney Model. Band Filling</a></li>
+  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures">Lectures</a>
+  <ul class="collapse">
+  <li><a href="#module-1.-introduction-and-theoretical-foundations" id="toc-module-1.-introduction-and-theoretical-foundations" class="nav-link" data-scroll-target="#module-1.-introduction-and-theoretical-foundations">Module 1. Introduction and Theoretical Foundations</a></li>
+  <li><a href="#module-2.-interatomic-interactions" id="toc-module-2.-interatomic-interactions" class="nav-link" data-scroll-target="#module-2.-interatomic-interactions">Module 2. Interatomic Interactions</a></li>
+  <li><a href="#module-3.-molecular-dynamics" id="toc-module-3.-molecular-dynamics" class="nav-link" data-scroll-target="#module-3.-molecular-dynamics">Module 3. Molecular Dynamics</a></li>
+  <li><a href="#module-4.-interaction-with-environment" id="toc-module-4.-interaction-with-environment" class="nav-link" data-scroll-target="#module-4.-interaction-with-environment">Module 4. Interaction with Environment</a></li>
+  <li><a href="#module-5.-ab-initio-dynamics-and-multiphysics" id="toc-module-5.-ab-initio-dynamics-and-multiphysics" class="nav-link" data-scroll-target="#module-5.-ab-initio-dynamics-and-multiphysics">Module 5. <em>Ab initio</em> Dynamics and Multiphysics</a></li>
+  <li><a href="#module-6.-practical-applications" id="toc-module-6.-practical-applications" class="nav-link" data-scroll-target="#module-6.-practical-applications">Module 6. Practical Applications</a></li>
   </ul></li>
-  <li><a href="#part-3.-crystal-lattice-dynamics" id="toc-part-3.-crystal-lattice-dynamics" class="nav-link" data-scroll-target="#part-3.-crystal-lattice-dynamics">Part 3. Crystal Lattice Dynamics</a>
+  <li><a href="#practical-classes" id="toc-practical-classes" class="nav-link" data-scroll-target="#practical-classes">Practical Classes</a></li>
+  <li><a href="#laboratory-work" id="toc-laboratory-work" class="nav-link" data-scroll-target="#laboratory-work">Laboratory Work</a></li>
+  </ul></li>
+  <li><a href="#independent-study" id="toc-independent-study" class="nav-link" data-scroll-target="#independent-study">Independent Study</a></li>
+  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
+  <li><a href="#recommended-literature" id="toc-recommended-literature" class="nav-link" data-scroll-target="#recommended-literature">Recommended Literature</a>
   <ul>
-  <li><a href="#lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles" id="toc-lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles" class="nav-link" data-scroll-target="#lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles">Lecture 6. Normal Vibrations of the Crystal Lattice. Quasiparticles</a></li>
-  <li><a href="#lecture-7.-phonon-density-of-states.-lattice-heat-capacity" id="toc-lecture-7.-phonon-density-of-states.-lattice-heat-capacity" class="nav-link" data-scroll-target="#lecture-7.-phonon-density-of-states.-lattice-heat-capacity">Lecture 7. Phonon Density of States. Lattice Heat Capacity</a></li>
+  <li><a href="#core-literature" id="toc-core-literature" class="nav-link" data-scroll-target="#core-literature">Core Literature</a></li>
+  <li><a href="#supplementary-literature" id="toc-supplementary-literature" class="nav-link" data-scroll-target="#supplementary-literature">Supplementary Literature</a></li>
   </ul></li>
-  <li><a href="#part-4.-electron-gas-in-metals" id="toc-part-4.-electron-gas-in-metals" class="nav-link" data-scroll-target="#part-4.-electron-gas-in-metals">Part 4. Electron Gas in Metals</a>
-  <ul>
-  <li><a href="#lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation" id="toc-lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation" class="nav-link" data-scroll-target="#lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation">Lecture 8. Electron Gas in Metals. Effective Mass. Boltzmann Equation</a></li>
-  <li><a href="#lecture-9.-electrical-conductivity-of-metals.-ohms-law" id="toc-lecture-9.-electrical-conductivity-of-metals.-ohms-law" class="nav-link" data-scroll-target="#lecture-9.-electrical-conductivity-of-metals.-ohms-law">Lecture 9. Electrical Conductivity of Metals. Ohm’s Law</a></li>
-  <li><a href="#lecture-10.-thermal-conductivity-of-metals" id="toc-lecture-10.-thermal-conductivity-of-metals" class="nav-link" data-scroll-target="#lecture-10.-thermal-conductivity-of-metals">Lecture 10. Thermal Conductivity of Metals</a></li>
-  </ul></li>
-  <li><a href="#part-5.-electronic-theory-of-semiconductors" id="toc-part-5.-electronic-theory-of-semiconductors" class="nav-link" data-scroll-target="#part-5.-electronic-theory-of-semiconductors">Part 5. Electronic Theory of Semiconductors</a>
-  <ul>
-  <li><a href="#lecture-11.-classification-of-semiconductors.-carrier-statistics" id="toc-lecture-11.-classification-of-semiconductors.-carrier-statistics" class="nav-link" data-scroll-target="#lecture-11.-classification-of-semiconductors.-carrier-statistics">Lecture 11. Classification of Semiconductors. Carrier Statistics</a></li>
-  <li><a href="#lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect" id="toc-lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect" class="nav-link" data-scroll-target="#lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect">Lecture 12. Electrical Conductivity of Semiconductors. Hall Effect</a></li>
-  <li><a href="#lecture-13.-contact-and-thermoelectric-phenomena" id="toc-lecture-13.-contact-and-thermoelectric-phenomena" class="nav-link" data-scroll-target="#lecture-13.-contact-and-thermoelectric-phenomena">Lecture 13. Contact and Thermoelectric Phenomena</a></li>
-  </ul></li>
-  <li><a href="#part-6.-microscopic-theories-of-magnetism" id="toc-part-6.-microscopic-theories-of-magnetism" class="nav-link" data-scroll-target="#part-6.-microscopic-theories-of-magnetism">Part 6. Microscopic Theories of Magnetism</a>
-  <ul>
-  <li><a href="#lecture-14.-diamagnetism-and-paramagnetism" id="toc-lecture-14.-diamagnetism-and-paramagnetism" class="nav-link" data-scroll-target="#lecture-14.-diamagnetism-and-paramagnetism">Lecture 14. Diamagnetism and Paramagnetism</a></li>
-  <li><a href="#lecture-15.-theories-of-ferromagnetism" id="toc-lecture-15.-theories-of-ferromagnetism" class="nav-link" data-scroll-target="#lecture-15.-theories-of-ferromagnetism">Lecture 15. Theories of Ferromagnetism</a></li>
-  </ul></li>
-  <li><a href="#part-7.-superconductivity" id="toc-part-7.-superconductivity" class="nav-link" data-scroll-target="#part-7.-superconductivity">Part 7. Superconductivity</a>
-  <ul>
-  <li><a href="#lecture-16.-superconductivity.-bcs-theory" id="toc-lecture-16.-superconductivity.-bcs-theory" class="nav-link" data-scroll-target="#lecture-16.-superconductivity.-bcs-theory">Lecture 16. Superconductivity. BCS Theory</a></li>
-  </ul></li>
-  <li><a href="#part-8.-experimental-methods-of-solid-state-physics" id="toc-part-8.-experimental-methods-of-solid-state-physics" class="nav-link" data-scroll-target="#part-8.-experimental-methods-of-solid-state-physics">Part 8. Experimental Methods of Solid State Physics</a>
-  <ul>
-  <li><a href="#lecture-17.-experimental-methods-in-solid-state-physics" id="toc-lecture-17.-experimental-methods-in-solid-state-physics" class="nav-link" data-scroll-target="#lecture-17.-experimental-methods-in-solid-state-physics">Lecture 17. Experimental Methods in Solid State Physics</a></li>
-  <li><a href="#lecturehoursliterature-correspondence" id="toc-lecturehoursliterature-correspondence" class="nav-link" data-scroll-target="#lecturehoursliterature-correspondence">Lecture–Hours–Literature Correspondence</a></li>
-  <li><a href="#main-references" id="toc-main-references" class="nav-link" data-scroll-target="#main-references">Main References</a></li>
-  </ul></li>
+  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
   </ul>
 </nav>
     </div>
@@ -383,7 +369,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Solid State Physics</h1>
+<h1 class="title">Molecular Dynamics and <em>ab initio</em> Modeling in Materials Science</h1>
 </div>
 
 
@@ -401,356 +387,309 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email" class="level5 access-info">
-<h5 class="anchored" data-anchor-id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email"><strong><em><a href="https://github.com/oyurii/ssph-private" target="_blank" rel="noopener noreferrer">Full access</a> to the website materials is granted exclusively to authorized users. For access requests, please contact the site author via email:</em></strong> <a data-email=""></a></h5>
+<h5 class="anchored" data-anchor-id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email"><strong><em><a href="https://github.com/oyurii/md-private" target="_blank" rel="noopener noreferrer">Full access</a> to the website materials is granted exclusively to authorized users. For access requests, please contact the site author via email:</em></strong> <a data-email=""></a></h5>
 </section>
-<section id="course-description" class="level3">
-<h3 class="anchored" data-anchor-id="course-description">Course Description</h3>
-<p>This course provides a comprehensive introduction to solid state physics. The course focuses on crystal structure, lattice dynamics, electronic band theory, electron transport in metals and semiconductors, magnetism, superconductivity, and experimental methods for studying solids. Special attention is paid to the microscopic physical mechanisms underlying macroscopic properties of solid materials.</p>
-<hr>
-</section>
-<section id="lecture-topics-and-questions" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-topics-and-questions">Lecture Topics and Questions</h2>
-</section>
-<section id="part-1.-crystal-lattice-geometry" class="level1">
-<h1>Part 1. Crystal Lattice Geometry</h1>
-<section id="lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-1.-introduction-to-solid-state-physics.-crystal-lattice-geometry">Lecture 1. Introduction to Solid State Physics. Crystal Lattice Geometry</h2>
-<ol type="1">
-<li>Subject, experimental and theoretical methods of solid state physics. Role of solid state physics in modern physical science.</li>
-<li>Crystalline and amorphous solids. Types of crystal lattices: Bravais lattice and lattice with a basis. Unit cell.</li>
-<li>Bravais lattices.</li>
-<li>Indices of lattice points, crystallographic directions and planes. Miller indices.</li>
-</ol>
-</section>
-<section id="lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-2.-wave-propagation-in-periodic-structures.-reciprocal-lattice">Lecture 2. Wave Propagation in Periodic Structures. Reciprocal Lattice</h2>
-<ol type="1">
-<li>Diffraction as the primary method for crystal structure determination. Wulff–Bragg law.</li>
-<li>Laue equations.</li>
-<li>Reciprocal lattice and its properties.</li>
-<li>Ewald construction.</li>
-<li>Brillouin zones.</li>
-</ol>
-</section>
-<section id="lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-3.-types-of-chemical-bonding-in-crystals.-crystal-defects">Lecture 3. Types of Chemical Bonding in Crystals. Crystal Defects</h2>
-<ol type="1">
-<li>General characteristics of chemical bonding in solids:
-<ul>
-<li>ionic bonding;</li>
-<li>covalent bonding;</li>
-<li>metallic bonding;</li>
-<li>molecular (van der Waals) bonding;</li>
-<li>hydrogen bonding.</li>
-</ul></li>
-<li>Crystal defects:
-<ul>
-<li>point defects: Frenkel and Schottky defects;</li>
-<li>line defects (dislocations);</li>
-<li>surface defects;</li>
-<li>volume defects.</li>
-</ul></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-2.-band-theory-of-solids" class="level1">
-<h1>Part 2. Band Theory of Solids</h1>
-<section id="lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-4.-approximate-methods-for-solving-the-schrödinger-equation-in-crystals">Lecture 4. Approximate Methods for Solving the Schrödinger Equation in Crystals</h2>
-<ol type="1">
-<li>Schrödinger equation for electrons in a crystal.</li>
-<li>Adiabatic approximation. Valence approximation.</li>
-<li>Hartree–Fock self-consistent field method (single-electron approximation).</li>
-<li>Bloch theorem.</li>
-<li>Qualitative analysis of the electronic energy spectrum. Formation of energy bands.</li>
-<li>Tight-binding approximation. Band formation and bandwidths for SC, BCC, and FCC lattices.</li>
-</ol>
-</section>
-<section id="lecture-5.-kronigpenney-model.-band-filling" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-5.-kronigpenney-model.-band-filling">Lecture 5. Kronig–Penney Model. Band Filling</h2>
-<ol type="1">
-<li>Schrödinger equation with the periodic Kronig–Penney potential.</li>
-<li>Analysis of solutions:
-<ul>
-<li>weak electron–atom interaction;</li>
-<li>strong electron–atom interaction.</li>
-</ul></li>
-<li>Filling of energy bands in mono-, di-, and multivalent materials. Conductors, semiconductors, and insulators.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-3.-crystal-lattice-dynamics" class="level1">
-<h1>Part 3. Crystal Lattice Dynamics</h1>
-<section id="lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-6.-normal-vibrations-of-the-crystal-lattice.-quasiparticles">Lecture 6. Normal Vibrations of the Crystal Lattice. Quasiparticles</h2>
-<ol type="1">
-<li>Lattice vibrations. Harmonic and anharmonic effects. Phonons.</li>
-<li>Quasiparticle method in solid state physics. Examples of quasiparticles. Comparison between quasiparticles and real particles.</li>
-<li>Acoustic and optical vibrations:
-<ul>
-<li>one-dimensional monatomic lattice;</li>
-<li>one-dimensional diatomic lattice.</li>
-</ul></li>
-<li>Anharmonicity and thermal expansion.</li>
-</ol>
-</section>
-<section id="lecture-7.-phonon-density-of-states.-lattice-heat-capacity" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-7.-phonon-density-of-states.-lattice-heat-capacity">Lecture 7. Phonon Density of States. Lattice Heat Capacity</h2>
-<ol type="1">
-<li>Phonon density of states. Debye frequency and Debye temperature.</li>
-<li>Experimental data and classical theory of lattice heat capacity.</li>
-<li>Einstein theory of lattice heat capacity.</li>
-<li>Debye theory of lattice heat capacity.</li>
-<li>Electronic heat capacity.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-4.-electron-gas-in-metals" class="level1">
-<h1>Part 4. Electron Gas in Metals</h1>
-<section id="lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-8.-electron-gas-in-metals.-effective-mass.-boltzmann-equation">Lecture 8. Electron Gas in Metals. Effective Mass. Boltzmann Equation</h2>
-<ol type="1">
-<li>Maxwell–Boltzmann, Fermi–Dirac, and Bose–Einstein statistics for a gas of quasiparticles.</li>
-<li>Chemical potential, Fermi energy, and Fermi level in metals.</li>
-<li>Electron as a quasiparticle. Effective mass and methods of its determination.</li>
-<li>Boltzmann kinetic equation for electrons in metals.</li>
-</ol>
-</section>
-<section id="lecture-9.-electrical-conductivity-of-metals.-ohms-law" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-9.-electrical-conductivity-of-metals.-ohms-law">Lecture 9. Electrical Conductivity of Metals. Ohm’s Law</h2>
-<ol type="1">
-<li>Basic concepts of the classical theory of electrical conductivity in metals.</li>
-<li>Boltzmann equation in the relaxation-time approximation.</li>
-<li>Ohm’s law and its analysis.</li>
-<li>Comparison of experimental and theoretical results:
-<ul>
-<li>Bloch–Grüneisen law;</li>
-<li>electron–phonon and electron–electron scattering; Matthiessen’s rule;</li>
-<li>Kondo effect;</li>
-<li>electron–magnon scattering.</li>
-</ul></li>
-</ol>
-</section>
-<section id="lecture-10.-thermal-conductivity-of-metals" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-10.-thermal-conductivity-of-metals">Lecture 10. Thermal Conductivity of Metals</h2>
-<hr>
-</section>
-</section>
-<section id="part-5.-electronic-theory-of-semiconductors" class="level1">
-<h1>Part 5. Electronic Theory of Semiconductors</h1>
-<section id="lecture-11.-classification-of-semiconductors.-carrier-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-11.-classification-of-semiconductors.-carrier-statistics">Lecture 11. Classification of Semiconductors. Carrier Statistics</h2>
-<ol type="1">
-<li>General characteristics of semiconductors.</li>
-<li>Intrinsic and extrinsic semiconductors.</li>
-<li>Degeneracy. Degenerate and non-degenerate semiconductors.</li>
-<li>Equilibrium carrier concentration in intrinsic semiconductors. Generalized carrier statistics.</li>
-<li>Equilibrium carrier concentration in doped semiconductors.</li>
-<li>Temperature dependence of the chemical potential in intrinsic and extrinsic semiconductors.</li>
-</ol>
-</section>
-<section id="lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-12.-electrical-conductivity-of-semiconductors.-hall-effect">Lecture 12. Electrical Conductivity of Semiconductors. Hall Effect</h2>
-<ol type="1">
-<li>Electrical conductivity of intrinsic semiconductors.</li>
-<li>Electrical conductivity of doped semiconductors.</li>
-<li>Determination of the energy band gap.</li>
-<li>Hall effect:
-<ul>
-<li>in metals;</li>
-<li>in semiconductors.</li>
-</ul></li>
-</ol>
-</section>
-<section id="lecture-13.-contact-and-thermoelectric-phenomena" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-13.-contact-and-thermoelectric-phenomena">Lecture 13. Contact and Thermoelectric Phenomena</h2>
-<ol type="1">
-<li>Metal–metal contact.</li>
-<li>Metal–semiconductor contact.</li>
-<li>p–n junction.</li>
-<li>Rectification of electric current.</li>
-<li>Thermoelectric effects.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-6.-microscopic-theories-of-magnetism" class="level1">
-<h1>Part 6. Microscopic Theories of Magnetism</h1>
-<section id="lecture-14.-diamagnetism-and-paramagnetism" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-14.-diamagnetism-and-paramagnetism">Lecture 14. Diamagnetism and Paramagnetism</h2>
-<ol type="1">
-<li>General properties of magnetic materials. Curie and Néel temperatures.</li>
-<li>Elementary theory of diamagnetism.</li>
-<li>Classical Langevin theory of paramagnetism.</li>
-<li>Pauli paramagnetism and Landau diamagnetism.</li>
-</ol>
-</section>
-<section id="lecture-15.-theories-of-ferromagnetism" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-15.-theories-of-ferromagnetism">Lecture 15. Theories of Ferromagnetism</h2>
-<ol type="1">
-<li>Weiss theory of ferromagnetism.</li>
-<li>Thermodynamic (Landau) theory of ferromagnetism.</li>
-<li>Exchange interaction in strongly magnetic materials.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-7.-superconductivity" class="level1">
-<h1>Part 7. Superconductivity</h1>
-<section id="lecture-16.-superconductivity.-bcs-theory" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-16.-superconductivity.-bcs-theory">Lecture 16. Superconductivity. BCS Theory</h2>
-<ol type="1">
-<li>Superconductivity phenomenon. Critical temperature.</li>
-<li>Meissner effect.</li>
-<li>Formation of Cooper pairs. Microscopic origin of superconductivity.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-8.-experimental-methods-of-solid-state-physics" class="level1">
-<h1>Part 8. Experimental Methods of Solid State Physics</h1>
-<section id="lecture-17.-experimental-methods-in-solid-state-physics" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-17.-experimental-methods-in-solid-state-physics">Lecture 17. Experimental Methods in Solid State Physics</h2>
-<ol type="1">
-<li>Investigation of crystal structure, elemental and phase composition.</li>
-<li>Study of electronic structure and magnetic properties of crystals.</li>
-</ol>
-<hr>
-</section>
-<section id="lecturehoursliterature-correspondence" class="level2">
-<h2 class="anchored" data-anchor-id="lecturehoursliterature-correspondence">Lecture–Hours–Literature Correspondence</h2>
+<section id="general-course-information" class="level2">
+<h2 class="anchored" data-anchor-id="general-course-information">General Course Information</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: right;">Lecture</th>
-<th>Topic (Short Title)</th>
-<th style="text-align: center;">Hours</th>
-<th>Recommended Literature</th>
+<th>Item</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
-<td>Crystal Lattice Geometry</td>
-<td style="text-align: center;">2</td>
-<td>Kittel</td>
+<td>Field of Study</td>
+<td>10 Natural Sciences</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2</td>
-<td>Reciprocal Lattice and Diffraction</td>
-<td style="text-align: center;">2</td>
-<td>Ashcroft &amp; Mermin</td>
+<td>Specialty</td>
+<td>104 Physics and Astronomy</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3</td>
-<td>Chemical Bonding and Defects</td>
-<td style="text-align: center;">2</td>
-<td>Kittel</td>
+<td>Level of Education</td>
+<td>Third (Educational and Scientific, PhD level)</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4</td>
-<td>Band Theory Fundamentals</td>
-<td style="text-align: center;">2</td>
-<td>Ashcroft &amp; Mermin</td>
+<td>Course Status</td>
+<td>Elective</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">5</td>
-<td>Kronig–Penney Model</td>
-<td style="text-align: center;">2</td>
-<td>Kittel</td>
+<td>Assessment Type</td>
+<td>Pass / Fail</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">6</td>
-<td>Lattice Vibrations</td>
-<td style="text-align: center;">2</td>
-<td>Kittel</td>
+<td>Credits</td>
+<td>3</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">7</td>
-<td>Heat Capacity of Solids</td>
-<td style="text-align: center;">2</td>
-<td>Kittel</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">8</td>
-<td>Electron Gas in Metals</td>
-<td style="text-align: center;">2</td>
-<td>Ashcroft &amp; Mermin</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">9</td>
-<td>Electrical Conductivity</td>
-<td style="text-align: center;">2</td>
-<td>Ziman</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10</td>
-<td>Thermal Conductivity</td>
-<td style="text-align: center;">2</td>
-<td>Ziman</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">11</td>
-<td>Semiconductor Statistics</td>
-<td style="text-align: center;">2</td>
-<td>Sze</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">12</td>
-<td>Hall Effect</td>
-<td style="text-align: center;">2</td>
-<td>Ashcroft &amp; Mermin</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">13</td>
-<td>Contacts and Thermoelectricity</td>
-<td style="text-align: center;">2</td>
-<td>Sze</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">14</td>
-<td>Dia- and Paramagnetism</td>
-<td style="text-align: center;">2</td>
-<td>Kittel</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">15</td>
-<td>Ferromagnetism</td>
-<td style="text-align: center;">2</td>
-<td>Kittel</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">16</td>
-<td>Superconductivity</td>
-<td style="text-align: center;">2</td>
-<td>Tinkham</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">17</td>
-<td>Experimental Methods</td>
-<td style="text-align: center;">2</td>
-<td>Cullity</td>
+<td>Total Workload</td>
+<td>90 hours</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="main-references" class="level2">
-<h2 class="anchored" data-anchor-id="main-references">Main References</h2>
-<ul>
-<li>C. Kittel, <em>Introduction to Solid State Physics</em></li>
-<li>N.W. Ashcroft, N.D. Mermin, <em>Solid State Physics</em></li>
-<li>J.M. Ziman, <em>Electrons and Phonons</em></li>
-<li>S.M. Sze, <em>Physics of Semiconductor Devices</em></li>
-<li>M. Tinkham, <em>Introduction to Superconductivity</em></li>
-<li>B.D. Cullity, <em>Elements of X-Ray Diffraction</em></li>
-</ul>
-
-
+<section id="course-description" class="level2">
+<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
+<p>This course focuses on modern molecular dynamics (MD) and <em>ab initio</em> simulation methods applied to the investigation of metals and alloys at the atomic scale. Special attention is given to MD algorithms, density functional theory (DFT), and hands-on experience with leading computational packages such as <strong>LAMMPS</strong> and <strong>Quantum ESPRESSO</strong>.</p>
+<p>Students acquire practical skills in model construction, analysis of diffusion, mechanical and thermodynamic properties of materials, as well as electronic structure calculations. The course is aimed at developing competencies required for advanced scientific research in materials science and solid-state physics.</p>
+<hr>
 </section>
+<section id="course-objective" class="level2">
+<h2 class="anchored" data-anchor-id="course-objective">Course Objective</h2>
+<p>The objective of the course is to develop systematic theoretical knowledge and practical skills in applying molecular dynamics and <em>ab initio</em> quantum-mechanical methods to study atomic structure, physical properties, and evolutionary processes in metals and alloys.</p>
+<p>Special emphasis is placed on the selection and application of modern interatomic potentials, DFT tools, and computational algorithms, as well as on the interpretation of simulation results for solving contemporary problems in solid-state physics and materials science.</p>
+<hr>
+</section>
+<section id="learning-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<section id="competencies" class="level3">
+<h3 class="anchored" data-anchor-id="competencies">Competencies</h3>
+<p>Upon completion of the course, PhD students will be able to:</p>
+<ul>
+<li>Understand fundamental principles of molecular dynamics (MD) and <em>ab initio</em> methods, including density functional theory (DFT).</li>
+<li>Select and parameterize interatomic potentials for metals and alloys and assess their validity.</li>
+<li>Perform classical MD simulations using <strong>LAMMPS</strong>.</li>
+<li>Conduct DFT calculations using <strong>Quantum ESPRESSO</strong>.</li>
+<li>Apply <em>ab initio</em> molecular dynamics (AIMD) for modeling atomic motion at finite temperatures.</li>
+<li>Integrate MD and DFT results through multiscale and machine-learning approaches.</li>
+<li>Critically analyze and interpret simulation results.</li>
+</ul>
+</section>
+<section id="learning-results" class="level3">
+<h3 class="anchored" data-anchor-id="learning-results">Learning Results</h3>
+<p>Students will be able to:</p>
+<ul>
+<li>Explain physical principles underlying MD and <em>ab initio</em> methods.</li>
+<li>Justify the choice of interatomic potentials and simulation parameters.</li>
+<li>Construct atomic models including defects and surfaces.</li>
+<li>Analyze diffusion, mechanical, thermodynamic, and electronic properties.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="course-workload-breakdown" class="level2">
+<h2 class="anchored" data-anchor-id="course-workload-breakdown">Course Workload Breakdown</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Activity</th>
+<th style="text-align: right;">Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lectures</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td>Practical Classes</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td>Laboratory Work</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>Independent Study</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>90</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="course-content" class="level2">
+<h2 class="anchored" data-anchor-id="course-content">Course Content</h2>
+<section id="lectures" class="level3">
+<h3 class="anchored" data-anchor-id="lectures">Lectures</h3>
+<section id="module-1.-introduction-and-theoretical-foundations" class="level4">
+<h4 class="anchored" data-anchor-id="module-1.-introduction-and-theoretical-foundations">Module 1. Introduction and Theoretical Foundations</h4>
+<ol type="1">
+<li><p><strong>Introduction to Computational Materials Science</strong> History and role of modeling; <em>ab initio</em>, MD, Monte Carlo methods. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Fundamental Atomic-Scale Equations</strong> Schrödinger equation; Born–Oppenheimer approximation. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Quantum-Mechanical Calculation Methods</strong> DFT, pseudopotentials, exchange–correlation functionals. <strong>Hours:</strong> 2</p></li>
+</ol>
+<hr>
+</section>
+<section id="module-2.-interatomic-interactions" class="level4">
+<h4 class="anchored" data-anchor-id="module-2.-interatomic-interactions">Module 2. Interatomic Interactions</h4>
+<ol start="4" type="1">
+<li><p><strong>Empirical Potentials for Metals</strong> EAM, MEAM, Finnis–Sinclair, Gupta potentials. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Construction and Scaling of Potentials</strong> Alloy systems and validation strategies. <strong>Hours:</strong> 2</p></li>
+</ol>
+<hr>
+</section>
+<section id="module-3.-molecular-dynamics" class="level4">
+<h4 class="anchored" data-anchor-id="module-3.-molecular-dynamics">Module 3. Molecular Dynamics</h4>
+<ol start="6" type="1">
+<li><p><strong>Fundamentals of Classical Molecular Dynamics</strong> Integration algorithms; statistical ensembles. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Implementation of MD in Software Packages</strong> LAMMPS workflows and input structures. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Modeling Physical Properties of Metals</strong> Elastic constants, diffusion, correlation functions. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Crystal Defects and Their Dynamics</strong> Vacancies, dislocations, grain boundaries. <strong>Hours:</strong> 2</p></li>
+</ol>
+<hr>
+</section>
+<section id="module-4.-interaction-with-environment" class="level4">
+<h4 class="anchored" data-anchor-id="module-4.-interaction-with-environment">Module 4. Interaction with Environment</h4>
+<ol start="10" type="1">
+<li><p><strong>Oxidation and Corrosion in MD Models</strong> Reactive force fields: ReaxFF, COMB. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Surface Phenomena and Nanostructures</strong> Surface energy and clustering. <strong>Hours:</strong> 2</p></li>
+</ol>
+<hr>
+</section>
+<section id="module-5.-ab-initio-dynamics-and-multiphysics" class="level4">
+<h4 class="anchored" data-anchor-id="module-5.-ab-initio-dynamics-and-multiphysics">Module 5. <em>Ab initio</em> Dynamics and Multiphysics</h4>
+<ol start="12" type="1">
+<li><p><strong><em>Ab initio</em> Molecular Dynamics (AIMD)</strong> Car–Parrinello MD. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Combining DFT and MD</strong> QM/MM and machine-learning potentials. <strong>Hours:</strong> 2</p></li>
+</ol>
+<hr>
+</section>
+<section id="module-6.-practical-applications" class="level4">
+<h4 class="anchored" data-anchor-id="module-6.-practical-applications">Module 6. Practical Applications</h4>
+<ol start="14" type="1">
+<li><p><strong>Modeling Structural and Kinetic Processes in Alloys</strong> Phase transitions and diffusion. <strong>Hours:</strong> 2</p></li>
+<li><p><strong>Modeling Radiation Damage in Materials</strong> Displacement cascades. <strong>Hours:</strong> 2</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="practical-classes" class="level3">
+<h3 class="anchored" data-anchor-id="practical-classes">Practical Classes</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">No.</th>
+<th>Topic</th>
+<th style="text-align: right;">Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Crystal lattice geometry and crystallography</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Phonons and vibrational properties</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Quantum statistics and electron gas</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Installation of LAMMPS and Quantum ESPRESSO</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Automation and post-processing</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="laboratory-work" class="level3">
+<h3 class="anchored" data-anchor-id="laboratory-work">Laboratory Work</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">No.</th>
+<th>Topic</th>
+<th style="text-align: right;">Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Lattice constants and defect formation energies</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Alloy deformation and strength limits</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="independent-study" class="level2">
+<h2 class="anchored" data-anchor-id="independent-study">Independent Study</h2>
+<p>Analytical mechanics, lattice dynamics, band theory, statistical thermodynamics, DFT-based elastic constant calculations.</p>
+<p><strong>Total:</strong> 44 hours</p>
+<hr>
+</section>
+<section id="assessment" class="level2">
+<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th style="text-align: right;">Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Practical classes</td>
+<td style="text-align: right;">35%</td>
+</tr>
+<tr class="even">
+<td>Laboratory work</td>
+<td style="text-align: right;">30%</td>
+</tr>
+<tr class="odd">
+<td>Attestation tests</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="even">
+<td>Individual assignments</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="recommended-literature" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-literature">Recommended Literature</h2>
+<section id="core-literature" class="level3">
+<h3 class="anchored" data-anchor-id="core-literature">Core Literature</h3>
+<ul>
+<li>Kittel, C., McEuen, P. <em>Introduction to Solid State Physics</em>, Wiley.</li>
+<li>Vakarchuk, I.O. <em>Quantum Mechanics</em>, Lviv.</li>
+<li><a href="https://www.lammps.org">https://www.lammps.org</a></li>
+<li><a href="https://www.quantum-espresso.org">https://www.quantum-espresso.org</a></li>
+</ul>
+</section>
+<section id="supplementary-literature" class="level3">
+<h3 class="anchored" data-anchor-id="supplementary-literature">Supplementary Literature</h3>
+<ul>
+<li>Protsenko I.Yu., Shumakova N.I., Ovcharenko Yu.M. <em>Solid State Physics</em>, Sumy.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="academic-integrity" class="level2">
+<h2 class="anchored" data-anchor-id="academic-integrity">Academic Integrity</h2>
+<p>Students must adhere to principles of academic integrity, proper citation, and independent completion of all assignments, in accordance with the regulations of the Institute of Applied Physics, NAS of Ukraine.</p>
+
+
 </section>
 
 </main> <!-- /main -->
