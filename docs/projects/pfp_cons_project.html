@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Multiscale simulation of X-ray diffraction based on Fresnel–Kirchhoff diffraction theory – Yurii Ovcharenko</title>
+<title>Phase-Field Simulator for Microstructure Evolution in Zr-Nb-Sn Alloys – Yurii Ovcharenko</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -368,12 +368,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#multiscale-simulation-of-x-ray-diffraction-based-on-fresnelkirchhoff-diffraction-theory" id="toc-multiscale-simulation-of-x-ray-diffraction-based-on-fresnelkirchhoff-diffraction-theory" class="nav-link active" data-scroll-target="#multiscale-simulation-of-x-ray-diffraction-based-on-fresnelkirchhoff-diffraction-theory">Multiscale simulation of X-ray diffraction based on Fresnel–Kirchhoff diffraction theory</a>
+  <li><a href="#phase-field-simulator-for-microstructure-evolution-in-zr-nb-sn-alloys" id="toc-phase-field-simulator-for-microstructure-evolution-in-zr-nb-sn-alloys" class="nav-link active" data-scroll-target="#phase-field-simulator-for-microstructure-evolution-in-zr-nb-sn-alloys">Phase-Field Simulator for Microstructure Evolution in Zr-Nb-Sn Alloys</a>
   <ul>
   <li><a href="#key-features" id="toc-key-features" class="nav-link" data-scroll-target="#key-features">Key Features</a></li>
-  <li><a href="#typical-application-areas" id="toc-typical-application-areas" class="nav-link" data-scroll-target="#typical-application-areas">Typical application areas</a></li>
-  <li><a href="#technology-stack" id="toc-technology-stack" class="nav-link" data-scroll-target="#technology-stack">Technology stack</a></li>
-  <li><a href="#project-status" id="toc-project-status" class="nav-link" data-scroll-target="#project-status">Project status</a></li>
+  <li><a href="#typical-applications" id="toc-typical-applications" class="nav-link" data-scroll-target="#typical-applications">Typical Applications</a></li>
+  <li><a href="#technology-stack" id="toc-technology-stack" class="nav-link" data-scroll-target="#technology-stack">Technology Stack</a></li>
+  <li><a href="#project-status" id="toc-project-status" class="nav-link" data-scroll-target="#project-status">Project Status</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -384,7 +384,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Multiscale simulation of X-ray diffraction based on Fresnel–Kirchhoff diffraction theory</h1>
+<h1 class="title">Phase-Field Simulator for Microstructure Evolution in Zr-Nb-Sn Alloys</h1>
 </div>
 
 
@@ -404,73 +404,69 @@ window.Quarto = {
 <section id="leftarrow-return-to-the-projects-list" class="level5">
 <h5 class="anchored" data-anchor-id="leftarrow-return-to-the-projects-list"><a href="../projects/index.html"><span class="math inline">\(\leftarrow\)</span> Return to the projects list</a></h5>
 </section>
-<section id="multiscale-simulation-of-x-ray-diffraction-based-on-fresnelkirchhoff-diffraction-theory" class="level1">
-<h1>Multiscale simulation of X-ray diffraction based on Fresnel–Kirchhoff diffraction theory</h1>
+<section id="phase-field-simulator-for-microstructure-evolution-in-zr-nb-sn-alloys" class="level1">
+<h1>Phase-Field Simulator for Microstructure Evolution in Zr-Nb-Sn Alloys</h1>
 <div style="display: flex; justify-content: center;">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" width="350pt" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="../video/xray.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" width="350pt" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="../video/pft_cons.mp4"></video></div>
 </div>
 <div style="display: flex; justify-content: center; color: grey;">
 <p><strong><em>Main dashboard showing simulation modules and real-time system resource monitoring.</em></strong></p>
 </div>
-<p><strong>X-rayDMS</strong> is a custom-developed software system for numerical simulation of X-ray diffraction on objects of arbitrary geometry and complexity using the Fresnel–Kirchhoff diffraction approach.</p>
-<p>Development started in 2023. Current version — <strong>1.0</strong> (as of early 2026).</p>
+<p><strong>Phase-Field Multistage Simulator</strong> is a console-based (TUI) software package I developed for modeling microstructure evolution in multi-component zirconium-based alloys (Zr-Nb-Sn, Zr-Nb, Zr-Sn and related systems) using the <strong>phase-field method</strong>.</p>
+<p>Development began in 2022. The simulator covers the three key life-cycle stages of structural and functional materials under extreme conditions:</p>
+<ol type="1">
+<li><strong>Crystal preparation</strong> (annealing, precipitation of secondary phases)</li>
+<li><strong>Crystal irradiation</strong> (radiation damage accumulation, solute redistribution, phase transformations)</li>
+<li><strong>Crystal deformation</strong> (plastic flow, strain localization, radiation-modified mechanical behavior)</li>
+</ol>
 <section id="key-features" class="level3">
 <h3 class="anchored" data-anchor-id="key-features">Key Features</h3>
 <ul>
-<li>Diffraction modeling for <strong>simple</strong> geometric bodies (sphere, cylinder, ellipsoid, etc.) and <strong>complex composite</strong> objects</li>
-<li>Flexible representation of complex objects via multiple components:
+<li>Full 3D phase-field modeling (default dimension = 3)</li>
+<li>Highly configurable simulation parameters:
 <ul>
-<li>selective component IDs (e.g.&nbsp;[1, 6])</li>
-<li>per-component scaling, rotations (<span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>), translations (x, y, z) and phase shift <span class="math inline">\(\Delta\)</span></li>
+<li>computational grid size (up to 64×64×64 and beyond)</li>
+<li>alloying element concentrations (Nb, Sn in Zr matrix, 0–10 at.%)</li>
+<li>annealing and target temperatures (in Kelvin)</li>
+<li>time scales: annealing time, total simulation time, integration timestep, field saving interval, averaging timestep</li>
+<li>precipitation level control, balance type</li>
 </ul></li>
-<li>Highly configurable source parameters:
+<li>Three independent input modules:
 <ul>
-<li>wavelength <span class="math inline">\(\lambda\)</span></li>
-<li>degree of monochromaticity</li>
-<li>source size and sampling points</li>
-<li>wavefront rotations</li>
+<li>Preparation_input → precipitation of Nb₃Sn-like phases, β→α transformation, coarsening</li>
+<li>Irradiation_input → radiation-induced damage, concentration shifts, dose rate, damage/recovery kinetics</li>
+<li>Deformation_input → mechanical deformation with inherited irradiation defects, strain rate, deformation mode</li>
 </ul></li>
-<li>Multiple calculation modes:
-<ul>
-<li>FAST CALCULATION</li>
-<li>SIMPLE OBJECTS</li>
-<li>COMPLEX OBJECTS — full multi-component simulation with Monte-Carlo-style sampling options</li>
-</ul></li>
-<li>Computation of both amplitude-phase field and intensity distribution in the detector plane</li>
-<li>Web-based project management interface:
-<ul>
-<li>project creation and editing</li>
-<li>real-time CPU / RAM usage monitoring</li>
-<li>execution history</li>
-<li>detailed per-task reports</li>
-<li>visualization: 2D/3D intensity maps, polar plots, phase &amp; amplitude line profiles</li>
-</ul></li>
+<li>Parallel task execution (up to 64 simultaneous tasks, multi-threading / multi-core support)</li>
+<li>Built-in CPU usage monitoring, project/task/VTK file lists</li>
+<li>Export of field data to .vtk format (compatible with ParaView / OVITO) — concentration fields, phase fields, stress/strain, defect densities</li>
 </ul>
 </section>
-<section id="typical-application-areas" class="level3">
-<h3 class="anchored" data-anchor-id="typical-application-areas">Typical application areas</h3>
+<section id="typical-applications" class="level3">
+<h3 class="anchored" data-anchor-id="typical-applications">Typical Applications</h3>
 <ul>
-<li>Analysis of diffraction patterns from nano- and micro-particles</li>
-<li>Simulation of SAXS / WAXS patterns for biological and synthetic objects</li>
-<li>Evaluation of source coherence and spectral bandwidth effects</li>
-<li>Comparison between theoretical predictions and experimental data</li>
-<li>Pre-experiment planning (optimization of geometry, wavelength, beam size, etc.)</li>
+<li>Simulation of secondary phase precipitation and growth (β-Nb, Zr₂(Nb,Sn), Laves phases) during heat treatment of Zr-Nb-Sn alloys</li>
+<li>Prediction of neutron irradiation effects: solute redistribution, solid solution decomposition, void/cavity formation</li>
+<li>Investigation of radiation hardening/softening, irradiation-induced growth (IIG), creep modification</li>
+<li>Modeling of deformation behavior in irradiated materials (strain localization, dislocation channeling)</li>
+<li>Support for optimization of cladding materials for nuclear reactors and Nb₃Sn-based superconducting strands/wires (internal oxidation with Zr addition)</li>
 </ul>
 </section>
 <section id="technology-stack" class="level3">
-<h3 class="anchored" data-anchor-id="technology-stack">Technology stack</h3>
+<h3 class="anchored" data-anchor-id="technology-stack">Technology Stack</h3>
 <ul>
-<li>Core language: <strong>Python</strong></li>
-<li>Numerical libraries: NumPy, SciPy</li>
-<li>Parallel execution: multi-threading / multi-core processing</li>
-<li>Web interface: Flask / FastAPI + modern frontend techniques (HTMX / Alpine.js or similar)</li>
-<li>Server resources (typical): 8 cores, ~16 GB RAM (2025–2026 configuration)</li>
+<li>Core language: <strong>Fortran</strong> / <strong>C</strong> with MPI / OpenMP for parallelism</li>
+<li>User interface: text-based (TUI) using ncurses-like library</li>
+<li>Result visualization: .vtk export → ParaView / OVITO</li>
+<li>Database backend: SQLite (stores projects, users, task history, input parameters)</li>
+<li>Target platform: Linux (server or workstation)</li>
 </ul>
 </section>
 <section id="project-status" class="level3">
-<h3 class="anchored" data-anchor-id="project-status">Project status</h3>
-<p>Actively developed.<br>
-Regular updates include new object types, calculation speed improvements, and extended result visualization capabilities.</p>
+<h3 class="anchored" data-anchor-id="project-status">Project Status</h3>
+<p>Actively maintained (as of 2026).<br>
+Ongoing development includes: - stronger coupling between irradiation and deformation stages - temperature-dependent mobilities and elastic energy contributions - new physical modules (e.g., cascade damage, hydrogen effects)</p>
+<p>The simulator is used for: - fundamental studies of microstructure evolution in nuclear Zr alloys - lifetime prediction of reactor components under irradiation - design of advanced heat-treatment and alloying strategies for improved radiation resistance</p>
 <p>If you are interested in collaboration, scientific applications, or access to (parts of) the code – feel free to <a href="../contact.html">contact me</a> .</p>
 <section id="leftarrow-return-to-the-projects-list-1" class="level5">
 <h5 class="anchored" data-anchor-id="leftarrow-return-to-the-projects-list-1"><a href="../projects/index.html"><span class="math inline">\(\leftarrow\)</span> Return to the projects list</a></h5>
