@@ -413,7 +413,7 @@ window.Quarto = {
 <p><strong><em>Main dashboard showing simulation modules and real-time system resource monitoring.</em></strong></p>
 </div>
 <p><strong>Phase-Field Multistage Simulator</strong> is a console-based (TUI) software package I developed for modeling microstructure evolution in multi-component zirconium-based alloys (Zr-Nb-Sn, Zr-Nb, Zr-Sn and related systems) using the <strong>phase-field method</strong>.</p>
-<p>Development began in 2022. The simulator covers the three key life-cycle stages of structural and functional materials under extreme conditions:</p>
+<p>The simulator covers the three key life-cycle stages of structural and functional materials under extreme conditions:</p>
 <ol type="1">
 <li><strong>Crystal preparation</strong> (annealing, precipitation of secondary phases)</li>
 <li><strong>Crystal irradiation</strong> (radiation damage accumulation, solute redistribution, phase transformations)</li>
@@ -425,49 +425,48 @@ window.Quarto = {
 <li>Full 3D phase-field modeling (default dimension = 3)</li>
 <li>Highly configurable simulation parameters:
 <ul>
-<li>computational grid size (up to 64×64×64 and beyond)</li>
-<li>alloying element concentrations (Nb, Sn in Zr matrix, 0–10 at.%)</li>
+<li>computational grid size (up to <span class="math inline">\(64 \times 64 \times 64\)</span> and beyond)</li>
+<li>alloying element concentrations (Nb, Sn in Zr matrix, 0-10 at.%)</li>
 <li>annealing and target temperatures (in Kelvin)</li>
 <li>time scales: annealing time, total simulation time, integration timestep, field saving interval, averaging timestep</li>
 <li>precipitation level control, balance type</li>
 </ul></li>
 <li>Three independent input modules:
 <ul>
-<li>Preparation_input → precipitation of Nb₃Sn-like phases, β→α transformation, coarsening</li>
-<li>Irradiation_input → radiation-induced damage, concentration shifts, dose rate, damage/recovery kinetics</li>
-<li>Deformation_input → mechanical deformation with inherited irradiation defects, strain rate, deformation mode</li>
+<li>Preparation_input <span class="math inline">\(\rightarrow\)</span> precipitation of Nb<span class="math inline">\(_3\)</span>Sn-like phases, <span class="math inline">\(\beta \rightarrow \alpha\)</span> transformation, coarsening</li>
+<li>Irradiation_input <span class="math inline">\(\rightarrow\)</span> radiation-induced damage, concentration shifts, dose rate, damage/recovery kinetics</li>
+<li>Deformation_input <span class="math inline">\(\rightarrow\)</span> mechanical deformation with inherited irradiation defects, strain rate, deformation mode</li>
 </ul></li>
 <li>Parallel task execution (up to 64 simultaneous tasks, multi-threading / multi-core support)</li>
 <li>Built-in CPU usage monitoring, project/task/VTK file lists</li>
-<li>Export of field data to .vtk format (compatible with ParaView / OVITO) — concentration fields, phase fields, stress/strain, defect densities</li>
+<li>Export of field data to .vtk format (compatible with ParaView / OVITO) – concentration fields, phase fields, stress/strain, defect densities</li>
 </ul>
 </section>
 <section id="typical-applications" class="level3">
 <h3 class="anchored" data-anchor-id="typical-applications">Typical Applications</h3>
 <ul>
-<li>Simulation of secondary phase precipitation and growth (β-Nb, Zr₂(Nb,Sn), Laves phases) during heat treatment of Zr-Nb-Sn alloys</li>
+<li>Simulation of secondary phase precipitation and growth (<span class="math inline">\(\beta\)</span>-Nb, Zr<span class="math inline">\(_2\)</span>(Nb,Sn), Laves phases) during heat treatment of Zr-Nb-Sn alloys</li>
 <li>Prediction of neutron irradiation effects: solute redistribution, solid solution decomposition, void/cavity formation</li>
 <li>Investigation of radiation hardening/softening, irradiation-induced growth (IIG), creep modification</li>
 <li>Modeling of deformation behavior in irradiated materials (strain localization, dislocation channeling)</li>
-<li>Support for optimization of cladding materials for nuclear reactors and Nb₃Sn-based superconducting strands/wires (internal oxidation with Zr addition)</li>
+<li>Support for optimization of cladding materials for nuclear reactors and Nb<span class="math inline">\(_3\)</span>Sn-based superconducting strands/wires (internal oxidation with Zr addition)</li>
 </ul>
 </section>
 <section id="technology-stack" class="level3">
 <h3 class="anchored" data-anchor-id="technology-stack">Technology Stack</h3>
 <ul>
-<li>Core language: <strong>Fortran</strong> / <strong>C</strong> with MPI / OpenMP for parallelism</li>
+<li>Core language: <strong>Perl</strong> / <strong>C</strong> with MPI / OpenMP for parallelism</li>
 <li>User interface: text-based (TUI) using ncurses-like library</li>
-<li>Result visualization: .vtk export → ParaView / OVITO</li>
+<li>Result visualization: .vtk export → ParaView</li>
 <li>Database backend: SQLite (stores projects, users, task history, input parameters)</li>
 <li>Target platform: Linux (server or workstation)</li>
 </ul>
 </section>
 <section id="project-status" class="level3">
 <h3 class="anchored" data-anchor-id="project-status">Project Status</h3>
-<p>Actively maintained (as of 2026).<br>
-Ongoing development includes: - stronger coupling between irradiation and deformation stages - temperature-dependent mobilities and elastic energy contributions - new physical modules (e.g., cascade damage, hydrogen effects)</p>
+<p>Ongoing development includes: - stronger coupling between irradiation and deformation stages - temperature-dependent mobilities and elastic energy contributions - new physical modules (e.g., cascade damage, hydrogen effects)</p>
 <p>The simulator is used for: - fundamental studies of microstructure evolution in nuclear Zr alloys - lifetime prediction of reactor components under irradiation - design of advanced heat-treatment and alloying strategies for improved radiation resistance</p>
-<p>If you are interested in collaboration, scientific applications, or access to (parts of) the code – feel free to <a href="../contact.html">contact me</a> .</p>
+<p>If you are interested in collaboration, scientific applications – feel free to <a href="../contact.html">contact me</a> .</p>
 <section id="leftarrow-return-to-the-projects-list-1" class="level5">
 <h5 class="anchored" data-anchor-id="leftarrow-return-to-the-projects-list-1"><a href="../projects/index.html"><span class="math inline">\(\leftarrow\)</span> Return to the projects list</a></h5>
 
