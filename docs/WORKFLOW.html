@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Molecular Dynamics and ab initio Modeling in Materials Science – Yurii Ovcharenko</title>
+<title>workflow – Yurii Ovcharenko</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,32 +20,67 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/img/yo.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/img/yo.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,10 +108,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../assets/js/main.js"></script>
+<script src="./assets/js/main.js"></script>
 
 
-<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -248,8 +283,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title"><img src="../assets/img/logo.png" style="height:5em; vertical-align:middle;"></span>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title"><img src="./assets/img/logo.png" style="height:5em; vertical-align:middle;"></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -259,17 +294,17 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> <i class="bi bi-person" role="img">
+    <a class="nav-link" href="./index.html"> <i class="bi bi-person" role="img">
 </i> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> <i class="bi bi-grid-3x3-gap" role="img">
+    <a class="nav-link" href="./projects/index.html"> <i class="bi bi-grid-3x3-gap" role="img">
 </i> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../work.html"> <i class="bi bi-briefcase" role="img">
+    <a class="nav-link" href="./work.html"> <i class="bi bi-briefcase" role="img">
 </i> 
 <span class="menu-text">Work</span></a>
   </li>  
@@ -281,39 +316,39 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-teaching">    
         <li>
-    <a class="dropdown-item" href="../teaching/quantum-mechanics.html"><i class="bi bi-cpu" role="img">
+    <a class="dropdown-item" href="./teaching/quantum-mechanics.html"><i class="bi bi-cpu" role="img">
 </i> 
  <span class="dropdown-text">Quantum Mechanics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../teaching/statistical-physics.html"><i class="bi bi-bar-chart" role="img">
+    <a class="dropdown-item" href="./teaching/statistical-physics.html"><i class="bi bi-bar-chart" role="img">
 </i> 
  <span class="dropdown-text">Statistical Physics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../teaching/solid-state-physics.html"><i class="bi bi-layers" role="img">
+    <a class="dropdown-item" href="./teaching/solid-state-physics.html"><i class="bi bi-layers" role="img">
 </i> 
  <span class="dropdown-text">Solid State Physics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../teaching/molecular-dynamics.html"><i class="bi bi-diagram-3" role="img">
+    <a class="dropdown-item" href="./teaching/molecular-dynamics.html"><i class="bi bi-diagram-3" role="img">
 </i> 
  <span class="dropdown-text">Molecular Dynamics &amp; Ab Initio</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../writing.html"> <i class="bi bi-pencil" role="img">
+    <a class="nav-link" href="./writing.html"> <i class="bi bi-pencil" role="img">
 </i> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resume.html"> <i class="bi bi-file-earmark-text" role="img">
+    <a class="nav-link" href="./resume.html"> <i class="bi bi-file-earmark-text" role="img">
 </i> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contact.html"> <i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="./contact.html"> <i class="bi bi-envelope" role="img">
 </i> 
 <span class="menu-text">Contact</span></a>
   </li>  
@@ -329,344 +364,277 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tools-workflow" id="toc-tools-workflow" class="nav-link active" data-scroll-target="#tools-workflow">Tools Workflow</a>
+  <ul>
+  <li><a href="#directory-overview" id="toc-directory-overview" class="nav-link" data-scroll-target="#directory-overview">Directory Overview</a></li>
+  <li><a href="#required-preconditions" id="toc-required-preconditions" class="nav-link" data-scroll-target="#required-preconditions">Required Preconditions</a></li>
+  <li><a href="#script-1-generate_group_list.py" id="toc-script-1-generate_group_list.py" class="nav-link" data-scroll-target="#script-1-generate_group_list.py">Script 1: <code>generate_group_list.py</code></a>
+  <ul class="collapse">
+  <li><a href="#default-run" id="toc-default-run" class="nav-link" data-scroll-target="#default-run">Default run</a></li>
+  <li><a href="#what-it-does" id="toc-what-it-does" class="nav-link" data-scroll-target="#what-it-does">What it does</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters">Parameters</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  </ul></li>
+  <li><a href="#script-2-encrypt.py" id="toc-script-2-encrypt.py" class="nav-link" data-scroll-target="#script-2-encrypt.py">Script 2: <code>encrypt.py</code></a></li>
+  <li><a href="#modes" id="toc-modes" class="nav-link" data-scroll-target="#modes">Modes</a>
+  <ul class="collapse">
+  <li><a href="#a-build-mode-default-recommended" id="toc-a-build-mode-default-recommended" class="nav-link" data-scroll-target="#a-build-mode-default-recommended">A) Build mode (default, recommended)</a></li>
+  <li><a href="#b-personal-mode-manualdebug" id="toc-b-personal-mode-manualdebug" class="nav-link" data-scroll-target="#b-personal-mode-manualdebug">B) Personal mode (manual/debug)</a></li>
+  <li><a href="#parameters-1" id="toc-parameters-1" class="nav-link" data-scroll-target="#parameters-1">Parameters</a></li>
+  </ul></li>
+  <li><a href="#full-recommended-workflow" id="toc-full-recommended-workflow" class="nav-link" data-scroll-target="#full-recommended-workflow">Full Recommended Workflow</a></li>
+  <li><a href="#github-actions-publishing" id="toc-github-actions-publishing" class="nav-link" data-scroll-target="#github-actions-publishing">GitHub Actions Publishing</a></li>
+  <li><a href="#important-security-notes" id="toc-important-security-notes" class="nav-link" data-scroll-target="#important-security-notes">Important Security Notes</a></li>
+  <li><a href="#search-behavior" id="toc-search-behavior" class="nav-link" data-scroll-target="#search-behavior">Search Behavior</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#invalid-username-or-access-code-open-the-site-via-https-not-file" id="toc-invalid-username-or-access-code-open-the-site-via-https-not-file" class="nav-link" data-scroll-target="#invalid-username-or-access-code-open-the-site-via-https-not-file">1) <code>Invalid username or access code (Open the site via HTTP(S), not file://)</code></a></li>
+  <li><a href="#invalid-username-or-access-code-http-404-..." id="toc-invalid-username-or-access-code-http-404-..." class="nav-link" data-scroll-target="#invalid-username-or-access-code-http-404-...">2) <code>Invalid username or access code (HTTP 404 ...)</code></a></li>
+  <li><a href="#quarto-error-attempt-to-write-a-readonly-database" id="toc-quarto-error-attempt-to-write-a-readonly-database" class="nav-link" data-scroll-target="#quarto-error-attempt-to-write-a-readonly-database">3) Quarto error: <code>attempt to write a readonly database</code></a></li>
+  <li><a href="#search-stopped-working" id="toc-search-stopped-working" class="nav-link" data-scroll-target="#search-stopped-working">4) Search stopped working</a></li>
+  </ul></li>
+  <li><a href="#quick-command-cheat-sheet" id="toc-quick-command-cheat-sheet" class="nav-link" data-scroll-target="#quick-command-cheat-sheet">Quick Command Cheat Sheet</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Molecular Dynamics and <em>ab initio</em> Modeling in Materials Science</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<section id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email" class="level5 access-info">
-<h5 class="anchored" data-anchor-id="full-access-to-the-website-materials-is-granted-exclusively-to-authorized-users.-for-access-requests-please-contact-the-site-author-via-email"><strong><em><a href="#" class="full-access-trigger" data-access-discipline="molecular-dynamics">Full access</a> to the website materials is granted exclusively to authorized users. For access requests, please contact the site author via email:</em></strong> <a data-email=""></a></h5>
-</section>
-<div class="public-content">
-<section id="general-course-information" class="level2">
-<h2 class="anchored" data-anchor-id="general-course-information">General Course Information</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Field of Study</td>
-<td>10 Natural Sciences</td>
-</tr>
-<tr class="even">
-<td>Specialty</td>
-<td>104 Physics and Astronomy</td>
-</tr>
-<tr class="odd">
-<td>Level of Education</td>
-<td>Third (Educational and Scientific, PhD level)</td>
-</tr>
-<tr class="even">
-<td>Course Status</td>
-<td>Elective</td>
-</tr>
-<tr class="odd">
-<td>Assessment Type</td>
-<td>Pass / Fail</td>
-</tr>
-<tr class="even">
-<td>Credits</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>Total Workload</td>
-<td>90 hours</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>This course focuses on modern molecular dynamics (MD) and <em>ab initio</em> simulation methods applied to the investigation of metals and alloys at the atomic scale. Special attention is given to MD algorithms, density functional theory (DFT), and hands-on experience with leading computational packages such as <strong>LAMMPS</strong> and <strong>Quantum ESPRESSO</strong>.</p>
-<p>Students acquire practical skills in model construction, analysis of diffusion, mechanical and thermodynamic properties of materials, as well as electronic structure calculations. The course is aimed at developing competencies required for advanced scientific research in materials science and solid-state physics.</p>
-<hr>
-</section>
-<section id="course-objective" class="level2">
-<h2 class="anchored" data-anchor-id="course-objective">Course Objective</h2>
-<p>The objective of the course is to develop systematic theoretical knowledge and practical skills in applying molecular dynamics and <em>ab initio</em> quantum-mechanical methods to study atomic structure, physical properties, and evolutionary processes in metals and alloys.</p>
-<p>Special emphasis is placed on the selection and application of modern interatomic potentials, DFT tools, and computational algorithms, as well as on the interpretation of simulation results for solving contemporary problems in solid-state physics and materials science.</p>
-<hr>
-</section>
-<section id="learning-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
-<section id="competencies" class="level3">
-<h3 class="anchored" data-anchor-id="competencies">Competencies</h3>
-<p>Upon completion of the course, PhD students will be able to:</p>
+<section id="tools-workflow" class="level1">
+<h1>Tools Workflow</h1>
+<p>This document describes how to use scripts in <code>Tools/</code> for access-code generation, encryption, and public-site build.</p>
+<section id="directory-overview" class="level2">
+<h2 class="anchored" data-anchor-id="directory-overview">Directory Overview</h2>
 <ul>
-<li>Understand fundamental principles of molecular dynamics (MD) and <em>ab initio</em> methods, including density functional theory (DFT).</li>
-<li>Select and parameterize interatomic potentials for metals and alloys and assess their validity.</li>
-<li>Perform classical MD simulations using <strong>LAMMPS</strong>.</li>
-<li>Conduct DFT calculations using <strong>Quantum ESPRESSO</strong>.</li>
-<li>Apply <em>ab initio</em> molecular dynamics (AIMD) for modeling atomic motion at finite temperatures.</li>
-<li>Integrate MD and DFT results through multiscale and machine-learning approaches.</li>
-<li>Critically analyze and interpret simulation results.</li>
+<li><code>Tools/group_list.md</code> - source list of users (one per line).</li>
+<li><code>Tools/generate_group_list.py</code> - generates per-discipline code maps.</li>
+<li><code>Tools/encrypt.py</code> - prepares encrypted lesson content.</li>
+<li><code>teaching/*.qmd</code> - source lesson files (plaintext source lives only here).</li>
+<li><code>.build_src/</code> - generated sanitized build workspace (temporary/build artifact).</li>
+<li><code>.github/workflows/publish_site.yml</code> - CI pipeline that builds from <code>.build_src</code> and publishes to <code>oyurii.github.io</code>.</li>
 </ul>
 </section>
-<section id="learning-results" class="level3">
-<h3 class="anchored" data-anchor-id="learning-results">Learning Results</h3>
-<p>Students will be able to:</p>
-<ul>
-<li>Explain physical principles underlying MD and <em>ab initio</em> methods.</li>
-<li>Justify the choice of interatomic potentials and simulation parameters.</li>
-<li>Construct atomic models including defects and surfaces.</li>
-<li>Analyze diffusion, mechanical, thermodynamic, and electronic properties.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="course-workload-breakdown" class="level2">
-<h2 class="anchored" data-anchor-id="course-workload-breakdown">Course Workload Breakdown</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Activity</th>
-<th style="text-align: right;">Hours</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Lectures</td>
-<td style="text-align: right;">30</td>
-</tr>
-<tr class="even">
-<td>Practical Classes</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr class="odd">
-<td>Laboratory Work</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td>Independent Study</td>
-<td style="text-align: right;">44</td>
-</tr>
-<tr class="odd">
-<td><strong>Total</strong></td>
-<td style="text-align: right;"><strong>90</strong></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="course-content" class="level2">
-<h2 class="anchored" data-anchor-id="course-content">Course Content</h2>
-<section id="lectures" class="level3">
-<h3 class="anchored" data-anchor-id="lectures">Lectures</h3>
-<section id="module-1.-introduction-and-theoretical-foundations" class="level4">
-<h4 class="anchored" data-anchor-id="module-1.-introduction-and-theoretical-foundations">Module 1. Introduction and Theoretical Foundations</h4>
+<section id="required-preconditions" class="level2">
+<h2 class="anchored" data-anchor-id="required-preconditions">Required Preconditions</h2>
 <ol type="1">
-<li><p><strong>Introduction to Computational Materials Science</strong> History and role of modeling; <em>ab initio</em>, MD, Monte Carlo methods. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Fundamental Atomic-Scale Equations</strong> Schrödinger equation; Born–Oppenheimer approximation. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Quantum-Mechanical Calculation Methods</strong> DFT, pseudopotentials, exchange–correlation functionals. <strong>Hours:</strong> 2</p></li>
+<li>Lessons that need protected content must have front matter with:
+<ul>
+<li><code>encrypt: true</code> (or <code>encript: true</code> for backward compatibility)</li>
+</ul></li>
+<li>Lesson must contain marked block:
+<ul>
+<li><code>&lt;!-- ENCRYPTED_SECTION_START --&gt;</code></li>
+<li><code>&lt;!-- ENCRYPTED_SECTION_END --&gt;</code></li>
+</ul></li>
+<li><code>Tools/*_group_list.json</code> files must exist for each encrypted discipline.</li>
 </ol>
-<hr>
 </section>
-<section id="module-2.-interatomic-interactions" class="level4">
-<h4 class="anchored" data-anchor-id="module-2.-interatomic-interactions">Module 2. Interatomic Interactions</h4>
+<section id="script-1-generate_group_list.py" class="level2">
+<h2 class="anchored" data-anchor-id="script-1-generate_group_list.py">Script 1: <code>generate_group_list.py</code></h2>
+<p>Generates per-discipline files with user codes.</p>
+<section id="default-run" class="level3">
+<h3 class="anchored" data-anchor-id="default-run">Default run</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Tools</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./generate_group_list.py</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="what-it-does" class="level3">
+<h3 class="anchored" data-anchor-id="what-it-does">What it does</h3>
+<ul>
+<li>Reads users from <code>group_list.md</code></li>
+<li>Detects encrypted disciplines from <code>../teaching/*.qmd</code></li>
+<li>Creates/updates <code>*_group_list.json</code></li>
+<li>Keeps existing codes by default</li>
+<li>Rotates only selected users if <code>--people</code> is provided</li>
+</ul>
+</section>
+<section id="parameters" class="level3">
+<h3 class="anchored" data-anchor-id="parameters">Parameters</h3>
+<ul>
+<li><code>--group-file GROUP_FILE</code><br>
+User list file (default: <code>group_list.md</code>)</li>
+<li><code>--courses-dir COURSES_DIR</code><br>
+Directory with lesson <code>.qmd</code> files (default: <code>../teaching</code>)</li>
+<li><code>--output-dir OUTPUT_DIR</code><br>
+Where to write group-list files (default: current dir)</li>
+<li><code>--disciplines [DISCIPLINES ...]</code><br>
+Explicit discipline names (skip auto-discovery)</li>
+<li><code>--people [PEOPLE ...]</code><br>
+Rotate codes only for selected users</li>
+<li><code>--format {json,yaml}</code><br>
+Output format (default: <code>json</code>)</li>
+<li><code>--code-length CODE_LENGTH</code><br>
+Random part length (without <code>code-</code> prefix), default <code>18</code></li>
+</ul>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate codes only for yurii and roman</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./generate_group_list.py</span> <span class="at">--people</span> yurii roman</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate only for specific disciplines</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">./generate_group_list.py</span> <span class="at">--disciplines</span> quantum-mechanics statistical-physics</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="script-2-encrypt.py" class="level2">
+<h2 class="anchored" data-anchor-id="script-2-encrypt.py">Script 2: <code>encrypt.py</code></h2>
+<p>Builds encrypted per-user lesson variants and sanitized public source.</p>
+</section>
+<section id="modes" class="level2">
+<h2 class="anchored" data-anchor-id="modes">Modes</h2>
+<section id="a-build-mode-default-recommended" class="level3">
+<h3 class="anchored" data-anchor-id="a-build-mode-default-recommended">A) Build mode (default, recommended)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Tools</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./encrypt.py</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># same as: ./encrypt.py --mode build</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This mode:</p>
+<ol type="1">
+<li>Recreates <code>.build_src/</code> from project root.</li>
+<li>Generates per-user encrypted qmd files in <code>.build_src/teaching/*_encripted.qmd</code>.</li>
+<li>Sanitizes public <code>.build_src/teaching/*.qmd</code> so plaintext protected block is removed.</li>
+<li>Adjusts <code>.build_src/_quarto.yml</code> to allow rendering encrypted variants in build workspace.</li>
+<li>Marks per-user pages with <code>search: false</code> to keep them out of public search index.</li>
+</ol>
+</section>
+<section id="b-personal-mode-manualdebug" class="level3">
+<h3 class="anchored" data-anchor-id="b-personal-mode-manualdebug">B) Personal mode (manual/debug)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Tools</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./encrypt.py</span> <span class="at">--mode</span> personal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This mode writes <code>*_encripted.qmd</code> into target content directory (default <code>../teaching</code>). Use only when explicitly needed.</p>
+</section>
+<section id="parameters-1" class="level3">
+<h3 class="anchored" data-anchor-id="parameters-1">Parameters</h3>
+<ul>
+<li><code>--mode {personal,build}</code><br>
+Execution mode (default: <code>build</code>)</li>
+<li><code>--content-dir CONTENT_DIR</code><br>
+Lesson source directory for personal mode (default: <code>../teaching</code>)</li>
+<li><code>--group-lists-dir GROUP_LISTS_DIR</code><br>
+Directory with <code>*_group_list.json</code> (default: current dir)</li>
+<li><code>--people [PEOPLE ...]</code><br>
+In personal mode, generate only selected users</li>
+<li><code>--suffix SUFFIX</code><br>
+Suffix for encrypted variants (default: <code>encripted</code>)</li>
+<li><code>--project-root PROJECT_ROOT</code><br>
+Project root for build mode (default: <code>..</code>)</li>
+<li><code>--build-dir BUILD_DIR</code><br>
+Build workspace path (default: <code>../.build_src</code>)</li>
+<li><code>--content-subdir CONTENT_SUBDIR</code><br>
+Content subdir in build workspace (default: <code>teaching</code>)</li>
+<li><code>--group-lists-subdir GROUP_LISTS_SUBDIR</code><br>
+Group-list subdir in build workspace (default: <code>Tools</code>)</li>
+</ul>
+</section>
+</section>
+<section id="full-recommended-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="full-recommended-workflow">Full Recommended Workflow</h2>
+<p>From <code>oyurii_project_private/</code>:</p>
+<ol type="1">
+<li>Update lesson content in <code>teaching/*.qmd</code> (including protected section markers).</li>
+<li>Update user list if needed in <code>Tools/group_list.md</code>.</li>
+<li>Regenerate/rotate codes:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Tools</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./generate_group_list.py</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="4" type="1">
-<li><p><strong>Empirical Potentials for Metals</strong> EAM, MEAM, Finnis–Sinclair, Gupta potentials. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Construction and Scaling of Potentials</strong> Alloy systems and validation strategies. <strong>Hours:</strong> 2</p></li>
+<li>Build sanitized workspace:</li>
 </ol>
-<hr>
-</section>
-<section id="module-3.-molecular-dynamics" class="level4">
-<h4 class="anchored" data-anchor-id="module-3.-molecular-dynamics">Module 3. Molecular Dynamics</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./encrypt.py</span> <span class="at">--mode</span> build</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="5" type="1">
+<li>Render site from sanitized workspace:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../.build_src</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="6" type="1">
-<li><p><strong>Fundamentals of Classical Molecular Dynamics</strong> Integration algorithms; statistical ensembles. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Implementation of MD in Software Packages</strong> LAMMPS workflows and input structures. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Modeling Physical Properties of Metals</strong> Elastic constants, diffusion, correlation functions. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Crystal Defects and Their Dynamics</strong> Vacancies, dislocations, grain boundaries. <strong>Hours:</strong> 2</p></li>
+<li>Publish only:</li>
 </ol>
-<hr>
-</section>
-<section id="module-4.-interaction-with-environment" class="level4">
-<h4 class="anchored" data-anchor-id="module-4.-interaction-with-environment">Module 4. Interaction with Environment</h4>
-<ol start="10" type="1">
-<li><p><strong>Oxidation and Corrosion in MD Models</strong> Reactive force fields: ReaxFF, COMB. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Surface Phenomena and Nanostructures</strong> Surface energy and clustering. <strong>Hours:</strong> 2</p></li>
-</ol>
-<hr>
-</section>
-<section id="module-5.-ab-initio-dynamics-and-multiphysics" class="level4">
-<h4 class="anchored" data-anchor-id="module-5.-ab-initio-dynamics-and-multiphysics">Module 5. <em>Ab initio</em> Dynamics and Multiphysics</h4>
-<ol start="12" type="1">
-<li><p><strong><em>Ab initio</em> Molecular Dynamics (AIMD)</strong> Car–Parrinello MD. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Combining DFT and MD</strong> QM/MM and machine-learning potentials. <strong>Hours:</strong> 2</p></li>
-</ol>
-<hr>
-</section>
-<section id="module-6.-practical-applications" class="level4">
-<h4 class="anchored" data-anchor-id="module-6.-practical-applications">Module 6. Practical Applications</h4>
-<ol start="14" type="1">
-<li><p><strong>Modeling Structural and Kinetic Processes in Alloys</strong> Phase transitions and diffusion. <strong>Hours:</strong> 2</p></li>
-<li><p><strong>Modeling Radiation Damage in Materials</strong> Displacement cascades. <strong>Hours:</strong> 2</p></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="practical-classes" class="level3">
-<h3 class="anchored" data-anchor-id="practical-classes">Practical Classes</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;">No.</th>
-<th>Topic</th>
-<th style="text-align: right;">Hours</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td>Crystal lattice geometry and crystallography</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td>Phonons and vibrational properties</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td>Quantum statistics and electron gas</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td>Installation of LAMMPS and Quantum ESPRESSO</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td>Automation and post-processing</td>
-<td style="text-align: right;">2</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="laboratory-work" class="level3">
-<h3 class="anchored" data-anchor-id="laboratory-work">Laboratory Work</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;">No.</th>
-<th>Topic</th>
-<th style="text-align: right;">Hours</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td>Lattice constants and defect formation energies</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td>Alloy deformation and strength limits</td>
-<td style="text-align: right;">2</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-</section>
-<section id="independent-study" class="level2">
-<h2 class="anchored" data-anchor-id="independent-study">Independent Study</h2>
-<p>Analytical mechanics, lattice dynamics, band theory, statistical thermodynamics, DFT-based elastic constant calculations.</p>
-<p><strong>Total:</strong> 44 hours</p>
-<hr>
-</section>
-<section id="assessment" class="level2">
-<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Component</th>
-<th style="text-align: right;">Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Practical classes</td>
-<td style="text-align: right;">35%</td>
-</tr>
-<tr class="even">
-<td>Laboratory work</td>
-<td style="text-align: right;">30%</td>
-</tr>
-<tr class="odd">
-<td>Attestation tests</td>
-<td style="text-align: right;">20%</td>
-</tr>
-<tr class="even">
-<td>Individual assignments</td>
-<td style="text-align: right;">15%</td>
-</tr>
-<tr class="odd">
-<td><strong>Total</strong></td>
-<td style="text-align: right;"><strong>100%</strong></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="recommended-literature" class="level2">
-<h2 class="anchored" data-anchor-id="recommended-literature">Recommended Literature</h2>
-<section id="core-literature" class="level3">
-<h3 class="anchored" data-anchor-id="core-literature">Core Literature</h3>
 <ul>
-<li>Kittel, C., McEuen, P. <em>Introduction to Solid State Physics</em>, Wiley.</li>
-<li>Vakarchuk, I.O. <em>Quantum Mechanics</em>, Lviv.</li>
-<li><a href="https://www.lammps.org">https://www.lammps.org</a></li>
-<li><a href="https://www.quantum-espresso.org">https://www.quantum-espresso.org</a></li>
+<li><code>.build_src/_docs/</code></li>
 </ul>
 </section>
-<section id="supplementary-literature" class="level3">
-<h3 class="anchored" data-anchor-id="supplementary-literature">Supplementary Literature</h3>
+<section id="github-actions-publishing" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions-publishing">GitHub Actions Publishing</h2>
+<p>Current workflow file: <code>.github/workflows/publish_site.yml</code></p>
+<p>Pipeline steps:</p>
+<ol type="1">
+<li>Checkout private repo.</li>
+<li><code>python3 Tools/encrypt.py --mode build</code></li>
+<li><code>quarto render</code> in <code>.build_src/</code></li>
+<li>Copy <code>.build_src/_docs/*</code> into <code>oyurii.github.io/docs/</code></li>
+<li>Commit + push to public repo.</li>
+</ol>
+</section>
+<section id="important-security-notes" class="level2">
+<h2 class="anchored" data-anchor-id="important-security-notes">Important Security Notes</h2>
 <ul>
-<li>Protsenko I.Yu., Shumakova N.I., Ovcharenko Yu.M. <em>Solid State Physics</em>, Sumy.</li>
+<li>Do not publish source <code>teaching/*.qmd</code> from main tree.</li>
+<li>Publish only <code>.build_src/_docs</code>.</li>
+<li>In build mode, public pages do not contain plaintext protected content.</li>
+<li>Per-user encrypted pages are generated separately and fetched only after user authorization.</li>
+<li>Authorization UI is modal and opens only after user clicks <code>Full access</code>.</li>
 </ul>
-<hr>
+</section>
+<section id="search-behavior" class="level2">
+<h2 class="anchored" data-anchor-id="search-behavior">Search Behavior</h2>
+<ul>
+<li>Per-user encrypted pages are marked with <code>search: false</code>.</li>
+<li>They are excluded from <code>search.json</code> indexing.</li>
+</ul>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<section id="invalid-username-or-access-code-open-the-site-via-https-not-file" class="level3">
+<h3 class="anchored" data-anchor-id="invalid-username-or-access-code-open-the-site-via-https-not-file">1) <code>Invalid username or access code (Open the site via HTTP(S), not file://)</code></h3>
+<p>You opened pages directly from filesystem. Use HTTP server:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> .build_src/_docs</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server 8000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="invalid-username-or-access-code-http-404-..." class="level3">
+<h3 class="anchored" data-anchor-id="invalid-username-or-access-code-http-404-...">2) <code>Invalid username or access code (HTTP 404 ...)</code></h3>
+<p>Usually means encrypted page was not published or wrong path. Ensure you deployed full <code>.build_src/_docs/teaching/</code> including <code>*_encripted.html</code>.</p>
+</section>
+<section id="quarto-error-attempt-to-write-a-readonly-database" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-error-attempt-to-write-a-readonly-database">3) Quarto error: <code>attempt to write a readonly database</code></h3>
+<p>Quarto cache issue in restricted environment. Re-run <code>quarto render</code> with proper permissions/environment (normal local shell usually works).</p>
+</section>
+<section id="search-stopped-working" class="level3">
+<h3 class="anchored" data-anchor-id="search-stopped-working">4) Search stopped working</h3>
+<p>Rebuild from <code>.build_src</code> and ensure final published <code>search.json</code> exists:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span> .build_src/_docs/search.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Also verify <code>search.json</code> does not include encrypted per-user pages:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="st">"_encripted</span><span class="dt">\\</span><span class="st">.html"</span> .build_src/_docs/search.json</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># should return no matches</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="academic-integrity" class="level2">
-<h2 class="anchored" data-anchor-id="academic-integrity">Academic Integrity</h2>
-<p>Students must adhere to principles of academic integrity, proper citation, and independent completion of all assignments, in accordance with the regulations of the Institute of Applied Physics, NAS of Ukraine.</p>
+<section id="quick-command-cheat-sheet" class="level2">
+<h2 class="anchored" data-anchor-id="quick-command-cheat-sheet">Quick Command Cheat Sheet</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Generate/update user codes</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Tools</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./generate_group_list.py</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Build sanitized workspace (default mode)</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="ex">./encrypt.py</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Render website</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../.build_src</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Local preview via HTTP (required for authorization fetch)</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> _docs</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server 8000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
 </section>
-</div>
-<div class="encrypted-section-block">
-<div class="encrypted-section-content">
-
-</div>
-</div>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
