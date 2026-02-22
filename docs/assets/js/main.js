@@ -1,3 +1,14 @@
+const SUPPORTED_LANGS = ["en", "uk"];
+const LANG_KEY = "site_lang";
+
+function isUkrainianUi() {
+  return (getCurrentLangFromPath() || getPreferredLang()) === "uk";
+}
+
+function t(enText, ukText) {
+  return isUkrainianUi() ? ukText : enText;
+}
+
 function setupEmailLinks() {
   document.querySelectorAll("[data-email]").forEach((el) => {
     const user1 = "yu";
@@ -12,9 +23,151 @@ function setupEmailLinks() {
     el.addEventListener("click", (event) => {
       event.preventDefault();
       navigator.clipboard.writeText(email);
-      alert("Email copied to clipboard");
+      alert(t("Email copied to clipboard", "Email скопійовано в буфер обміну"));
     });
   });
+}
+
+function getCurrentLangFromPath() {
+  const segments = window.location.pathname.split("/").filter(Boolean);
+  const idx = segments.findIndex((s) => SUPPORTED_LANGS.includes(s));
+  return idx >= 0 ? segments[idx] : "";
+}
+
+function getPreferredLang() {
+  const saved = localStorage.getItem(LANG_KEY);
+  if (saved && SUPPORTED_LANGS.includes(saved)) {
+    return saved;
+  }
+  const nav = (navigator.language || "en").toLowerCase();
+  return nav.startsWith("uk") ? "uk" : "en";
+}
+
+function buildPathForLang(targetLang) {
+  const segments = window.location.pathname.split("/").filter(Boolean);
+  const hasFile = segments.length > 0 && segments[segments.length - 1].includes(".");
+  const hadTrailingSlash = window.location.pathname.endsWith("/");
+  const langIdx = segments.findIndex((s) => SUPPORTED_LANGS.includes(s));
+
+  if (langIdx >= 0) {
+    segments[langIdx] = targetLang;
+  } else if (hasFile) {
+    segments.splice(Math.max(segments.length - 1, 0), 0, targetLang);
+  } else {
+    segments.push(targetLang);
+  }
+
+  let path = `/${segments.join("/")}`;
+  if (!hasFile && hadTrailingSlash && !path.endsWith("/")) {
+    path += "/";
+  }
+  return `${path}${window.location.search}${window.location.hash}`;
+}
+
+function buildLanguagePathCandidates(targetLang) {
+  const candidates = [];
+  const primary = buildPathForLang(targetLang);
+  candidates.push(primary);
+
+  if (primary.startsWith("/docs/")) {
+    candidates.push(primary.replace(/^\/docs/, ""));
+  } else {
+    candidates.push(`/docs${primary}`);
+  }
+
+  return [...new Set(candidates)];
+}
+
+async function pathExists(path) {
+  try {
+    const response = await fetch(path, { cache: "no-store" });
+    return response.ok;
+  } catch (_error) {
+    return false;
+  }
+}
+
+async function setupLanguageRouting() {
+  if (window.location.protocol === "file:") {
+    return;
+  }
+
+  const preferred = getPreferredLang();
+  localStorage.setItem(LANG_KEY, preferred);
+
+  const currentLang = getCurrentLangFromPath();
+  if (!currentLang) {
+    const candidates = buildLanguagePathCandidates(preferred);
+    for (const candidate of candidates) {
+      // Avoid loop in edge setups.
+      if (candidate === `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+        continue;
+      }
+      if (await pathExists(candidate)) {
+        window.location.replace(candidate);
+        return;
+      }
+    }
+    return;
+  }
+
+  if (currentLang !== preferred) {
+    const candidates = buildLanguagePathCandidates(preferred);
+    for (const candidate of candidates) {
+      if (await pathExists(candidate)) {
+        window.location.replace(candidate);
+        return;
+      }
+    }
+  }
+}
+
+function setupLanguageSwitcher() {
+  const navList =
+    document.querySelector(".navbar .navbar-nav.navbar-nav-scroll.ms-auto") ||
+    document.querySelector(".navbar .navbar-nav");
+  if (!navList || document.querySelector(".lang-switcher-item")) {
+    return;
+  }
+
+  const currentLang = getCurrentLangFromPath() || getPreferredLang();
+  const item = document.createElement("li");
+  item.className = "nav-item lang-switcher-item d-flex align-items-center";
+
+  const en = document.createElement("a");
+  en.href = buildPathForLang("en");
+  en.className = "nav-link px-1";
+  en.textContent = "EN";
+
+  const sep = document.createElement("span");
+  sep.className = "nav-link px-0";
+  sep.textContent = "/";
+
+  const uk = document.createElement("a");
+  uk.href = buildPathForLang("uk");
+  uk.className = "nav-link px-1";
+  uk.textContent = "UK";
+
+  if (currentLang === "en") {
+    en.style.fontWeight = "700";
+  }
+  if (currentLang === "uk") {
+    uk.style.fontWeight = "700";
+  }
+
+  const onClick = (lang) => (event) => {
+    event.preventDefault();
+    localStorage.setItem(LANG_KEY, lang);
+    window.location.href = buildPathForLang(lang);
+  };
+
+  en.addEventListener("click", onClick("en"));
+  uk.addEventListener("click", onClick("uk"));
+
+  item.appendChild(en);
+  item.appendChild(sep);
+  item.appendChild(uk);
+  navList.appendChild(item);
 }
 
 function normalizeUserName(name) {
@@ -113,12 +266,12 @@ async function buildKeystream(encKey, nonce, length) {
 async function decryptPayload(encodedPayload, secret) {
   const packed = base64UrlToBytes(encodedPayload.trim());
   if (packed.length < 4 + 16 + 16 + 32 + 1) {
-    throw new Error("Payload is too short");
+    throw new Error(t("Payload is too short", "Зашифровані дані занадто короткі"));
   }
 
   const magic = new TextDecoder().decode(packed.slice(0, 4));
   if (magic !== "ENC1") {
-    throw new Error("Unsupported payload format");
+    throw new Error(t("Unsupported payload format", "Непідтримуваний формат зашифрованих даних"));
   }
 
   const salt = packed.slice(4, 20);
@@ -130,7 +283,7 @@ async function decryptPayload(encodedPayload, secret) {
   const { encKey, macKey } = await deriveKeys(secret, salt);
   const computedTag = await hmacSha256(macKey, concatBytes(header, cipher));
   if (!equalBytes(tag, computedTag.slice(0, tag.length))) {
-    throw new Error("Authentication failed");
+    throw new Error(t("Authentication failed", "Перевірка автентичності не пройшла"));
   }
 
   const stream = await buildKeystream(encKey, nonce, cipher.length);
@@ -159,6 +312,7 @@ function buildEncryptedCandidatePaths(discipline, user) {
   const fileName = `${discipline}_${user}_encripted.html`;
   const rawSegments = window.location.pathname.split("/").filter(Boolean);
   const segments = [...rawSegments];
+  const langIdx = segments.findIndex((s) => SUPPORTED_LANGS.includes(s));
 
   if (segments.length > 0) {
     const last = segments[segments.length - 1].toLowerCase();
@@ -169,8 +323,25 @@ function buildEncryptedCandidatePaths(discipline, user) {
     }
   }
 
-  const basePath = `/${segments.join("/")}${segments.length ? "/" : "/"}`;
-  const candidates = [new URL(`${basePath}${fileName}`, window.location.origin).toString()];
+  const baseVariants = [];
+  baseVariants.push([...segments]);
+
+  if (langIdx >= 0) {
+    SUPPORTED_LANGS.forEach((lang) => {
+      const variant = [...segments];
+      variant[langIdx] = lang;
+      baseVariants.push(variant);
+    });
+  }
+
+  const candidates = [];
+  baseVariants.forEach((parts) => {
+    const basePath = `/${parts.join("/")}${parts.length ? "/" : "/"}`;
+    const url = new URL(`${basePath}${fileName}`, window.location.origin).toString();
+    if (!candidates.includes(url)) {
+      candidates.push(url);
+    }
+  });
 
   if (window.location.pathname.endsWith("/")) {
     const fallbackDir = getPageDirectoryPath();
@@ -185,11 +356,11 @@ function buildEncryptedCandidatePaths(discipline, user) {
 
 async function fetchEncryptedVariant(discipline, user) {
   if (window.location.protocol === "file:") {
-    throw new Error("Open the site via HTTP(S), not file://");
+    throw new Error(t("Open the site via HTTP(S), not file://", "Відкрийте сайт через HTTP(S), а не file://"));
   }
 
   const candidates = buildEncryptedCandidatePaths(discipline, user);
-  let lastError = "No candidate URL succeeded";
+  let lastError = t("No candidate URL succeeded", "Не вдалося отримати дані за жодним із можливих URL");
 
   for (const url of candidates) {
     try {
@@ -207,7 +378,7 @@ async function fetchEncryptedVariant(discipline, user) {
       const hashNode = doc.querySelector(".encrypted-payload-meta[data-encrypted-payload-sha256]");
 
       if (!payloadNode || !hashNode) {
-        lastError = `Encrypted payload missing in ${url}`;
+        lastError = t(`Encrypted payload missing in ${url}`, `Зашифровані дані відсутні за адресою ${url}`);
         continue;
       }
 
@@ -248,7 +419,7 @@ function setEncryptedMode(plaintext) {
 async function tryUnlockWithCredentials(discipline, user, code, persist) {
   const normalizedUser = normalizeUserName(user);
   if (!normalizedUser || !code) {
-    return { ok: false, reason: "Missing username or code" };
+    return { ok: false, reason: t("Missing username or code", "Не вказано ім'я користувача або код доступу") };
   }
 
   try {
@@ -256,7 +427,7 @@ async function tryUnlockWithCredentials(discipline, user, code, persist) {
     const plaintext = await decryptPayload(variant.payload, code);
     const digest = await sha256Hex(plaintext);
     if (variant.expectedHash && digest !== variant.expectedHash) {
-      return { ok: false, reason: "Hash mismatch" };
+      return { ok: false, reason: t("Hash mismatch", "Контрольна сума не збігається") };
     }
 
     if (persist) {
@@ -266,7 +437,10 @@ async function tryUnlockWithCredentials(discipline, user, code, persist) {
     setEncryptedMode(plaintext);
     return { ok: true, reason: "" };
   } catch (error) {
-    return { ok: false, reason: error instanceof Error ? error.message : "Unknown error" };
+    return {
+      ok: false,
+      reason: error instanceof Error ? error.message : t("Unknown error", "Невідома помилка")
+    };
   }
 }
 
@@ -291,9 +465,8 @@ function createAccessModal() {
   modal.style.boxShadow = "0 20px 50px rgba(0,0,0,0.3)";
 
   const title = document.createElement("h3");
-  title.textContent = "Authorized Access";
-  title.style.margin = "0 0 12px 0";
-  title.style.fontSize = "1.1rem";
+  title.className = "encrypted-access-title";
+  title.textContent = t("Authorized Access", "Авторизований доступ");
 
   const form = document.createElement("form");
   form.className = "encrypted-access-form";
@@ -301,34 +474,33 @@ function createAccessModal() {
   form.style.gap = "10px";
 
   const userInput = document.createElement("input");
+  userInput.className = "encrypted-access-input";
   userInput.type = "text";
   userInput.name = "username";
-  userInput.placeholder = "Username";
+  userInput.placeholder = t("Username", "Ім'я користувача");
   userInput.autocomplete = "username";
   userInput.required = true;
-  userInput.style.padding = "8px";
-
   const codeInput = document.createElement("input");
+  codeInput.className = "encrypted-access-input";
   codeInput.type = "password";
   codeInput.name = "access_code";
-  codeInput.placeholder = "Access code";
+  codeInput.placeholder = t("Access code", "Код доступу");
   codeInput.autocomplete = "off";
   codeInput.required = true;
-  codeInput.style.padding = "8px";
-
   const actions = document.createElement("div");
+  actions.className = "encrypted-access-actions";
   actions.style.display = "flex";
   actions.style.gap = "8px";
 
   const unlockBtn = document.createElement("button");
+  unlockBtn.className = "encrypted-access-btn encrypted-access-btn-primary";
   unlockBtn.type = "submit";
-  unlockBtn.textContent = "Unlock";
-  unlockBtn.style.padding = "8px 14px";
+  unlockBtn.textContent = t("Unlock", "Відкрити");
 
   const cancelBtn = document.createElement("button");
+  cancelBtn.className = "encrypted-access-btn encrypted-access-btn-secondary";
   cancelBtn.type = "button";
-  cancelBtn.textContent = "Cancel";
-  cancelBtn.style.padding = "8px 14px";
+  cancelBtn.textContent = t("Cancel", "Скасувати");
 
   const status = document.createElement("div");
   status.className = "encrypted-access-status";
@@ -368,6 +540,11 @@ function hideAccessInfo(trigger) {
   }
 }
 
+function shouldForgetStoredCredentials(reason) {
+  const msg = (reason || "").toLowerCase();
+  return msg.includes("authentication failed") || msg.includes("hash mismatch");
+}
+
 function setupEncryptedAccess() {
   const trigger = document.querySelector(".full-access-trigger[data-access-discipline]");
   const encryptedBlocks = document.querySelectorAll(".encrypted-section-block");
@@ -394,8 +571,10 @@ function setupEncryptedAccess() {
     modal.userInput.value = storedUser;
     tryUnlockWithCredentials(discipline, storedUser, storedCode, false).then((result) => {
       if (!result.ok) {
-        localStorage.removeItem(`courseAccessCode:${discipline}`);
-        localStorage.removeItem(`courseAccessUser:${discipline}`);
+        if (shouldForgetStoredCredentials(result.reason)) {
+          localStorage.removeItem(`courseAccessCode:${discipline}`);
+          localStorage.removeItem(`courseAccessUser:${discipline}`);
+        }
         setPublicMode();
       } else {
         hideAccessInfo(trigger);
@@ -411,7 +590,7 @@ function setupEncryptedAccess() {
 
   modal.form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    modal.status.textContent = "Checking credentials...";
+    modal.status.textContent = t("Checking credentials...", "Перевірка облікових даних...");
 
     const result = await tryUnlockWithCredentials(
       discipline,
@@ -421,7 +600,10 @@ function setupEncryptedAccess() {
     );
 
     if (!result.ok) {
-      modal.status.textContent = `Invalid username or access code (${result.reason})`;
+      modal.status.textContent = t(
+        `Invalid username or access code (${result.reason})`,
+        `Неправильне ім'я користувача або код доступу (${result.reason})`
+      );
       setPublicMode();
       return;
     }
@@ -438,6 +620,8 @@ function setupEncryptedAccess() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  setupLanguageRouting();
+  setupLanguageSwitcher();
   setupEmailLinks();
   setupEncryptedAccess();
 });

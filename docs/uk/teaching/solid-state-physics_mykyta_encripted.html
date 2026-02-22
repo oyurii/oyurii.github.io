@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk-UA" xml:lang="uk-UA"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Фізика твердого тіла – Юрій Овчаренко</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/yo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../assets/js/main.js"></script>
+
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title"><img src="../assets/img/logo.png" style="height:5em; vertical-align:middle;"></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> <i class="bi bi-person" role="img">
+</i> 
+<span class="menu-text">Про мене</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/index.html"> <i class="bi bi-grid-3x3-gap" role="img">
+</i> 
+<span class="menu-text">Проєкти</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../work.html"> <i class="bi bi-briefcase" role="img">
+</i> 
+<span class="menu-text">Досвід</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-mortarboard" role="img">
+</i> 
+ <span class="menu-text">Викладання</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="../teaching/quantum-mechanics.html"><i class="bi bi-cpu" role="img">
+</i> 
+ <span class="dropdown-text">Квантова механіка</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../teaching/statistical-physics.html"><i class="bi bi-bar-chart" role="img">
+</i> 
+ <span class="dropdown-text">Статистична фізика</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../teaching/solid-state-physics.html"><i class="bi bi-layers" role="img">
+</i> 
+ <span class="dropdown-text">Фізика твердого тіла</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../teaching/molecular-dynamics.html"><i class="bi bi-diagram-3" role="img">
+</i> 
+ <span class="dropdown-text">Молекулярна динаміка та Ab Initio</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../writing.html"> <i class="bi bi-pencil" role="img">
+</i> 
+<span class="menu-text">Нотатки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resume.html"> <i class="bi bi-file-earmark-text" role="img">
+</i> 
+<span class="menu-text">Резюме</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Контакти</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Фізика твердого тіла</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="повний-доступ-до-матеріалів-сайту-надається-лише-авторизованим-користувачам.-для-отримання-доступу-зверніться-до-автора-сайту-за-email" class="level5 access-info">
+<h5 class="anchored" data-anchor-id="повний-доступ-до-матеріалів-сайту-надається-лише-авторизованим-користувачам.-для-отримання-доступу-зверніться-до-автора-сайту-за-email"><strong><em><a href="#" class="full-access-trigger" data-access-discipline="solid-state-physics">Повний доступ</a> до матеріалів сайту надається лише авторизованим користувачам. Для отримання доступу зверніться до автора сайту за email:</em></strong> <a data-email=""></a></h5>
+</section>
+<div class="public-content">
+<section id="опис-курсу" class="level3">
+<h3 class="anchored" data-anchor-id="опис-курсу">Опис курсу</h3>
+<p>Цей курс дає цілісний вступ до фізики твердого тіла. Основна увага приділяється кристалічній структурі, динаміці ґратки, електронній зонній теорії, переносу електронів у металах і напівпровідниках, магнетизму, надпровідності та експериментальним методам дослідження твердих тіл. Особливий акцент робиться на мікроскопічних фізичних механізмах, що визначають макроскопічні властивості твердих матеріалів.</p>
+<hr>
+</section>
+<section id="теми-лекцій-та-питання" class="level2">
+<h2 class="anchored" data-anchor-id="теми-лекцій-та-питання">Теми лекцій та питання</h2>
+</section>
+<section id="частина-1.-геометрія-кристалічної-ґратки" class="level1">
+<h1>Частина 1. Геометрія кристалічної ґратки</h1>
+<section id="лекція-1.-вступ-до-фізики-твердого-тіла.-геометрія-кристалічної-ґратки" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-1.-вступ-до-фізики-твердого-тіла.-геометрія-кристалічної-ґратки">Лекція 1. Вступ до фізики твердого тіла. Геометрія кристалічної ґратки</h2>
+<ol type="1">
+<li>Предмет, експериментальні та теоретичні методи фізики твердого тіла. Роль фізики твердого тіла в сучасній фізичній науці.</li>
+<li>Кристалічні та аморфні тверді тіла. Типи кристалічних ґраток: ґратка Браве та ґратка з базисом. Елементарна комірка.</li>
+<li>Ґратки Браве.</li>
+<li>Індекси вузлів, кристалографічних напрямів і площин. Індекси Міллера.</li>
+</ol>
+</section>
+<section id="лекція-2.-поширення-хвиль-у-періодичних-структурах.-обернена-ґратка" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-2.-поширення-хвиль-у-періодичних-структурах.-обернена-ґратка">Лекція 2. Поширення хвиль у періодичних структурах. Обернена ґратка</h2>
+<ol type="1">
+<li>Дифракція як основний метод визначення кристалічної структури. Закон Вульфа-Брэгга.</li>
+<li>Рівняння Лауе.</li>
+<li>Обернена ґратка та її властивості.</li>
+<li>Побудова Евальда.</li>
+<li>Зони Бріллюена.</li>
+</ol>
+</section>
+<section id="лекція-3.-типи-хімічного-звязку-в-кристалах.-дефекти-кристалів" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-3.-типи-хімічного-звязку-в-кристалах.-дефекти-кристалів">Лекція 3. Типи хімічного зв’язку в кристалах. Дефекти кристалів</h2>
+<ol type="1">
+<li>Загальна характеристика хімічного зв’язку в твердих тілах:
+<ul>
+<li>йонний зв’язок;</li>
+<li>ковалентний зв’язок;</li>
+<li>металічний зв’язок;</li>
+<li>молекулярний (ван дер Ваальсів) зв’язок;</li>
+<li>водневий зв’язок.</li>
+</ul></li>
+<li>Дефекти кристалів:
+<ul>
+<li>точкові дефекти: дефекти Френкеля і Шотткі;</li>
+<li>лінійні дефекти (дислокації);</li>
+<li>поверхневі дефекти;</li>
+<li>об’ємні дефекти.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="частина-2.-зонна-теорія-твердих-тіл" class="level1">
+<h1>Частина 2. Зонна теорія твердих тіл</h1>
+<section id="лекція-4.-наближені-методи-розвязання-рівняння-шредінгера-в-кристалах" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-4.-наближені-методи-розвязання-рівняння-шредінгера-в-кристалах">Лекція 4. Наближені методи розв’язання рівняння Шредінгера в кристалах</h2>
+<ol type="1">
+<li>Рівняння Шредінгера для електронів у кристалі.</li>
+<li>Адіабатичне наближення. Валентне наближення.</li>
+<li>Метод самоузгодженого поля Гартрі-Фока (одноелектронне наближення).</li>
+<li>Теорема Блоха.</li>
+<li>Якісний аналіз енергетичного спектра електронів. Формування енергетичних зон.</li>
+<li>Наближення сильного зв’язку. Формування зон та їх ширина для SC, BCC і FCC ґраток.</li>
+</ol>
+</section>
+<section id="лекція-5.-модель-кроніга-пенні.-заповнення-зон" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-5.-модель-кроніга-пенні.-заповнення-зон">Лекція 5. Модель Кроніга-Пенні. Заповнення зон</h2>
+<ol type="1">
+<li>Рівняння Шредінгера з періодичним потенціалом Кроніга-Пенні.</li>
+<li>Аналіз розв’язків:
+<ul>
+<li>слабка взаємодія електрон–атом;</li>
+<li>сильна взаємодія електрон–атом.</li>
+</ul></li>
+<li>Заповнення енергетичних зон в одно-, дво- та багатовалентних матеріалах. Провідники, напівпровідники та ізолятори.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="частина-3.-динаміка-кристалічної-ґратки" class="level1">
+<h1>Частина 3. Динаміка кристалічної ґратки</h1>
+<section id="лекція-6.-нормальні-коливання-кристалічної-ґратки.-квазічастинки" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-6.-нормальні-коливання-кристалічної-ґратки.-квазічастинки">Лекція 6. Нормальні коливання кристалічної ґратки. Квазічастинки</h2>
+<ol type="1">
+<li>Коливання ґратки. Гармонічні та ангармонічні ефекти. Фонони.</li>
+<li>Метод квазічастинок у фізиці твердого тіла. Приклади квазічастинок. Порівняння квазічастинок і реальних частинок.</li>
+<li>Акустичні та оптичні коливання:
+<ul>
+<li>одновимірна одноатомна ґратка;</li>
+<li>одновимірна двоатомна ґратка.</li>
+</ul></li>
+<li>Ангармонічність і теплове розширення.</li>
+</ol>
+</section>
+<section id="лекція-7.-густина-фононних-станів.-теплоємність-ґратки" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-7.-густина-фононних-станів.-теплоємність-ґратки">Лекція 7. Густина фононних станів. Теплоємність ґратки</h2>
+<ol type="1">
+<li>Густина фононних станів. Дебаївська частота та дебаївська температура.</li>
+<li>Експериментальні дані та класична теорія теплоємності ґратки.</li>
+<li>Теорія теплоємності ґратки Ейнштейна.</li>
+<li>Теорія теплоємності ґратки Дебая.</li>
+<li>Електронна теплоємність.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="частина-4.-електронний-газ-у-металах" class="level1">
+<h1>Частина 4. Електронний газ у металах</h1>
+<section id="лекція-8.-електронний-газ-у-металах.-ефективна-маса.-рівняння-больцмана" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-8.-електронний-газ-у-металах.-ефективна-маса.-рівняння-больцмана">Лекція 8. Електронний газ у металах. Ефективна маса. Рівняння Больцмана</h2>
+<ol type="1">
+<li>Статистики Максвелла-Больцмана, Фермі-Дірака та Бозе-Ейнштейна для газу квазічастинок.</li>
+<li>Хімічний потенціал, енергія Фермі та рівень Фермі в металах.</li>
+<li>Електрон як квазічастинка. Ефективна маса та методи її визначення.</li>
+<li>Кінетичне рівняння Больцмана для електронів у металах.</li>
+</ol>
+</section>
+<section id="лекція-9.-електропровідність-металів.-закон-ома" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-9.-електропровідність-металів.-закон-ома">Лекція 9. Електропровідність металів. Закон Ома</h2>
+<ol type="1">
+<li>Основні поняття класичної теорії електропровідності металів.</li>
+<li>Рівняння Больцмана в наближенні часу релаксації.</li>
+<li>Закон Ома та його аналіз.</li>
+<li>Порівняння експериментальних і теоретичних результатів:
+<ul>
+<li>закон Блоха-Грюнайзена;</li>
+<li>електрон-фононне та електрон-електронне розсіяння; правило Маттіссена;</li>
+<li>ефект Кондо;</li>
+<li>електрон-магнонне розсіяння.</li>
+</ul></li>
+</ol>
+</section>
+<section id="лекція-10.-теплопровідність-металів" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-10.-теплопровідність-металів">Лекція 10. Теплопровідність металів</h2>
+<hr>
+</section>
+</section>
+<section id="частина-5.-електронна-теорія-напівпровідників" class="level1">
+<h1>Частина 5. Електронна теорія напівпровідників</h1>
+<section id="лекція-11.-класифікація-напівпровідників.-статистика-носіїв" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-11.-класифікація-напівпровідників.-статистика-носіїв">Лекція 11. Класифікація напівпровідників. Статистика носіїв</h2>
+<ol type="1">
+<li>Загальна характеристика напівпровідників.</li>
+<li>Власні та домішкові напівпровідники.</li>
+<li>Виродження. Вироджені та невироджені напівпровідники.</li>
+<li>Рівноважна концентрація носіїв у власних напівпровідниках. Узагальнена статистика носіїв.</li>
+<li>Рівноважна концентрація носіїв у легованих напівпровідниках.</li>
+<li>Температурна залежність хімічного потенціалу у власних і домішкових напівпровідниках.</li>
+</ol>
+</section>
+<section id="лекція-12.-електропровідність-напівпровідників.-ефект-голла" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-12.-електропровідність-напівпровідників.-ефект-голла">Лекція 12. Електропровідність напівпровідників. Ефект Голла</h2>
+<ol type="1">
+<li>Електропровідність власних напівпровідників.</li>
+<li>Електропровідність домішкових напівпровідників.</li>
+<li>Визначення ширини забороненої зони.</li>
+<li>Ефект Голла:
+<ul>
+<li>у металах;</li>
+<li>у напівпровідниках.</li>
+</ul></li>
+</ol>
+</section>
+<section id="лекція-13.-контактні-та-термоелектричні-явища" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-13.-контактні-та-термоелектричні-явища">Лекція 13. Контактні та термоелектричні явища</h2>
+<ol type="1">
+<li>Контакт метал–метал.</li>
+<li>Контакт метал–напівпровідник.</li>
+<li>p–n перехід.</li>
+<li>Випрямлення електричного струму.</li>
+<li>Термоелектричні ефекти.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="частина-6.-мікроскопічні-теорії-магнетизму" class="level1">
+<h1>Частина 6. Мікроскопічні теорії магнетизму</h1>
+<section id="лекція-14.-діамагнетизм-і-парамагнетизм" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-14.-діамагнетизм-і-парамагнетизм">Лекція 14. Діамагнетизм і парамагнетизм</h2>
+<ol type="1">
+<li>Загальні властивості магнітних матеріалів. Температури Кюрі та Нееля.</li>
+<li>Елементарна теорія діамагнетизму.</li>
+<li>Класична теорія парамагнетизму Ланжевена.</li>
+<li>Парамагнетизм Паулі та діамагнетизм Ландау.</li>
+</ol>
+</section>
+<section id="лекція-15.-теорії-феромагнетизму" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-15.-теорії-феромагнетизму">Лекція 15. Теорії феромагнетизму</h2>
+<ol type="1">
+<li>Теорія феромагнетизму Вейса.</li>
+<li>Термодинамічна (ландауівська) теорія феромагнетизму.</li>
+<li>Обмінна взаємодія в сильномагнітних матеріалах.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="частина-7.-надпровідність" class="level1">
+<h1>Частина 7. Надпровідність</h1>
+<section id="лекція-16.-надпровідність.-bcs-теорія" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-16.-надпровідність.-bcs-теорія">Лекція 16. Надпровідність. BCS-теорія</h2>
+<ol type="1">
+<li>Явище надпровідності. Критична температура.</li>
+<li>Ефект Мейснера.</li>
+<li>Утворення куперівських пар. Мікроскопічна природа надпровідності.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="частина-8.-експериментальні-методи-фізики-твердого-тіла" class="level1">
+<h1>Частина 8. Експериментальні методи фізики твердого тіла</h1>
+<section id="лекція-17.-експериментальні-методи-у-фізиці-твердого-тіла" class="level2">
+<h2 class="anchored" data-anchor-id="лекція-17.-експериментальні-методи-у-фізиці-твердого-тіла">Лекція 17. Експериментальні методи у фізиці твердого тіла</h2>
+<ol type="1">
+<li>Дослідження кристалічної структури, елементного та фазового складу.</li>
+<li>Дослідження електронної структури та магнітних властивостей кристалів.</li>
+</ol>
+<hr>
+</section>
+<section id="відповідність-лекціїгодинилітература" class="level2">
+<h2 class="anchored" data-anchor-id="відповідність-лекціїгодинилітература">Відповідність: лекції–години–література</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Лекція</th>
+<th>Тема (коротка назва)</th>
+<th style="text-align: center;">Години</th>
+<th>Рекомендована література</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Геометрія кристалічної ґратки</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Обернена ґратка та дифракція</td>
+<td style="text-align: center;">2</td>
+<td>Ashcroft &amp; Mermin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Хімічний зв’язок і дефекти</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Основи зонної теорії</td>
+<td style="text-align: center;">2</td>
+<td>Ashcroft &amp; Mermin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Модель Кроніга-Пенні</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Коливання ґратки</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>Теплоємність твердих тіл</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>Електронний газ у металах</td>
+<td style="text-align: center;">2</td>
+<td>Ashcroft &amp; Mermin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>Електропровідність</td>
+<td style="text-align: center;">2</td>
+<td>Ziman</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td>Теплопровідність</td>
+<td style="text-align: center;">2</td>
+<td>Ziman</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td>Статистика в напівпровідниках</td>
+<td style="text-align: center;">2</td>
+<td>Sze</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td>Ефект Голла</td>
+<td style="text-align: center;">2</td>
+<td>Ashcroft &amp; Mermin</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td>Контакти і термоелектрика</td>
+<td style="text-align: center;">2</td>
+<td>Sze</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td>Діа- та парамагнетизм</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td>Феромагнетизм</td>
+<td style="text-align: center;">2</td>
+<td>Kittel</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td>Надпровідність</td>
+<td style="text-align: center;">2</td>
+<td>Tinkham</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td>Експериментальні методи</td>
+<td style="text-align: center;">2</td>
+<td>Cullity</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="основна-література" class="level2">
+<h2 class="anchored" data-anchor-id="основна-література">Основна література</h2>
+<ul>
+<li>C. Kittel, <em>Introduction to Solid State Physics</em></li>
+<li>N.W. Ashcroft, N.D. Mermin, <em>Solid State Physics</em></li>
+<li>J.M. Ziman, <em>Electrons and Phonons</em></li>
+<li>S.M. Sze, <em>Physics of Semiconductor Devices</em></li>
+<li>M. Tinkham, <em>Introduction to Superconductivity</em></li>
+<li>B.D. Cullity, <em>Elements of X-Ray Diffraction</em></li>
+</ul>
+</section>
+</section>
+</div>
+<div class="encrypted-section-block">
+<div class="encrypted-section-content">
+<!-- ENCRYPTED_SECTION_START -->
+<div class="encrypted-payload-meta" data-encrypted-payload-sha256="0686bd58ee4b7cd804dda83be53f74e35d33da9cf8c83be56ad90b29cd387ae3">
+
+</div>
+<pre class="encrypted"><code>RU5DMZ4kT6q4wkDSUSOZNztELnJk7rZjZ9Q18N3iXe4yZQlZ7SfRiU5b18Q6hjhK2APjAAn99ElL6sVI1rJRnc_FTI0A_O3F48hRJpWk7RIORAIjmA-wLVQA-Oltg5aMMkSGfhJeCmrPgphWDEV3w_3csZobKpvO9x2GaUdlciYEwG_t6CzhTIa-GQFwisX_HbYEeWfhNdQ0HAiLX3_qIRxzXYtIywF5CdgmrekHNNPeDmuvci1IYGbrhFTaRvfQKJjbRfJLB_lwK6wohbNoA9Pz8b8Tw51S_NMRujAWqjHQDr_UQBntrKYd4v31Kf8VLfiTKqtq6H8Kxr4Fg28u7YUnUBKXRaGKuspfoJgoK-Dgk1cCaCjyD0lUehIXQJRq9tHqd-H3TrCsWvzG8hwFeGpWIQTxR9so76XaGlCqA7ejrYLJILfN3NH6btfMxpZ2s7VSgpmv5g==</code></pre>
+<!-- ENCRYPTED_SECTION_END -->
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -20,3 +20,78 @@ img.about-image {
     color: red;
 }
 
+.encrypted-access-title {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+}
+
+.encrypted-access-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #111827;
+}
+
+.encrypted-access-input::placeholder {
+  color: #6b7280;
+}
+
+.encrypted-access-input:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 1px;
+  border-color: #60a5fa;
+}
+
+.encrypted-access-actions {
+  margin-top: 2px;
+}
+
+.encrypted-access-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.encrypted-access-btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.encrypted-access-btn-secondary {
+  background: #f3f4f6;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+.encrypted-access-status {
+  min-height: 1.2em;
+}
+
+body.quarto-dark .encrypted-access-modal {
+  background: #111827 !important;
+  color: #f9fafb !important;
+  border: 1px solid #374151;
+}
+
+body.quarto-dark .encrypted-access-input {
+  background: #1f2937;
+  color: #f9fafb;
+  border-color: #4b5563;
+}
+
+body.quarto-dark .encrypted-access-input::placeholder {
+  color: #9ca3af;
+}
+
+body.quarto-dark .encrypted-access-btn-secondary {
+  background: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+body.quarto-dark .encrypted-access-status {
+  color: #f9fafb;
+}
