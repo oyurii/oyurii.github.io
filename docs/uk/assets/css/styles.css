@@ -95,3 +95,50 @@ body.quarto-dark .encrypted-access-btn-secondary {
 body.quarto-dark .encrypted-access-status {
   color: #f9fafb;
 }
+
+.encrypted-section-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.encrypted-section-content th,
+.encrypted-section-content td {
+  border: 1px solid #d1d5db;
+  padding: 0.45rem 0.6rem;
+  vertical-align: top;
+}
+
+.encrypted-section-content th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.encrypted-section-content tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.encrypted-section-content {
+  overflow-x: auto;
+}
+
+body.quarto-dark .encrypted-section-content th,
+body.quarto-dark .encrypted-section-content td {
+  border-color: #4b5563;
+}
+
+body.quarto-dark .encrypted-section-content th {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+body.quarto-dark .encrypted-section-content tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+html.encrypted-content-pending .access-info,
+html.encrypted-content-pending .public-content,
+html.encrypted-content-pending .encrypted-section-block {
+  display: none !important;
+}

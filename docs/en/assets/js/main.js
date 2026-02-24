@@ -1,4 +1,9 @@
 const SUPPORTED_LANGS = ["en", "uk"];
+const ENCRYPTED_PENDING_CLASS = "encrypted-content-pending";
+
+// Added in <head> before page content is parsed to prevent flash of public text on protected pages.
+document.documentElement.classList.add(ENCRYPTED_PENDING_CLASS);
+
 const LANG_KEY = "site_lang";
 
 function isUkrainianUi() {
@@ -309,19 +314,26 @@ function getPageDirectoryPath() {
 }
 
 function buildEncryptedCandidatePaths(discipline, user) {
-  const fileName = `${discipline}_${user}_encripted.html`;
   const rawSegments = window.location.pathname.split("/").filter(Boolean);
   const segments = [...rawSegments];
   const langIdx = segments.findIndex((s) => SUPPORTED_LANGS.includes(s));
+  let pageStem = "index";
 
   if (segments.length > 0) {
     const last = segments[segments.length - 1].toLowerCase();
     if (last.endsWith(".html")) {
+      pageStem = last.replace(/\.html$/i, "");
       segments.pop();
     } else if (last === discipline.toLowerCase()) {
+      pageStem = last;
       segments.pop();
+    } else if (window.location.pathname.endsWith("/")) {
+      pageStem = "index";
+    } else {
+      pageStem = last;
     }
   }
+  const fileName = `${pageStem}_${user}_encripted.html`;
 
   const baseVariants = [];
   baseVariants.push([...segments]);
@@ -384,7 +396,8 @@ async function fetchEncryptedVariant(discipline, user) {
 
       return {
         payload: (payloadNode.textContent || "").trim(),
-        expectedHash: hashNode.getAttribute("data-encrypted-payload-sha256") || ""
+        expectedHash: hashNode.getAttribute("data-encrypted-payload-sha256") || "",
+        payloadFormat: hashNode.getAttribute("data-encrypted-payload-format") || "markdown"
       };
     } catch (error) {
       lastError = error instanceof Error ? error.message : String(error);
@@ -392,6 +405,10 @@ async function fetchEncryptedVariant(discipline, user) {
   }
 
   throw new Error(lastError);
+}
+
+function clearEncryptedPendingState() {
+  document.documentElement.classList.remove(ENCRYPTED_PENDING_CLASS);
 }
 
 function setPublicMode() {
@@ -403,7 +420,176 @@ function setPublicMode() {
   });
 }
 
-function setEncryptedMode(plaintext) {
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function rewriteClientMarkdownLinks(url) {
+  if (!url) {
+    return url;
+  }
+  if (/^[a-z]+:/i.test(url) || url.startsWith("#") || url.startsWith("mailto:")) {
+    return url;
+  }
+
+  const parts = url.split("#");
+  const path = parts[0];
+  const fragment = parts.length > 1 ? `#${parts.slice(1).join("#")}` : "";
+  if (/\.qmd$/i.test(path)) {
+    return `${path.replace(/\.qmd$/i, ".html")}${fragment}`;
+  }
+  return url;
+}
+
+function inlineMarkdownToHtml(text) {
+  let html = escapeHtml(text);
+  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_m, alt, url) => {
+    return `<img src="${rewriteClientMarkdownLinks(url)}" alt="${alt}">`;
+  });
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label, url) => {
+    return `<a href="${rewriteClientMarkdownLinks(url)}">${label}</a>`;
+  });
+  html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  html = html.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
+  return html;
+}
+
+function markdownToHtml(markdown) {
+  const lines = String(markdown || "").replace(/\r\n/g, "\n").split("\n");
+  const out = [];
+  let inCode = false;
+  let codeLang = "";
+  let listType = null;
+  let inBlockquote = false;
+  let paragraph = [];
+
+  const flushParagraph = () => {
+    if (paragraph.length) {
+      out.push(`<p>${inlineMarkdownToHtml(paragraph.join(" "))}</p>`);
+      paragraph = [];
+    }
+  };
+
+  const closeList = () => {
+    if (listType) {
+      out.push(listType === "ol" ? "</ol>" : "</ul>");
+      listType = null;
+    }
+  };
+
+  const closeBlockquote = () => {
+    if (inBlockquote) {
+      flushParagraph();
+      closeList();
+      out.push("</blockquote>");
+      inBlockquote = false;
+    }
+  };
+
+  lines.forEach((rawLine) => {
+    const line = rawLine;
+
+    const fenceMatch = line.match(/^```([^`]*)$/);
+    if (fenceMatch) {
+      flushParagraph();
+      closeList();
+      closeBlockquote();
+      if (!inCode) {
+        inCode = true;
+        codeLang = (fenceMatch[1] || "").trim();
+        out.push(
+          `<pre><code${codeLang ? ` class="language-${escapeHtml(codeLang)}"` : ""}>`
+        );
+      } else {
+        inCode = false;
+        codeLang = "";
+        out.push("</code></pre>");
+      }
+      return;
+    }
+
+    if (inCode) {
+      out.push(`${escapeHtml(line)}\n`);
+      return;
+    }
+
+    if (!line.trim()) {
+      flushParagraph();
+      closeList();
+      closeBlockquote();
+      return;
+    }
+
+    const quoteMatch = line.match(/^>\s?(.*)$/);
+    if (quoteMatch) {
+      if (!inBlockquote) {
+        flushParagraph();
+        closeList();
+        out.push("<blockquote>");
+        inBlockquote = true;
+      }
+      const quoteText = quoteMatch[1];
+      if (quoteText.trim()) {
+        paragraph.push(quoteText.trim());
+      } else {
+        flushParagraph();
+      }
+      return;
+    }
+
+    closeBlockquote();
+
+    const headingMatch = line.match(/^(#{1,6})\s+(.*)$/);
+    if (headingMatch) {
+      flushParagraph();
+      closeList();
+      const level = headingMatch[1].length;
+      out.push(`<h${level}>${inlineMarkdownToHtml(headingMatch[2].trim())}</h${level}>`);
+      return;
+    }
+
+    const hrMatch = line.match(/^[-*_]{3,}\s*$/);
+    if (hrMatch) {
+      flushParagraph();
+      closeList();
+      out.push("<hr>");
+      return;
+    }
+
+    const olMatch = line.match(/^\s*\d+\.\s+(.*)$/);
+    const ulMatch = line.match(/^\s*[-*]\s+(.*)$/);
+    if (olMatch || ulMatch) {
+      flushParagraph();
+      const nextListType = olMatch ? "ol" : "ul";
+      if (listType && listType !== nextListType) {
+        closeList();
+      }
+      if (!listType) {
+        listType = nextListType;
+        out.push(listType === "ol" ? "<ol>" : "<ul>");
+      }
+      out.push(`<li>${inlineMarkdownToHtml((olMatch || ulMatch)[1].trim())}</li>`);
+      return;
+    }
+
+    paragraph.push(line.trim());
+  });
+
+  flushParagraph();
+  closeList();
+  closeBlockquote();
+  if (inCode) {
+    out.push("</code></pre>");
+  }
+
+  return out.join("\n");
+}
+
+function setEncryptedMode(plaintext, payloadFormat = "markdown") {
   document.querySelectorAll(".public-content").forEach((el) => {
     el.style.display = "none";
   });
@@ -411,9 +597,31 @@ function setEncryptedMode(plaintext) {
     el.style.display = "";
     const target = el.querySelector(".encrypted-section-content");
     if (target) {
-      target.textContent = plaintext;
+      if (payloadFormat === "html") {
+        target.innerHTML = plaintext;
+      } else {
+        target.innerHTML = markdownToHtml(plaintext);
+      }
     }
   });
+}
+
+function isDisciplineLandingPage(discipline) {
+  const path = window.location.pathname.replace(/\/+$/, "");
+  const patterns = [
+    new RegExp(`/${discipline.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "i"),
+    new RegExp(`/${discipline.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\.html$`, "i")
+  ];
+  return patterns.some((rx) => rx.test(path));
+}
+
+function buildDisciplineMaterialsIndexPath(discipline) {
+  const path = window.location.pathname;
+  if (path.endsWith(".html")) {
+    return path.replace(new RegExp(`${discipline}\\.html$`, "i"), `${discipline}-materials/index.html`);
+  }
+  const normalized = path.endsWith("/") ? path : `${path}/`;
+  return `${normalized}${discipline}-materials/index.html`;
 }
 
 async function tryUnlockWithCredentials(discipline, user, code, persist) {
@@ -434,8 +642,8 @@ async function tryUnlockWithCredentials(discipline, user, code, persist) {
       localStorage.setItem(`courseAccessCode:${discipline}`, code);
       localStorage.setItem(`courseAccessUser:${discipline}`, normalizedUser);
     }
-    setEncryptedMode(plaintext);
-    return { ok: true, reason: "" };
+    setEncryptedMode(plaintext, variant.payloadFormat);
+    return { ok: true, reason: "", payloadFormat: variant.payloadFormat };
   } catch (error) {
     return {
       ok: false,
@@ -549,6 +757,7 @@ function setupEncryptedAccess() {
   const trigger = document.querySelector(".full-access-trigger[data-access-discipline]");
   const encryptedBlocks = document.querySelectorAll(".encrypted-section-block");
   if (!trigger || encryptedBlocks.length === 0) {
+    clearEncryptedPendingState();
     return;
   }
 
@@ -558,11 +767,11 @@ function setupEncryptedAccess() {
 
   const discipline = trigger.getAttribute("data-access-discipline");
   if (!discipline) {
+    clearEncryptedPendingState();
     return;
   }
 
   const modal = createAccessModal();
-  setPublicMode();
 
   const storedUser = localStorage.getItem(`courseAccessUser:${discipline}`) || "";
   const storedCode = localStorage.getItem(`courseAccessCode:${discipline}`) || "";
@@ -576,10 +785,18 @@ function setupEncryptedAccess() {
           localStorage.removeItem(`courseAccessUser:${discipline}`);
         }
         setPublicMode();
+        clearEncryptedPendingState();
       } else {
         hideAccessInfo(trigger);
+        clearEncryptedPendingState();
+        if (isDisciplineLandingPage(discipline)) {
+          window.location.replace(buildDisciplineMaterialsIndexPath(discipline));
+        }
       }
     });
+  } else {
+    setPublicMode();
+    clearEncryptedPendingState();
   }
 
   trigger.addEventListener("click", (event) => {
@@ -610,6 +827,9 @@ function setupEncryptedAccess() {
 
     hideAccessInfo(trigger);
     modal.closeModal();
+    if (isDisciplineLandingPage(discipline)) {
+      window.location.replace(buildDisciplineMaterialsIndexPath(discipline));
+    }
   });
 
   document.addEventListener("keydown", (event) => {
@@ -620,8 +840,13 @@ function setupEncryptedAccess() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  setupLanguageRouting();
-  setupLanguageSwitcher();
-  setupEmailLinks();
-  setupEncryptedAccess();
+  try {
+    setupLanguageRouting();
+    setupLanguageSwitcher();
+    setupEmailLinks();
+    setupEncryptedAccess();
+  } catch (error) {
+    clearEncryptedPendingState();
+    throw error;
+  }
 });

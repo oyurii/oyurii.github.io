@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk-UA" xml:lang="uk-UA"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Лекція 3. Методи квантово-механічних розрахунків – Юрій Овчаренко</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../assets/img/yo.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-960d9d362f81d399278ec3e29b622b37.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../../../assets/js/main.js"></script>
+
+
+<link rel="stylesheet" href="../../../../assets/css/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title"><img src="../../../../assets/img/logo.png" style="height:5em; vertical-align:middle;"></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> <i class="bi bi-person" role="img">
+</i> 
+<span class="menu-text">Про мене</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../projects/index.html"> <i class="bi bi-grid-3x3-gap" role="img">
+</i> 
+<span class="menu-text">Проєкти</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../work.html"> <i class="bi bi-briefcase" role="img">
+</i> 
+<span class="menu-text">Досвід</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-mortarboard" role="img">
+</i> 
+ <span class="menu-text">Викладання</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="../../../../teaching/quantum-mechanics.html"><i class="bi bi-cpu" role="img">
+</i> 
+ <span class="dropdown-text">Квантова механіка</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../teaching/statistical-physics.html"><i class="bi bi-bar-chart" role="img">
+</i> 
+ <span class="dropdown-text">Статистична фізика</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../teaching/solid-state-physics.html"><i class="bi bi-layers" role="img">
+</i> 
+ <span class="dropdown-text">Фізика твердого тіла</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../teaching/molecular-dynamics.html"><i class="bi bi-diagram-3" role="img">
+</i> 
+ <span class="dropdown-text">Молекулярна динаміка та Ab Initio</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../writing.html"> <i class="bi bi-pencil" role="img">
+</i> 
+<span class="menu-text">Нотатки</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../resume.html"> <i class="bi bi-file-earmark-text" role="img">
+</i> 
+<span class="menu-text">Резюме</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../contact.html"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Контакти</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#захищені-матеріали-курсу" id="toc-захищені-матеріали-курсу" class="nav-link active" data-scroll-target="#захищені-матеріали-курсу">Захищені матеріали курсу</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Лекція 3. Методи квантово-механічних розрахунків</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="повний-доступ-до-матеріалів-сайту-надається-лише-авторизованим-користувачам.-для-отримання-доступу-зверніться-до-автора-сайту-за-email" class="level5 access-info">
+<h5 class="anchored" data-anchor-id="повний-доступ-до-матеріалів-сайту-надається-лише-авторизованим-користувачам.-для-отримання-доступу-зверніться-до-автора-сайту-за-email"><strong><em><a href="#" class="full-access-trigger" data-access-discipline="molecular-dynamics">Повний доступ</a> до матеріалів сайту надається лише авторизованим користувачам. Для отримання доступу зверніться до автора сайту за email:</em></strong> <a data-email=""></a></h5>
+</section>
+<section id="захищені-матеріали-курсу" class="level3 public-content">
+<h3 class="anchored" data-anchor-id="захищені-матеріали-курсу">Захищені матеріали курсу</h3>
+<p>Вміст цієї сторінки доступний лише після авторизації.</p>
+</section>
+<div class="encrypted-section-block">
+<div class="encrypted-section-content">
+<!-- ENCRYPTED_SECTION_START -->
+<div class="encrypted-payload-meta" data-encrypted-payload-sha256="8055f66f000b194726b8f25b2de5073e3a519e53b5630e49e2f905877e5fc443" data-encrypted-payload-format="html">
+
+</div>
+<pre class="encrypted"><code>RU5DMU2UGgQNxP4BdP6uDUZwkKGuRX71vRIOhYK8rDSxYolKkjQ6Gz6lq-FN4nhJC_4QM1bxl3pe9v3IZRiUaagP5L_BFu95uwICSFCyc_rK3PxQ84TVwOb2LS9uqsPYVc_QcWbE-TEbnY4Ben9qWowub2Cvik3sqFZJydwtCCbDgsBjpj-z_AC2J4mWEzGbpinO8m4iKnop31quFVREBajK1sMd-FZevGg8d2mftXuh3CF-pm3PF3ZaizlSYo7J1CsYtNAtdAqPOQ2q1dO8hj19YJfNFCevRJRXBkQ0-ObaC-JTE4okwdryn5aSI5BiifLJcIdR5kGWGP0w37KsnfAB418VgfCSrGNLX7NvNG7F6F5JdCYvv_KtQINgA51EP-LLmr59Ngr4DtCMq4nl6pS_7MSk96Bg1DY-0H_XkeehBKJalymReUJqTOq4K8NkmkiauxIFV1OTP1u8vHSxSYTUrJhwFNLSzLBnqVhgB_0K1aCYdmtrfrZ8UKtJCggZOm_MOltIQgOTDXnDIxvpVviptVHaA4tXlMHi5_9TuT4nAXdNIDdyGYFkzXo5mgvByqbtfj0LpMRlPNKJlVrp_vyghXLcj72v1czhl_VCczz60XY82Zbd5BQIegju_AcECrb1fw-XaU1bJgjr_02iyf1dzfcF2NOrs1M7XdHyDmJFAATMzPYSpSSAedmvhca7lWc0hnJN-Rvot9Eu1ppR3TTd5grUNQFTgaEcg7uAeU-5Zp7aqLdkAXmJ86uXM0ryCfpk8i6iLx5Vi_HCdjLk0k7AviESwlMINVHt1As1MgktwPp5VcTr7fRNVm_9Gb10HwCoK2osjm2Vn0BH6J2qz1UM5gaSArwLZzi9nQnsi72D1AScb46zOGSEfbN7H5k_ljOaMK7q7qYGR2vdGNjc12W2HKOBkSZPxpevclnory7CjIktSuDvrz8iXkh1XQPISUW5pSXQyK9XBCbYtfEQTqUQroWjrIJSXzYYf5WaUfBlTszEO-0lplxtNgXl3RqKU01FGI4tkFXgLKzEydnSTggkKqQft8gna-DZuqOG8PlAHZefQj9Ngqa8BMbSeqWNBKEqGQe1QA98dJNSXUawujz6WWDlfTbMkQp62zLluLB1VFQzxBCvm7w1Q_RLIThvp52i6B2FhIF4835jJ-3AnBZfi059TBcRGy5QTJLiRZjCBwsnXNXcQCoW-hkr1XXqfv_LgWVT8gou4r-_-9LHXQzU4MzgWzfJZ1qIkqtVS6kdjrDogZMmfEmZzTsRbtuQk92MvcvEb2vrwku4rcsOVLmgbEqYN9_g8QvX9UK2wSp8jmnvsuXA7g5pCvw0ap2wiuSjegUMkaTSQOFg0cVpH0IkOonpbAY06eq5y0Rrf9ClB13B3yphJDkwjkm7ecFChl2jTeSQ1H_zaitBotZMNHisUCpa0UzbASr5FbBJquAkZcxpFdUX5qeEnTMnISJJJbsQDpqoNlXa9cp3SuF5dFKlOU4bgHnC35rS6OyZBAQTDb9FUbmWYuNp-ujvupvBDoCR60MQICTSDZw6rLPDZHs7NV29gsjVCiZ2OAjRmUCeKhLVLMx17lErFDYC2TyP6pMaJ0KY85WxtmcXxJaHgxWvUUnpi-LA9_f4offqvwBRMtlHnFlG8BeI4pC--E8TXsBWnxeclqGbULL2KhcdCukLzkdwAHdRiAFQnIV2uYZi2YoH6R6YrDGHnYaqZMGjZ5byHzFOUwrIUkHHp0Bcubu4jlPyPCkQTmqQRDrbUGstldY4ruDXDu3qnYsVmtyZCGuikYU72-_G7vBN5QNOoJn_qDh-aPAICKVAFiuSfbNz7eNB5iygzSqxF17bYH11tgCuzihRRNoGyzstKmlt4b5Bd4RW-R5p_ZCULYY2HUpUXDx153HPHFrpk9pAPVDSUYeJZWutaJoY9hTHrB1mJ9FV6QjLQRg3WTqljbvhk5HhUFs1jWJW9vbIKfOpqPJKlWpaAx9GR2n_dSgPG1dWMRKRN3ozOyqNVMPZO-dSHwpH11bHeLm1psf-1nzhnPIzvjNiLAtD_RaA4jtcDY9cF7HEeu49qlZEkbuqJmLiBBx0TxFzVUYyPd0cGB0fyXUVUEy3dvX2E_dLiJK1z4nASzRFiIMRO_N9RyCxjFEnwsdOtK7SxP7lv15L-rR5mkFooTdNBBdQ__WXLs00nffTOH994H6SM1ytZPUdHTUnKipZOU6O3s-1PrYsMO7N7mQn0Km5Rc7hPcI3yBw17x4R5jbiEMA2ssmC8fgVHPVLh36nTfaBWNqK8T-XQUnBkrWtYtIroDU8dVap5iIy2P061MKzccm6f9lS9j9jL_SwFmkXOESUuIqCf_3JjhvHLHhHEc-ZTvK8QMqZVOnqAG33PWwwsONalzhbDKiAvaHtMmTbdBEj115TAP-R10GTK_JkZF0AVGCUcPGiy-S0I8qnRjOAHrC8FvWQ3R0FVPRj_nVmqCIHBvDc9U9U0A-GYgDF6hDQ4zal3klwlWCB1HAHa-N3qyX2BzXf6cC3TT11v337IFHCLg7-zl-7f56mJbZY6vYjU-hD8eG-TXN_2rP93w42xHa5fI1bxxHb_Mo5_vZewiEEK740WdTKOqBHUpLWS3oapc4xH5Bcdmk3st9ftV2_v4j9h64zr3LKI4ldjlBimZpBqdr9lbR7WPaVfP6W00thj4BYHi82yYqgK2TcKmn7kSmxpCULIkWBtvwxZB1rhUzfPb8K7SDFzs2tR6bFYG-iiUOBt_SnRiQwHfWH7BJZYlOFl7oDHCXybPTAJyp0_T8Sa72mnM0LA3PoahmhkgT_96WlIcp6o-tKY2qHCDcL2qjmlRv99HskZH3p18oGU3LaYW0KHIS7Z7DjatcoOq_BxoZojxRDK4FHn6ywz_sJ4507CoD-CX3qQYx2nCBmod6_qUC7bt1YZ6geJpsPAvq869Zser9JGPZGlDL5TSJYHTomUJAOWZyK4MzIGY0BB1JlabLMe8pLT46sLftOAK04MmfGxe35haOzqBnLqYANjF4_IomRLiJvi37Kg6WrEbZ9P8Bp9Qqwl-BgFOrPubqddJ5UpkrAjJt6ay1FTsmFOeI5QinatEkwJNwE6FvpJz1Wv5_sTdE68w2HeNeTjenJFn25YrR563n2U7JzZ8IR7TDnEknkAeAiNFFVKaAKHB5Ig7b88qJ5tch2p1de7rZqSxytJ3qtnyAo-ItLyNuCzxC2ku1sSpLNkrkFAK1ADuVlkBKDD2nEQ3roiz8vuRZM3MghKR7wTugmLfOcHr7SuBJJaFQxOW3R4xB0dqD1ULwFNalbl9V6t7El1fqOr6Ets_aISwN6eNOGZEj8M5cIxDG4vsUxzo_qBQP0T7akyByFgmD7rJfYuxVX1DrrQe967znyHSzrw27orxq_L0cZDLFRH_17wXWWsvM6phZjr0yNxs5Pedclc9P9Bj3vSyZSVSnj-Pznh9-dFYOM5Z3WQWnOINFX0LC72zQPWDNTg8I0RVYhAveBLttzqTwiwb2SxUK7hsWkOAvCO2CSVfGPk2fRjF1UdLwfa3dwKIJJxyVeDI7NjUD3xLOxtprWtQ8HpSv167cfWnWGTlRdI8vkWPavzq-trXQJ-AoKKAhDnwy5uMTOggRNx6Td6s77Y3HQYZ-u-JxGqaCklmHMg8oNlODHcLO120l3kZ0lFrzICW4YZiVwVrLE_K9M4HaGcAEGzMI1BJOC56IwLq6r6ebvwGwLU0tYC6rGdQHfepT4CdLMx2ZxpCjl_hw3XKWgam4t8Qy-pmHbVVa3SqrHTIqvjHpe_eJhM4-TlUiSgiHhTGWvsGhLCbNgSrcgaxIn3JBAXYLvrwHWV2eK0jX_w9FMov9q9O0J2Y4N1lUs9QyBt3LTVsLZBI2oszolVdhSNQcrk1CrvlPBb5wIu4AqdeBs2yFlxKM6e0xOSsJqPuhz9bgTuKGorpxVzmhmSzUrgHABEZRcnbqdlFZiW489ZcMt3EsvCNqRkpbMhDBRe9i3ccXLGvV6aJXroLv_IYpPgXY_n5BGds8v_84RypcRLHHh6sNc6PqJO1oQFl92ZImbPHQwNMggPxi_D10mtc0U6_vn6Kucx4XBwdpV9BVVcELCXIBuHra9qamSDrXkE6-0732FPZ2xwx5ZO-R1Sdr9HyLOi89kubZ1g9sXGknhB7-Wdl7g1SnR4v1omjD_ZSanCpoOawyB4nrVF3n4_xVfR2JOSYAr69tlnRwVosedKKz8kcU76-wUZ6zGBr8sLSS4L43hyUcxlngcUZv0KVjqkBH2Qs9F1bvBHnWXlOgBDm2hp5Puw5M91tO-NVlBM09y0eptQtFztO0CvTk768YCndgHsBxpZny_KM99XJCWia2iVwj4i6Pekr6FhjZ9Lf-N6phbEVye4eUc2pdKOJCBqv_H5J6KB8fAcB5Sl1u4C0q04NZM1J4neQhXwXVE0aeMU8RkfTntzwFqmkIgkcfYnmQmk8RQIFT47RQOAumphfG99x844-g9cIf6irKgvTtAuZn37ZFK2J-iaOqGlAScXqkJZhuHua4-h_oW8qVMzt0B83A1mncCnzaQbX4TT1Ns2iXHGN7ajQwS53XOVbZLss1Wl16wRJLdAxNy0EjTZ5lpSWyvRglDra1_0-Tg0_XufKrgtdd1oprCugoeUCkuwikx-PeRvN4MGDhjMDIXCvwvzGkJ2oXZC33ooJZkplHIYssZvAmnAmeXSqq70zWjeVRB_zKTgt1vHRsHuFbkF7Ug1O6Sv-6wr0R6aXCdkCI7WmBSeLNSZAkl-ea27rHizN7ojyrXkX1do9L_OtkaNF38nitUnqJwtdidYrU2YxkclWNKXyw9wtSakOxTor7b9o9TTIznyq36u_FND4Q7ifSOinZ2CwWcdYFj7tNNXRfx4CcT-pf9VDTtOzFaS1Vybzsw29KZH1p2xvSqTGB2jiYgn2kJHbqT9vUip6WaXt80OhhOA2yBdhGk-qQs5aaDZhFUY5UTksetlllXQhl-LxJxLPxh2skmIvMCy4faaG8_g4KV9BU1562c8X3bZD-uySNl3PduK5T8Wllhgpn_hy2M_eeq0KKImUqslPBkHSOQ8xqTsqpww8bkWgKDZ6XzLAyQSPmLKDqUmL2xPDPOTOkQgZ7obdBGiMWUgLsk7-LNI3QCDMi6-_GFi6G3o0pYCXBKqqc9qWXwRxJLvaq9PSg23ZiC7FxoRQGUa-dPMwmCI5JKkLLFOZEYHM0wKJjf2cm-g5W2rqHBimgDjVl6PaMX3PxniCZPzledAc8sxstDok_rt6RngR5mfjqgqAMK_X5ubXoeAifixp1rrgM7kKKotFrnKXVmK-chl-nluqnH8ryulCstl4alLvnW0Vl2FGy6PSU-_IWNBbA4LP5D8boAvkjSGbPD_L9fhkFFcKgMVW9Yf5BNzaOsIj9VLI3-6PWlD75WULWfUR5q4V5Ps8Br5PuVU8RKiWnY6mzAfvXveBwEYVHHf878-R8axpP2MIdFCGhTAJb4fbkvsqPKOG1nW8HqPgSPE4vLH-M5p-EqPNLs3KSCZmwxXnEeTCB_Xo6d6oRlXfKu-fEXzTMQsc3ygG2GJUzNuP6QYvkYB90-2DxDkcpZvubXoqkXbR-7Qs3LP4w5--u6wBVkrwe0bNeB0wWxClyN_XDe7Y0erK-Pt3HCqKV6ratAllmp-DFK1vXs0bJbChn7gUgNSUvPF1sqMjFFr2U5zNfdh8YjCn-DQoqyui8cJLFzN7uNHha8eiObSGp4Bx9FJnaxoZajnCLF05s-OyQPpAnoosE7TmpRfweLRbl5cVDQkBDEaWBPVW8OLKNcDfI2mh7XU0gbg7uV6Iv3gws_EJ4lHo5E6vHxkYerjlhzEI1ONmCD1-c6MIBziNYPnSkEm3MH-if9DwwYJYZ3CNdIVyL2ZSiv8a4uG88w0cqPSrXCwe26KLcQldXXn3pErKItrXp4m8KV89ilZ4R5sJKy-h5cYQiJgOJGqMf57eagCou_ijX_Ldi-56cwFx29DWR5E9fLls2Hfp5KbQCa0vJcf7ivEe0efpZJqISfMHWFql08_nkJfI_Y5bzrcleBmu-DPKgVHX7pdlCaRpL2DItnURlllO8XCcftKnLwoiz1gQRSHcGcbwcTBesCHCTZpwrWGAFmSzBxta2GC32Vw2zoFLZ4TF5kEh9W6NXCter3xfzuhpKnkPW38BovibHvYc4EXu4tkj3gkTkGqOxhtBDdvkLZB2RPVgkqq2X8mrscYmTXuB4CaJQm44ltUiF9Lc_AomxS-hm6SPWbAPeGXBPOyxUuRXlFkKAa3J13o_-Q03G8X9wwpH8eKBS6xEUZ-39_2pHBIYg5uOo34JWi1KhVCx5IYT85mJM5BsJ6DWfV338HeRWXKBt5QBPHpWBIaqy6N5J9c4qGYjrjbi3kGgrpOBHTP3zSFMX6o8PzyczBkKNpvIEvSMsU7opTZ0VEXIUxyU1kYt7qFpVF8ZhQA26BANMu7Iub9B1WXRvuISfutr83oIXiksVy4vFf5_vYto2FshmyFD0_nEAmfScjckLiPGXPkYPV29N13Sbj4UYxiyudtdJPlYIi939MkaOPCrq6SCL5ZqewDrpOjK-nlNHUjwwm_2y9LAJCu4tRBGrPMmhH-NcLXTEdgkFTQIhCzUAtGZcHa-q3sRDevpdK6YSDW4YV2SuyzWwgnpdRC1RbRLp4dgNcuIxKunlukiRscLa12oUKR3klhlmdOfUG12dx5py7qrjMjEPx5Fantg-SB6Ej3lC2XTMyjo143wS54jSWRXxe5Pg-vwiR8SrgzVUZnQ6Mb9YOsJC3_IAwUdM9E80ibwre6nw5CAp4FictX4tvFUJwFUe5pA7I9bRXuxZ90u-9UMGkPrGOioXg8TsKPMsRp54U4OY4elNggRVLNxRuAyPBxIPPxFyS01IVQyQ3V-BKmjc40fhyXlwdxDBN4huUPueJ58lUBNe4uqJDHt4uchTJNR8Uvi2tKCh4EiiCyw2-EOcNLcS2sfV0cQ-w5xyjk4sOJh3z-Br8bqi4w0hC4t2Ac4Oz-N9v8VxoOi1__dE6HVShNV0GZFh2J69k7n73kikckFTDDYsXHmxdLAT403c4S7cn2BmjBlWE0UE42_n0OxIu32dzSz8SCfz6PEHhkyXad6nuNRZCP7qpPZRMVOoYq0cYguavRpQFMdqe82AP3B4CdAIPPOZreUKLNuy_HQppjdFP84krcZVqptb9kFZpBxDFBa7AXSuraGWjX2dmsPBDxJST-noPDZGpverHhURbvo6Uoq3QbOuWdgfoQy91Nm3lLr7nYfXjc4Ztz37dxCVTCUCk32GYC8GYMF9emPpdrY3WaYVT88_cI7dbmaU_5aphZR00xa211l9SU787JnuYNekw</code></pre>
+<!-- ENCRYPTED_SECTION_END -->
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -39,7 +39,7 @@
     "href": "uk/contact.html",
     "title": "Контакти",
     "section": "",
-    "text": "Юрій Овчаренко, кандидат фізико-математичних наук, доцент\n\nЕлектронна пошта:"
+    "text": "Юрій Михайлович Овчаренко, кандидат фізико-математичних наук, доцент\n\nЕлектронна пошта:"
   },
   {
     "objectID": "teaching/statistical-physics.html#lecture-1.-introduction.-methods-of-analytical-mechanics",
@@ -1082,13 +1082,13 @@
     "href": "uk/work.html",
     "title": "Досвід",
     "section": "",
-    "text": "Цей розділ у процесі наповнення.\n\n\n\nАльтернативний текст"
+    "text": "Цей розділ у процесі наповнення."
   },
   {
     "objectID": "work.html",
     "href": "work.html",
     "title": "Work",
     "section": "",
-    "text": "This section is under development.\n\n\n\nАльтернативний текст"
+    "text": "This section is under development.\nmarkdown"
   }
 ]
