@@ -624,7 +624,8 @@ function buildDisciplineMaterialsIndexPath(discipline) {
   return `${normalized}${discipline}-materials/index.html`;
 }
 
-async function tryUnlockWithCredentials(discipline, user, code, persist) {
+async function tryUnlockWithCredentials(discipline, user, code, persist, options = {}) {
+  const applyContent = options.applyContent !== false;
   const normalizedUser = normalizeUserName(user);
   if (!normalizedUser || !code) {
     return { ok: false, reason: t("Missing username or code", "Не вказано ім'я користувача або код доступу") };
@@ -642,7 +643,9 @@ async function tryUnlockWithCredentials(discipline, user, code, persist) {
       localStorage.setItem(`courseAccessCode:${discipline}`, code);
       localStorage.setItem(`courseAccessUser:${discipline}`, normalizedUser);
     }
-    setEncryptedMode(plaintext, variant.payloadFormat);
+    if (applyContent) {
+      setEncryptedMode(plaintext, variant.payloadFormat);
+    }
     return { ok: true, reason: "", payloadFormat: variant.payloadFormat };
   } catch (error) {
     return {
@@ -775,10 +778,11 @@ function setupEncryptedAccess() {
 
   const storedUser = localStorage.getItem(`courseAccessUser:${discipline}`) || "";
   const storedCode = localStorage.getItem(`courseAccessCode:${discipline}`) || "";
+  const shouldRedirectLanding = isDisciplineLandingPage(discipline);
 
   if (storedUser && storedCode) {
     modal.userInput.value = storedUser;
-    tryUnlockWithCredentials(discipline, storedUser, storedCode, false).then((result) => {
+    tryUnlockWithCredentials(discipline, storedUser, storedCode, false, { applyContent: !shouldRedirectLanding }).then((result) => {
       if (!result.ok) {
         if (shouldForgetStoredCredentials(result.reason)) {
           localStorage.removeItem(`courseAccessCode:${discipline}`);
@@ -788,10 +792,11 @@ function setupEncryptedAccess() {
         clearEncryptedPendingState();
       } else {
         hideAccessInfo(trigger);
-        clearEncryptedPendingState();
-        if (isDisciplineLandingPage(discipline)) {
+        if (shouldRedirectLanding) {
           window.location.replace(buildDisciplineMaterialsIndexPath(discipline));
+          return;
         }
+        clearEncryptedPendingState();
       }
     });
   } else {
@@ -813,7 +818,8 @@ function setupEncryptedAccess() {
       discipline,
       modal.userInput.value,
       modal.codeInput.value.trim(),
-      true
+      true,
+      { applyContent: !shouldRedirectLanding }
     );
 
     if (!result.ok) {
@@ -825,11 +831,12 @@ function setupEncryptedAccess() {
       return;
     }
 
+    if (shouldRedirectLanding) {
+      window.location.replace(buildDisciplineMaterialsIndexPath(discipline));
+      return;
+    }
     hideAccessInfo(trigger);
     modal.closeModal();
-    if (isDisciplineLandingPage(discipline)) {
-      window.location.replace(buildDisciplineMaterialsIndexPath(discipline));
-    }
   });
 
   document.addEventListener("keydown", (event) => {
