@@ -142,3 +142,8 @@ html.encrypted-content-pending .public-content,
 html.encrypted-content-pending .encrypted-section-block {
   display: none !important;
 }
+
+html.encrypted-redirect-pending #title-block-header,
+html.encrypted-redirect-pending main.content {
+  visibility: hidden !important;
+}
